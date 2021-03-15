@@ -28,7 +28,7 @@
 				flex-direction: column;
 				height: auto;
 				height: calc(var(--vh, 1vh) * 100 - var(--sPT));
-				overflow-y: auto;
+		 
 				// @extend .custom-scroll;
 				// --scroll-size: 10px;
 				padding-top: rem(80);

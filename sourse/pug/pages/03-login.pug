@@ -34,18 +34,10 @@ block pagecontent
 							+e.aside-text.h5.strong Главный отраслевой форум соберет около 1000 участников&nbsp;&mdash; российских автодилеров, автопроизводителей, представителей государственной власти, экспертов отрасли и&nbsp;СМИ.
 						.col
 							+e.inner-reg
-								.row 
-									.col-sm-6 
-										+input("",'email','E-mail')
-									.col-12
-									.col-sm-6 
-										+input("",'password','Пароль')
-									.col-12
-									.col-sm-6.mb-3
-										button.btn.btn-md.btn-primary.w-100 Войти
-									.col-12.pt-2
-										.smallest Забыли пароль? #[a(href="#"  ) Востановить]
-
+								+input("",'email','E-mail')
+								+input("",'password','Пароль')
+								button.btn.btn-md.btn-primary.w-100 Войти
+								.smallest.pt-4 Забыли пароль? #[a(href="#"  ) Востановить]
 		+footer
 
 	

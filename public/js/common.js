@@ -119,10 +119,10 @@ var JSCCommon = {
 		var tabs = document.querySelectorAll(tab); // const indexOf = element => Array.from(element.parentNode.children).indexOf(element);
 
 		tabs.forEach(function (element) {
-			var tabs = element;
-			var tabsCaption = tabs.querySelector(".tabs__caption");
+			var tabsEl = element;
+			var tabsCaption = tabsEl.querySelector(".tabs__caption");
 			var tabsBtn = tabsCaption.querySelectorAll(".tabs__btn");
-			var tabsWrap = tabs.querySelector(".tabs__wrap");
+			var tabsWrap = tabsEl.querySelector(".tabs__wrap");
 			var tabsContent = tabsWrap.querySelectorAll(".tabs__content");
 			var random = Math.trunc(Math.random() * 1000);
 			tabsBtn.forEach(function (el, index) {
@@ -135,7 +135,7 @@ var JSCCommon = {
 				console.log(el.innerHTML);
 				content.insertAdjacentHTML("beforebegin", "<div class=\"tabs__btn-accordion  btn btn-primary d-block mb-1 ".concat(active, "\" data-tab-btn=\"").concat(data, "\">").concat(el.innerHTML, "</div>"));
 			});
-			tabs.addEventListener('click', function (element) {
+			tabsEl.addEventListener('click', function (element) {
 				var btn = element.target.closest("[data-tab-btn]:not(.active)");
 				if (!btn) return;
 				var data = btn.dataset.tabBtn;
@@ -147,6 +147,8 @@ var JSCCommon = {
 				content.forEach(function (element) {
 					element.dataset.tabContent == data ? (element.classList.add('active'), element.previousSibling.classList.add('active')) : element.classList.remove('active');
 				});
+			}, {
+				passive: true
 			});
 		}); // $('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
 		// 	$(this)

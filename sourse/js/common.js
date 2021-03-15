@@ -102,10 +102,10 @@ const JSCCommon = {
 		const tabs = document.querySelectorAll(tab);
 		// const indexOf = element => Array.from(element.parentNode.children).indexOf(element);
 		tabs.forEach(element => {
-			let tabs = element;
-			const tabsCaption = tabs.querySelector(".tabs__caption");
+			const tabsEl = element;
+			const tabsCaption = tabsEl.querySelector(".tabs__caption");
 			const tabsBtn = tabsCaption.querySelectorAll(".tabs__btn");
-			const tabsWrap = tabs.querySelector(".tabs__wrap");
+			const tabsWrap = tabsEl.querySelector(".tabs__wrap");
 			const tabsContent = tabsWrap.querySelectorAll(".tabs__content");
 			const random = Math.trunc(Math.random() * 1000);
 			tabsBtn.forEach((el, index) => {
@@ -121,7 +121,7 @@ const JSCCommon = {
 			})
 
 
-			tabs.addEventListener('click', function (element) {
+			tabsEl.addEventListener('click', function (element) {
 				const btn = element.target.closest(`[data-tab-btn]:not(.active)`);
 				if (!btn) return;
 				const data = btn.dataset.tabBtn;
@@ -137,7 +137,7 @@ const JSCCommon = {
 						? (element.classList.add('active'), element.previousSibling.classList.add('active'))
 						: element.classList.remove('active')
 				});
-			})
+			}, { passive: true })
 		})
 
 		// $('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
