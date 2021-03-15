@@ -41,9 +41,9 @@ block pagecontent
 									.col-xl-4.col-sm-6 
 										+input("",'text','Имя')(value='Юрий')
 									.col-xl-4.col-sm-6 
-										+input("",'text','Фамилия')
-									.col-xl-4.col-sm-6 
 										+input("",'text','Отчество')
+									.col-xl-4.col-sm-6 
+										+input("",'text','Фамилия')
 									.col-xl-4.col-sm-6 
 										+input("",'email','E-mail')
 									.col-xl-4.col-sm-6 
@@ -54,22 +54,26 @@ block pagecontent
 										.h5.fw-400.mb-3 Тип участия:
 										.row
 											.col-auto.mb-4
-												+in-c('radio','Дилер')
+												+in-c('radio','Дилер')(data-tab-radio="block-base" checked)
 											.col-auto.mb-4
-												+in-c('radio','Экспонент')
+												+in-c('radio','Экспонент')(data-tab-radio="block-exponent")
 											.col-auto.mb-4
-												+in-c('radio','Партнер')
+												+in-c('radio','Партнер')(data-tab-radio="block-base")
 											.col-auto.mb-4
-												+in-c('radio','Производитель')
+												+in-c('radio','Производитель')(data-tab-radio="block-base")
 											.col-auto.mb-4
-												+in-c('radio','СМИ')
+												+in-c('radio','СМИ')(data-tab-radio="block-base")
 											.col-auto.mb-4
-												+in-c('radio','Другое...')
+												+in-c('radio','Другое')(data-tab-radio="block-base")
+									.col-xl-4.col-sm-6
+										.tab-radio-content#block-base 
+											+input("",'text','Компания')
+												span.smallest название компании без ООО и “”
+										.tab-radio-content#block-exponent
+											+input("",'select','Компания')
 									.col-xl-4.col-sm-6 
-										+input("",'text','Компания')
-									.col-xl-4.col-sm-6 
-										+input("",'text','Должность')
-									.col-12 
+										+input("",'text','Должность') 
+									.col-12
 									.col-xl-4.col-sm-6 
 										+input("",'password','Пароль')
 									.col-xl-4.col-sm-6 
@@ -78,7 +82,7 @@ block pagecontent
 									.col-xl-4.col-sm-6.mb-3
 										button.btn.btn-md.btn-primary.w-100 Зарегистрироваться
 									.col-xl-4.col-sm-6.pt-2 
-										.smallest Отправляя формуя принимаю условия #[a(href="#")  Пользовательского соглашения] и   #[a(href="#") Политики конфиденциальности]
+										.smallest Отправляя форму я принимаю условия #[a(href="#")  Пользовательского соглашения] и   #[a(href="#") Политики конфиденциальности]
 
 
 		+footer

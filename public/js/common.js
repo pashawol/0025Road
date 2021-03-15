@@ -319,16 +319,29 @@ function eventHandler() {
 			// var rellax = new Rellax('.rellax', {});
 			// wow.init();
 		}
+	}); // табы на радиокнопках
+
+	$('[data-tab-radio]').change(function () {
+		var th = $(this),
+				tabRadio = th.data('tab-radio');
+		$('#' + tabRadio).fadeIn(100).addClass("active").siblings('.tab-radio-content').removeClass('active').hide();
+	}); //  если радио таб выбран показать блок
+
+	$('[data-tab-radio]').each(function () {
+		var th = $(this),
+				tabRadio = th.data('tab-radio');
+
+		if (th.is(":checked")) {
+			$('.tab-radio-content.active').removeClass('active').hide();
+			$('#' + tabRadio).fadeIn(100).addClass("active");
+		}
 	});
-	$('.has-title-js').blur(checkEmptyVal);
+	$(document).on('input', '.has-title-js', checkEmptyVal);
 	$('.has-title-js').each(checkEmptyVal);
 
 	function checkEmptyVal() {
-		if (this.value !== '') {
-			$(this).removeClass('empty');
-		} else {
-			$(this).addClass('empty');
-		}
+		this.value !== '' ? this.classList.add('not-empty') // this.autocomplete= 'off'
+		: this.classList.remove('not-empty');
 	}
 }
 

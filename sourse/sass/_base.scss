@@ -106,7 +106,9 @@ body {
 
 
 
-
+.tab-radio-content:not(.active) {
+	display: none;
+}
 
 .section {
 	@include bgs;
