@@ -1,7 +1,67 @@
 
 	// start .sContact
 	.sContact {
+		.section-title-vertical {
+			&__inner{
+
+			}
+			@include media-breakpoint-up(xl) {
+				&__shadow {
+					margin-inline-start: -5%;
+				}
+			h2 {
+				text-align: start;
+					padding-left: 3%;
+				}
+			}
+		} 
+		 --sTPB:;
+
+		 @include media-breakpoint-up(lg) {
+		 	.section__inner {
+		 		padding-bottom: 0;
+		 	}
+		 }
+		.col-main {
+			@include media-breakpoint-up(lg) {
+				display: flex;
+				flex-direction: column;
+				height: auto;
+				height: calc(var(--vh, 1vh) * 100 - var(--sPT));
+				overflow-y: auto;
+				// @extend .custom-scroll;
+				// --scroll-size: 10px;
+				padding-top: rem(80);
+				padding-bottom: var(--sTPB);
+			}
+		}
+		&__body{
+			flex-grow: 1;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+		.h3{
+			margin-bottom: rem(30);
+		}
+		&__item{
+			margin-bottom: rem(20);
+		}
+		&__item-title{
+			margin-bottom: 5px;
+		}
+		&__item-text{
+			@include rfs(24px);
+			font-weight: bold;
+		}
 		 
+		.soc{
+			&__item{
+				@extend .text-body;
+			}
+			// margin-top: rem(135);
+			margin-bottom: rem(85);
+		}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

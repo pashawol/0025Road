@@ -141,7 +141,7 @@
 }
 
 @mixin mt($s: .36) {
-  transition: all #{$s}s;
+  transition: all #{$s}s ease-in-out;
 }
 
 // михин многоточия

@@ -25,7 +25,7 @@ html{
 }
 
 body {
-	// min-width: 320px; 
+	min-width: 360px; 
 	-webkit-font-smoothing: antialiased;
 	position: relative;
 	overflow-x: hidden; 
@@ -54,7 +54,7 @@ body {
 		width: 100%;
 		height: 100%;
 		@include mt;
-		background-color: $body-color;
+		background-color: $body-bg;
 		opacity: 0;
 		z-index: -1;
 		// left: 200px;
@@ -84,16 +84,16 @@ body {
 	}
 }
 
-// .main-wrapper { 
-// 	display: flex;
-// 	flex-direction: row; 
-// 	// overflow: scroll;
-// 	// width: 100%; 
-// 	// height: 100vh;
-// 	// height: calc(var(--vh, 1vh) * 100);
+.main-wrapper { 
+	// display: flex;
+	// flex-direction: row; 
+	// overflow: scroll;
+	// width: 100%; 
+	// height: 100vh;
+	min-height: calc(var(--vh, 1vh) * 100);
 	
 	
-// }
+}
 // .main-wrapper__inner{
 // 	// overflow-x: hidden;
 // 	display: flex;
@@ -110,6 +110,12 @@ body {
 
 .section {
 	@include bgs;
+	position: relative;
+	color: var(--body-color);
+}
+
+.section__inner{
+	
 	padding-top: var(--sPT);
 	padding-bottom: var(--sPB);
 }
@@ -274,13 +280,23 @@ ul {
 .control-wrap {
 	position: relative;
 }
-
+.control-wrap{
+	position: relative;
+	width: rem(90 + 59);
+	height: var(--swiperArrowSize);
+	@include media-breakpoint-up(lg){
+		margin-top: 0;
+	}
+	margin-top: 30px;
+	margin-bottom: calc(var(--inline-start) + #{rem(46)});
+	margin-right: rem(20);
+}
 .swiper-button-hand {
 	width: var(--swiperArrowSize);
 	height: var(--swiperArrowSize);
 	border-radius: 50%;
-	background-color: var(--swiperBgDef);
-	border: 2px solid var(--swiperBorderColorDef);
+	background:transparent;
+	border: none;
 	color: var(--swiperColorDef);
 	@include bgs;
 	z-index: 300;
@@ -300,7 +316,9 @@ ul {
 	}
 
 	.icon {
-		font-size: rem(12);
+		font-size: rem(26);
+		fill: transparent;
+		stroke: currentColor;
 	}
 
 	&::after {
@@ -422,10 +440,10 @@ iframe {
 
 
 .custom-scroll {
-	scrollbar-color: var(--bs-primary)  transparent;
+	scrollbar-color: var(--bs-primary)  $light;
 
 	scrollbar-width: thin;
-	scrollbar-color: var(--bs-primary)  transparent;
+	scrollbar-color: var(--bs-primary)  $light;
 
 	&::-webkit-scrollbar-thumb {
 		opacity: 1;
@@ -434,14 +452,15 @@ iframe {
 
 	&::-webkit-scrollbar-track {
 		border: none;
-		background-color: transparent;
-		border-color: transparent;
+		background-color: $light;
+		border-color: $light;
 		-webkit-box-shadow: none;
 	}
 
+	--scroll-size: 2px;
 	&::-webkit-scrollbar {
-		width: 4px;
-		height: 2px;
+		width: var(--scroll-size, 2);
+		height: var(--scroll-size, 2);
 		background-color: transparent;
 		// border-right: 2px;
 		/* or add it to the track */
@@ -463,3 +482,215 @@ iframe {
 }
 
 
+.btn-outline-primary,
+.btn-primary{
+	color: #fff !important;
+}
+.container-fluid,
+.container-lg,
+.container{
+	@include media-breakpoint-up(lg) {
+	margin-left: 0;
+}
+padding-left: var(--inline-start);
+	}
+
+	body:not(.main-page) .container-fluid{
+			@include media-breakpoint-up(xxl){
+				padding-right: rem(72);
+			}
+	}
+
+	.main-wrapper{
+		@include media-breakpoint-up(lg) {
+
+				margin-inline-start: var(--logo-size);
+				border-left: 1px solid rgba($color: #fff, $alpha: .1);
+			}
+		overflow: hidden;
+	}
+
+	.col-section{
+			@include media-breakpoint-up(lg){
+
+				width: var(--title-w);
+			}
+		
+	}
+	.col-main{
+			@include media-breakpoint-up(lg) {
+
+				width: calc(100% - var(--title-w));
+			}
+	}
+	.section-title-vertical{
+			@include media-breakpoint-up(lg){
+
+				// margin-left: calc(-1 * var(--inline-start));
+				min-height: 100%;
+			}
+		// position: relative;
+
+		&__inner {
+
+					@include media-breakpoint-up(lg){
+						position: absolute;
+						transform: rotate(-90deg);
+						transform-origin: top left;
+						z-index: 2;
+						z-index: 5;
+					left: 0;
+					top: 100%; 
+					margin-bottom: 0;
+				} 
+				margin-bottom: 2rem;
+		}
+		&__shadow{
+			z-index: 1;
+			// position: absolute;
+				@include media-breakpoint-down(lg) { 
+					margin-bottom: 0; 
+					position: absolute;
+				} 
+				// margin-bottom: rem(-40);
+				// margin-bottom: -.5em;
+			@include media-breakpoint-up(xxl) {
+				font-size: rem(280);
+				margin-top: em(-14);
+			}
+			@include rfs(200px);
+			font-weight: 900;
+			opacity: 0.1;
+			line-height: (341 / 280);
+			margin-top: em(-13);
+		}
+
+		h2 {
+			font-weight: 900;
+			position: relative;
+			z-index: 2;
+
+				@include media-breakpoint-up(xl){
+					font-size: rem(70);
+				}
+				@include media-breakpoint-up(lg){
+					margin-top: rem(40);
+					height: rem(156);
+					text-align: right;
+				}
+			margin-right: em(-10);
+		}
+	}
+
+
+	.btn{
+		font-weight: bold;
+	}
+
+		.section-bg{
+			--top: var(--logo-size);
+			@include media-breakpoint-up(xl){
+			}
+			// --top: 0;
+			position: absolute;
+			z-index: 1;
+			background-color: $dark;
+			z-index: -1;
+			left: 0;
+			width: 100%;
+				@include media-breakpoint-up(xl) {
+
+					top: var(--top,0);
+					height: calc(100% - var(--top,0));
+				}
+				top: 0;
+				height: calc(100%  );
+		}
+
+		.page-head{
+			padding-top: rem(40);
+			--sPB: #{rem(10)};
+			h1{
+				font-weight: 900;
+				max-width: rem(800);
+				// @include rfs(70px);
+			}
+			& + * .section__inner {
+				padding-top: 0;
+			}
+		}
+
+
+		.smallest{
+			font-size: $smallest;
+		}
+
+		.btn-md{
+			font-size: rem(20);
+			padding: rem(20) rem(10);
+		}
+
+		.photo-block{
+			border: 1px dashed #2988E1;
+			box-sizing: border-box;
+			border-radius: 8px;
+			margin-bottom: rem(40);
+			@include media-breakpoint-up(xxl) {
+
+				width: rem(271.29);
+				height: rem(317.04px);
+			}
+			width: rem(271.29 * .8);
+			height: rem(317.04 * .8);
+			display: flex !important;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-around;
+			text-align: center;
+			cursor: pointer;
+			&__title{
+				max-width: rem(145);
+
+			}
+			&__foot{
+				font-size: $smallest;
+				opacity: 0.5;
+				max-width: rem(110);
+			}
+			input{
+				position: absolute;
+				@include a-cent;
+				@extend .invisible;
+			}
+		}
+
+
+		.link-back{
+			@include media-breakpoint-up(lg) {
+				top: 0;
+				left: calc(var(--logo-size)/ 2 );
+				transform: translateX(-50%);
+				margin-top: calc(var(--logo-size) + #{rem(64)});
+				position: fixed;
+			}
+			font-size: rem(32);
+			color: $body-color !important;
+			display: inline-block;
+			margin-bottom: 2rem;
+			.icon{
+				stroke: currentColor;
+				font-size: rem(32);
+			}
+			
+		}
+
+		.btn-top{
+			position: fixed;
+			left: calc(var(--logo-size)/ 2 );
+			transform: translateX(-50%);
+			bottom: rem(60);
+			cursor: pointer;
+				@include media-breakpoint-down(lg){
+					display: none;
+				}
+		}

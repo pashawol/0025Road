@@ -8,11 +8,11 @@ mixin pic(i, bg,  media='576px')
 		let exp = (expArr[1] || 'jpg')
 	mixin src(i, exp, path ,   source, bg)
 		-
-			const url= `img/@${path}/${expArr[0]}.${exp}` 
+			const url= `img/@${path}/${expArr[0]}.${exp}`
 			const data = (ifLazy ?  url  : null)
 
 		if source
-			source(type=`image/${exp}` srcset=url)&attributes(attributes)
+			source(type=`image/${exp}` srcset=url)
 		else
 			
 				img(class=(bg=="bg" ? "object-fit-js": null ) src=url alt="" loading='lazy' decoding="async")

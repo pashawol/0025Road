@@ -1,0 +1,84 @@
+
+	// start .sSpeakers
+	.sSpeakers {
+		position: relative;
+		.container-fluid{
+			padding-right: 0;
+			@include media-breakpoint-down(lg) {
+				padding-left: 0;
+			}
+		}
+		.section-bg{
+			@include media-breakpoint-up(lg) {
+			width: rem(270);
+			z-index: 4;
+			}
+			width: 0;
+		}
+		.section-title-vertical {
+			padding-left: 15px;
+			&__inner {
+
+				@include media-breakpoint-up(lg) {
+					max-height: rem(250);
+					max-width: 100vh;
+					overflow: hidden;
+					padding-left: 10%;
+
+				}
+				h2{
+					text-align: left;
+				}
+			}
+
+			&__shadow {
+
+				margin-left: -20%;
+			}
+		}
+		&__slide{
+			max-width: rem(304);
+			@include media-breakpoint-up(xl) {
+
+				margin-right: rem(80);
+			}
+			margin-right: rem(30);
+		}
+		.col-main{
+			padding-right: 0;
+			padding-left: 0;
+			// margin-left: ;
+		}
+		// --sPT: ;
+		// --sPB: ;
+		// --sTPB: ;
+		 
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	//
+	@include media-breakpoint-between(md, xl) { }
+	//
+	@include media-breakpoint-only(xl) {}
+	//
+	@include media-breakpoint-down(xl) {}
+} // end.sSpeakers
+
+.speaker-item{
+	@include media-breakpoint-up(xxl) {}
+	--sp-b: 0;
+	min-height: calc(100% - var(--sp-b));
+	margin-bottom: var(--sp-b);
+	&__img-wrap{
+		@include block(304, 400);
+		margin-bottom: rem(40);
+		object-position: top center;
+	}
+	&__title{
+		@extend .h3;
+		font-weight: bold;
+		text-transform: uppercase;
+		min-height: 2.5em;
+	}
+}

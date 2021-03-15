@@ -1,22 +1,43 @@
 :root {
 	--animate-delay: 1.2s;
-	--fontSizeBase: #{$em-base};
+	@include media-breakpoint-up(xl) {
+		--fontSizeBase: #{$em-base};
+	}
+	--bs-gutter-x: #{$grid-gutter-width};
+	--fontSizeBase: 14px;
 	@include media-breakpoint-up(md) {
-
-		--sPT: #{rem(80)};
+		
+		
 		--sPB: #{rem(90)};
 		--sTPB: #{rem(40)};
 	}
+	@include media-breakpoint-up(xl){
+	--inline-start: #{rem(40)};
+	}
+	--inline-start: var(--bs-gutter-x);
+	@include media-breakpoint-up(xxl){
+		
+		--inline-start: calc(#{rem(80)} );
+		--logo-size: #{rem(176)};
+		--title-w: calc(#{rem(370)} + var(--inline-start));
+	}
+	--title-w: calc(#{rem(200)} + var(--inline-start));
+	--input-fz: #{rem(20)};
+	@include media-breakpoint-up(sm) {
 
-	--sPT: #{rem(80 / 2)};
+		--logo-size: #{rem(100)};
+	}
+	--logo-size: #{rem(80)};
+
+	--sPT: var(--logo-size);
 	--sPB: #{rem(90 / 2)};
 	--sTPB: #{rem(40 / 2)};
 
 
-		--swiperArrowSize: #{rem(68)};
-		--swiperArrowPosition: calc(-1 * var(--swiperArrowSize) / 2);
+		--swiperArrowSize: #{rem(26)};
+		--swiperArrowPosition: 0;
 		--swiperBorderColorDef: var(--bs-primary);
-		--swiperColorDef: var(--bs-primary);
+		--swiperColorDef: var(--bs-dark);
 		--swiperBgDef: #ffffff;
 	
 		--swiperBorderColorDefHover: var(--bs-primary);
@@ -24,7 +45,9 @@
 		--swiperBgDefHover: #ffffff;
 
 
-	 
+	--body-color: #fff;
+	--body-bg: #494949;
+
 }
 
 @include media-breakpoint-up(xl) {}

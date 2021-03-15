@@ -1,0 +1,56 @@
+
+	// start .sLive
+	.sLive {
+		@include media-breakpoint-up(xxl) {
+
+			--sPT: calc(var(--logo-size) + 80px);
+		}
+		// --sPB: ;
+		// --sTPB: ;
+		h2{
+			@include media-breakpoint-up(xxl) {
+				@include rfs(130px);
+			}
+			@include rfs(100px);
+		}
+		&__video{
+			@include block(1184,688);
+			picture{
+				&::before,
+				&::after{
+					content: '';
+					@include a-cent1;
+				}
+				&::before{ 
+					width: rem(96);
+					height: rem(96);
+					border-radius: 50%;
+					@extend .btn;
+					@extend .btn-primary;
+				}
+				&::after{
+				content: url(../img/svg/play.svg);
+				margin-top: rem(4);
+				margin-left: rem(2);
+				}	
+			}
+		}
+		.section__inner{
+			// min-height: 100%;
+			position: relative;
+		}
+
+		.section-title-vertical{
+
+		}
+		 
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	//
+	@include media-breakpoint-between(md, xl) { }
+	//
+	@include media-breakpoint-only(xl) {}
+	//
+	@include media-breakpoint-down(xl) {}
+} // end.sLive

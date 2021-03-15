@@ -1,0 +1,33 @@
+mixin sSpeakers(data)
+	// start sSpeakers
+	+b.SECTION.sSpeakers.section#sSpeakers&attributes(attributes)
+		.section-bg
+		.section__inner
+			.container-fluid
+				.row
+					.col-section.col-lg-auto
+						+b.section-title-vertical
+							+e.inner
+								h2( ) КЛЮЧЕВЫЕ <br> СПИКЕРЫ
+								+e.shadow КЛЮЧЕВЫЕ <br> СПИКЕРЫ
+					.col-main.col
+						
+						+e.slider--js.swiper-container
+							.swiper-wrapper
+								+e.slide.swiper-slide
+									+slide-speaker(`1`,`Олег  Мосеев`,`РОАД`,`Президент РОАД, <br> член совета директоров  <br> ГК «Блок Роско»`)
+								+e.slide.swiper-slide
+									+slide-speaker(`2`,`Александр  Морозов`,`Corporation long`, `Генеральный директор`)
+								+e.slide.swiper-slide
+									+slide-speaker(`3`,`Дмитрий Масловатый`,`Corporation long`, `Генеральный директор`)
+								+e.slide.swiper-slide
+									+slide-speaker(`2`,`Александр  Морозов`,`Corporation long`, `Генеральный директор`)
+	// end sSpeakers
+mixin slide-speaker(i,t,pr, p)
+	+e.slide.swiper-slide 
+		+b.speaker-item
+			+e.img-wrap.bg-wrap
+				img.swiper-lazy.img-bg(src="#" data-src=`img/@2x/webp/speak-${i}.webp`, alt="")
+			+e.title= t
+			p.strong= pr
+			p!= p

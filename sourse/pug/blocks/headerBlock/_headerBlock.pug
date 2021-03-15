@@ -1,10 +1,25 @@
 mixin headerBlock()
 	// start headerBlock
-	+b.headerBlock.section#headerBlock&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
-
-			.row
-						
+	+b.headerBlock.section#headerBlock&attributes(attributes).bg-wrap
+		.section__inner
+			+pic("head-bg2.jpg",'bg').picture-bg
+			.container-fluid
+				+e.center
+					+e.center-bg
+					+e.data  
+						div 10 — 12  <br> апреля <br> 2021
+					+e.head-text Конвенция
+					h1 РОАД 2021
+					p Главный отраслевой форум российских автодилеров, автопроизводителей, представителей государственной власти, экспертов отрасли и&nbsp;СМИ
+					+e.btn(href="#") Зарегистрироваться
+					+pic("head-car.png",'',0).car-top
+				+e.right
+				+e.footer 
+					+e.row.row 
+						+e.col.col-auto
+							+e.date 14 Апр
+							+e.text GM&nbsp;делает ставку на&nbsp;онлайн-бронирование
+						+e.col.col-auto
+							+e.date 15 Апр
+							+e.text АВТОDOM приобрел дилерские центры Audi ГК&nbsp;&laquo;АвтоСпецЦентр&raquo;
 	// end headerBlock

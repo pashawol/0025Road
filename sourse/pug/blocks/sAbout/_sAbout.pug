@@ -1,0 +1,26 @@
+mixin sAbout(data)
+	// start sAbout
+	+b.SECTION.sAbout.section#sAbout&attributes(attributes)
+		.section-bg
+		.section__inner
+			.container-fluid
+				.row
+					.col-section.col-lg-auto
+						+b.section-title-vertical
+							+e.inner
+								h2( ) О&nbsp;МЕРОПРИЯТИИ
+								+e.shadow О&nbsp;МЕРОПРИЯТИИ
+					.col-main.col
+						+e.text
+							p: strong Главный отраслевой форум соберет около 1000 участников — российских автодилеров, автопроизводителей, представителей государственной власти, экспертов отрасли и СМИ.
+
+							p На площадках Конвенции запланированы более 25 мероприятий, в числе которых генеральные сессии, круглые столы и семинары Академии РОАД и партнеров Ассоциации. Важной составляющей Конвенции станет отраслевая выставка, экспоненты которой представят товары и услуги, ориентированные на повышение эффективности дилеров.
+
+							p: strong Приглашаем всех участников авторитейла!
+							a.btn.btn-white(href="#") Смотреть порграмму
+
+						+e.picture-wrap
+							+pic("about-1.jpg",'bg',0).pic-1
+							+pic("about-2.jpg",'bg',0).pic-2
+
+	// end sAbout

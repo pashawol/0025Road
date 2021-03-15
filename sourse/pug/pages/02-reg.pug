@@ -1,0 +1,86 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sLive/_sLive.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sSpeakers/_sSpeakers.pug
+include ../blocks/sExponents/_sExponents.pug
+include ../blocks/sPartners/_sPartners.pug
+
+block variables
+	- let  mainPage= null 
+	- let  bg= null
+
+block title
+	- let  title= 'Регистрация'
+	title= title
+block pagecontent
+	.main-wrapper
+		+mob-mnu()
+		+top-nav()
+		+b.page-head.section
+
+			.section__inner.container-fluid 
+				+b.link-back(href="#")
+					+icon("arrow-back")
+				h1= title
+		.section
+			.section__inner.container-fluid
+				+form-wrap
+					.row 
+						.col-lg-auto.order-lg-last
+							+b.LABEL.photo-block
+								input(type="file")
+								+e.title  Выберите фото вашего профиля
+								+e.foot Изображение JPG или PNG не&nbsp;более 2&nbsp;mb
+						.col
+							+e.inner-reg
+								.row 
+									.col-xl-4.col-sm-6 
+										+input("",'text','Имя')(value='Юрий')
+									.col-xl-4.col-sm-6 
+										+input("",'text','Фамилия')
+									.col-xl-4.col-sm-6 
+										+input("",'text','Отчество')
+									.col-xl-4.col-sm-6 
+										+input("",'email','E-mail')
+									.col-xl-4.col-sm-6 
+										+input("",'tel','Телефон')
+									.col-xl-4.col-sm-6 
+										+input("",'select','Выберите регион')
+									.col-12
+										.h5.fw-400.mb-3 Тип участия:
+										.row
+											.col-auto.mb-4
+												+in-c('radio','Дилер')
+											.col-auto.mb-4
+												+in-c('radio','Экспонент')
+											.col-auto.mb-4
+												+in-c('radio','Партнер')
+											.col-auto.mb-4
+												+in-c('radio','Производитель')
+											.col-auto.mb-4
+												+in-c('radio','СМИ')
+											.col-auto.mb-4
+												+in-c('radio','Другое...')
+									.col-xl-4.col-sm-6 
+										+input("",'text','Компания')
+									.col-xl-4.col-sm-6 
+										+input("",'text','Должность')
+									.col-12 
+									.col-xl-4.col-sm-6 
+										+input("",'password','Пароль')
+									.col-xl-4.col-sm-6 
+										+input("",'password','Повторите пароль')
+									.col-12 
+									.col-xl-4.col-sm-6.mb-3
+										button.btn.btn-md.btn-primary.w-100 Зарегистрироваться
+									.col-xl-4.col-sm-6.pt-2 
+										.smallest Отправляя формуя принимаю условия #[a(href="#")  Пользовательского соглашения] и   #[a(href="#") Политики конфиденциальности]
+
+
+		+footer
+
+	

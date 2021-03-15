@@ -1,0 +1,51 @@
+mixin sPartners(data)
+	// start sPartners
+	+b.SECTION.sPartners.section.scrollable#sPartners&attributes(attributes)
+		.section-bg
+		.section__inner
+			.container-fluid
+				.row 
+					.col-section.col-lg-auto
+						+b.section-title-vertical
+							+e.inner
+								h2( ) Партнеры
+								+e.shadow Партнеры
+					.col-main.col
+						+e.title.h5 Если вы&nbsp;хотите стать нашим партнером, свяжитесь с&nbsp;нами по&nbsp;почте #[a(href="mailto:asroad@asroad.org") asroad@asroad.org] или телефону&nbsp; #[a.strong.text-body(href="tel:+7(495)211-29-88") +7 (495) 211-29-88]
+						
+						+e.group
+							+e.group-title Генеральный партнер
+							.row
+								+logop(1,'ООО «Газпромнефть-СМ»')
+						+e.group
+							+e.group-title Золотые партнеры
+							.row
+								+logop(2)
+								+logop(3)
+						- for (var x = 0; x < 5; x++)
+							+e.group
+								+e.group-title Информационные партнеры
+								.row
+									+logop(4)
+									+logop(5)
+									+logop(6)
+									+logop(7)
+									+logop(4)
+									+logop(5)
+									+logop(6)
+									+logop(7)
+									
+						
+	// end sPartners
+mixin logop(i, a)
+	+e.col.col-sm-3.col-6 
+		+pic(`logop-${i}.png`,'',0)
+		if a
+			a(href="#")= a 
+//- 	+e.slide.swiper-slide 
+//- 		+b.speaker-item
+//- 			+e.img-wrap.bg-wrap
+//- 				img.swiper-lazy.img-bg(data-src=`img/@2x/webp/speak-${i}.webp`, src="#", alt="")
+//- 			+e.title= t
+//- 			p.strong= pr
+//- 			p!= p

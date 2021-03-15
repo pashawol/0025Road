@@ -1,9 +1,30 @@
 mixin sContact()
 	// start sContact
 	+b.SECTION.sContact.section#sContact&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 sContact
-				
-			.row
+		.container-fluid
+			.row 
+				.col-section.col-lg-auto
+					+b.section-title-vertical
+						+e.inner
+							h2( ) КОНТАКТЫ
+							+e.shadow КОНТАКТЫ
+				.col-main.col
+					+e.body
+						.h3.strong.mb-3 ЦВК "Экспоцентр"
+						+e.item 
+							+e.item-title Адрес: 
+							+e.item-text Москва, Краснопресненская набережная, 14
+							
+						+e.item 
+							+e.item-title Метро:
+							+e.item-text «Выставочная», «Деловой центр»
+						+e.item 
+							+e.item-title Телефон:
+							+e.item-text: a.text-body(href="tel:+79856658899") +7 985 665 88 99
+						+e.item 
+							+e.item-title E-mail:
+							+e.item-text: a.text-body(href="mailto:sample@sample.com") sample@sample.com
+					+e.footer
+						+soc
+						+e.copy © Все права защищены, Ассоциация РОАД
 	// end sContact

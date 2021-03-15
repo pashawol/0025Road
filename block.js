@@ -17,11 +17,12 @@ const fileSources = {
 	pug: `mixin {blockName}(data)
 	// start {blockName}
 	+b.SECTION.{blockName}.section#{blockName}&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 {blockName}
-				
-			.row
+		.section__inner
+			.container
+				+b.section-title.text-center
+					h2 {blockName}
+					
+				.row
 	// end {blockName}`,
 	scss: `
 	// start .{blockName}

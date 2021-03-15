@@ -3,49 +3,32 @@ extends layout/main.pug
 
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
+include ../blocks/sLive/_sLive.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sSpeakers/_sSpeakers.pug
+include ../blocks/sExponents/_sExponents.pug
+include ../blocks/sPartners/_sPartners.pug
 
 block variables
-	- let  mainPage= null 
+	- let  mainPage= 'main-page'
 	- let  bg= null
 
 block title
 	- let  title= 'title'
 	title= title
 block pagecontent
+	.main-wrapper#fullpage
+		+mob-mnu()
+		+top-nav()
 
-	+mob-mnu()
-	+header()
-	+top-nav()
-	+soc()
-	+in-c("checkbox", "text") 
-	+b.tabs--js 
-		+e.caption.d-flex 
-			+e.btn.btn.btn-warning.active  btn1
-			+e.btn.btn.btn-warning btn 2
-			+e.btn.btn.btn-warning btn 3
-			+e.btn.btn.btn-warning btn 4
-		+e.wrap 
-			+e.content.active content 1
-			+e.content content 2
-			+e.content content 3
-			+e.content content 4
-	+b.tabs--js 
-		+e.caption.d-flex 
-			+e.btn.btn.btn-success.active  btn  2 1
-			+e.btn.btn.btn-success btn 2  2
-			+e.btn.btn.btn-success btn 2  3
-			+e.btn.btn.btn-success btn  2 4
-		+e.wrap 
-			+e.content.active content 1
-			+e.content content 2
-			+e.content content 3
-			+e.content content 4
-
-	+topLine() 
-	+headerBlock()
-	+sForm()
-	+sContact()
-	+footer()
+		+headerBlock()
+		+sLive
+		+sAbout
+		+sSpeakers
+		+sExponents
+		+sPartners
+		//- +sForm()
+		+sContact()
 
 
-	
+		

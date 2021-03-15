@@ -132,7 +132,7 @@ var JSCCommon = {
 				content.dataset.tabContent = data;
 				if (!content.dataset.tabContent == data) return;
 				var active = content.classList.contains('active') ? 'active' : '';
-				console.log(tabsBtn[index].innerHTML);
+				console.log(el.innerHTML);
 				content.insertAdjacentHTML("beforebegin", "<div class=\"tabs__btn-accordion  btn btn-primary d-block mb-1 ".concat(active, "\" data-tab-btn=\"").concat(data, "\">").concat(el.innerHTML, "</div>"));
 			});
 			tabs.addEventListener('click', function (element) {
@@ -162,7 +162,9 @@ var JSCCommon = {
 		InputTel.forEach(function (element) {
 			return element.setAttribute("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}");
 		});
-		Inputmask("+9(999)999-99-99").mask(InputTel);
+		Inputmask("+9(999)999-99-99", {
+			showMaskOnHover: false
+		}).mask(InputTel);
 	},
 	// /inputMask
 	ifie: function ifie() {
@@ -171,50 +173,6 @@ var JSCCommon = {
 		if (isIE11) {
 			document.body.insertAdjacentHTML("beforeend", '<div class="browsehappy">	<p class=" container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p></div>');
 		}
-	},
-	sendForm: function sendForm() {
-		var gets = function () {
-			var a = window.location.search;
-			var b = new Object();
-			var c;
-			a = a.substring(1).split("&");
-
-			for (var i = 0; i < a.length; i++) {
-				c = a[i].split("=");
-				b[c[0]] = c[1];
-			}
-
-			return b;
-		}(); // form
-
-
-		$(document).on('submit', "form", function (e) {
-			e.preventDefault();
-			var th = $(this);
-			var data = th.serialize();
-			th.find('.utm_source').val(decodeURIComponent(gets['utm_source'] || ''));
-			th.find('.utm_term').val(decodeURIComponent(gets['utm_term'] || ''));
-			th.find('.utm_medium').val(decodeURIComponent(gets['utm_medium'] || ''));
-			th.find('.utm_campaign').val(decodeURIComponent(gets['utm_campaign'] || ''));
-			$.ajax({
-				url: 'action.php',
-				type: 'POST',
-				data: data
-			}).done(function (data) {
-				$.fancybox.close();
-				$.fancybox.open({
-					src: '#modal-thanks',
-					type: 'inline'
-				}); // window.location.replace("/thanks.html");
-
-				setTimeout(function () {
-					// Done Functions
-					th.trigger("reset"); // $.magnificPopup.close();
-					// ym(53383120, 'reachGoal', 'zakaz');
-					// yaCounter55828534.reachGoal('zakaz');
-				}, 4000);
-			}).fail(function () {});
-		});
 	},
 	heightwindow: function heightwindow() {
 		// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
@@ -239,6 +197,11 @@ var JSCCommon = {
 			}, 1100);
 			return false;
 		});
+		$(document).on('click', ".btn-top--js ", function () {
+			$('html, body').animate({
+				scrollTop: 0
+			}, 1100);
+		});
 	},
 	getCurrentYear: function getCurrentYear(el) {
 		var now = new Date();
@@ -256,7 +219,6 @@ function eventHandler() {
 	JSCCommon.tabscostume('.tabs--js');
 	JSCCommon.mobileMenu();
 	JSCCommon.inputMask();
-	JSCCommon.sendForm();
 	JSCCommon.heightwindow();
 	JSCCommon.animateScroll(); // JSCCommon.CustomInputFile(); 
 
@@ -290,25 +252,82 @@ function eventHandler() {
 			loadPrevNext: true
 		},
 		watchOverflow: true
-	}, _defineProperty(_defaultSl, "spaceBetween", 0), _defineProperty(_defaultSl, "loop", true), _defineProperty(_defaultSl, "navigation", {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev'
-	}), _defineProperty(_defaultSl, "pagination", {
-		el: ' .swiper-pagination',
-		type: 'bullets',
-		clickable: true // renderBullet: function (index, className) {
-		// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
-		// }
-
-	}), _defaultSl);
-	var swiper4 = new Swiper('.sBanners__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
+	}, _defineProperty(_defaultSl, "spaceBetween", 0), _defineProperty(_defaultSl, "loop", true), _defaultSl);
+	var swiper4 = new Swiper('.sSpeakers__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
 		slidesPerView: 'auto',
 		freeMode: true,
 		loopFillGroupWithBlank: true,
-		touchRatio: 0.2,
+		// touchRatio: 0.2,
 		slideToClickedSlide: true,
 		freeModeMomentum: true
+	}));
+	var swiper5 = new Swiper('.sExponents__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
+		slidesPerView: 'auto',
+		freeMode: true,
+		loopFillGroupWithBlank: true,
+		// touchRatio: 0.2,
+		slideToClickedSlide: true,
+		freeModeMomentum: true,
+		navigation: {
+			nextEl: '.sExponents .swiper-button-next',
+			prevEl: '.sExponents .swiper-button-prev'
+		}
 	})); // modal window
+
+	$('#fullpage').fullpage({
+		scrollingSpeed: 800,
+		// loopHorizontal: true,
+		responsiveWidth: 1200,
+		responsiveHeight: 600,
+		// responsiveHeight: 600,
+		// responsiveHeight: 1200,
+		animateAnchor: true,
+		navigation: true,
+		navigationPosition: 'left',
+		recordHistory: false,
+		// css3: true,
+		scrollBar: true,
+		// scrollOverflow: true,
+		// allowPageScroll: true,
+		// verticalCentered: false,
+		// fixedElements: '.top-nav',
+		// anchors: ['header', 'sBase', 'sProf', 'sCorp', 'sWhy', 'sStart', 'sTeam', "sDemo", 'sRew', 'sGift', 'sLogo', 'sGift2', 'sFaq', 'sApplication'],
+		// menu: '.menu',
+		// scrollBar: true,
+		parallaxOptions: {
+			type: 'reveal',
+			percentage: 62,
+			property: 'translate'
+		},
+		afterLoad: function afterLoad(origin, destination, direction) {
+			var loadedSection = destination.item; // console.log(this);
+
+			if (loadedSection.classList.contains('section--dark')) {
+				document.querySelector('body').classList.add('body-dark');
+			} else {
+				document.querySelector('body').classList.remove('body-dark');
+			}
+		},
+		// continuousVertical: true,
+		// autoScrolling: true,
+		// scrollOverflow: true,
+		// scrollOverflowReset: true,
+		// scrollOverflowReset: true,
+		afterRender: function afterRender() {// wow.init();
+			// var rellax = new Rellax('.rellax', {});
+			// wow.init();
+		}
+	});
+	$('.has-title-js').blur(checkEmptyVal);
+	$('.has-title-js').each(checkEmptyVal);
+
+	function checkEmptyVal() {
+		if (this.value !== '') {
+			$(this).removeClass('empty');
+		} else {
+			$(this).addClass('empty');
+		}
+	}
 }
 
 ;

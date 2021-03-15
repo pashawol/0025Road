@@ -1,19 +1,207 @@
 // start .headerBlock
 .headerBlock {
-	margin-bottom: 1px;
-	min-height: 100vh;
-	min-height: calc(var(--vh, 1vh) * 100);
-	// background-image: url(../img);
-	// background-color: #000000;
-
-	h1 {
-		margin-bottom: 1px;
+	@include media-breakpoint-up(xxl){
+		
+		--data-size: #{rem(232)};
+		--block: calc(#{rem(1264 - 232 - 80)} + var(--data-size) + var(--inline-start));
+	}
+	@include media-breakpoint-up(xl){
+		// --block: calc(#{rem(1264 - 232 - 80)} + var(--data-size) + var(--inline-start));
+		--block: calc(#{rem(1164 - 232 - 80)} + var(--data-size) + var(--inline-start));
+	}
+	
+	@include media-breakpoint-up(xxl) {
+		--y: #{rem(90)};
+	}
+	
+	--y: #{rem(40)};
+	--block: calc(100% + var(--inline-start));
+	// --block: calc(#{rem(900)} + var(--data-size) );
+	--data-size: #{rem(182)};
+	--data-size-y: calc(var(--data-size) + 3px);
+	--sPB: 0;
+	// background: #494949;
+	.fp-tableCell{
+		vertical-align: top;
 	}
 
-	h2 {
-		margin-bottom: 1px;
+.picture-bg{
+	// opacity: 0.4;
+}
+	&__right{
+		position: absolute;
+		// right: 0;
+		left: var(--block);
+		bottom: 0;
+		width: 100%;
+		height: calc(100% - var(--data-size-y) - var(--logo-size));
+		background: #004D95;
+		// opacity: 0.5;
+		mix-blend-mode: screen;
 	}
+	&__center{
+	
+		@include media-breakpoint-up(sm){
+		max-width: var(--block);
+		}
+		@include media-breakpoint-down(sm) {
+			margin-right: calc(-1 * var(--bs-gutter-x));
+		}
+			@include media-breakpoint-up(lg){
 
+				padding: var(--y) var(--data-size) var(--y) calc(var(--inline-start) );
+			}
+			padding: var(--y) var(--y) var(--y) calc(var(--inline-start));
+		
+		margin-left: calc(-1 * var(--inline-start));
+		position: relative;
+		z-index: 2;
+		margin-bottom: rem(50);
+	}
+	&__center-bg{
+		z-index: -1;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: #fff;
+	}
+	.car-top{
+		position: absolute;
+		// top: 100%;
+		// left: 100%;
+			@include media-breakpoint-up(xxl){
+
+				width: rem(554);
+				height: rem(390); 
+			}
+
+				width: rem(554 * .8);
+				height: rem(390 * .8);
+					@include media-breakpoint-up(lg) { 
+						right: rem(62); 
+						left: auto;
+					}
+					left: 50%;
+					bottom: rem(-110); 
+
+	}
+	&__head-text{
+		text-transform: uppercase;
+		margin-bottom: rem(10);
+		
+		/* 49 */
+		
+		color: #494949;
+		@include media-breakpoint-up(xxl){
+			font-size: rem(40);
+			letter-spacing: 1.525em;
+		}
+			@include media-breakpoint-up(sm) {
+
+				letter-spacing: 1.225em;
+			}
+			letter-spacing: .225em;
+		@include rfs(30px);
+		font-weight: 500;
+	}
+	h1{
+		font-weight: 900;
+			@include media-breakpoint-up(xxl){
+				font-size: rem(130);
+			}
+		@include rfs(80px);
+		// font-size: 130.855px;
+		margin-bottom: rem(10);
+		line-height: 1; 
+		color: $dark; 
+	}
+	p{
+		font-weight: 500; 
+		line-height: 160%; 
+		color: #494949;
+		opacity: 0.5;
+		max-width: rem(700);
+			@include media-breakpoint-up(xxl){
+
+				margin-bottom: rem(65);
+			}
+			margin-bottom: rem(35);
+	}
+	&__btn{
+		@extend .btn;
+		@extend .btn-dark;
+			@include media-breakpoint-up(sm) {
+
+				max-width: rem(272);
+				width: 100%;
+			}
+	}
+	&__data{
+		font-weight: 500;
+		@include rfs(30px);
+		br{
+			display: none;
+		}
+		padding: 1rem; 
+		margin: calc(-1 * var(--y)) calc( -1 * var(--y)) 1rem calc(-1 * var(--inline-start));
+	 
+
+		@include media-breakpoint-up(lg) {
+			padding: 0;
+			position: absolute;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: var(--data-size);
+			height: var(--data-size-y); 
+			margin: 0;
+			br{
+				display: block;
+			}
+		}
+
+
+		// font-size: 30px;
+
+		line-height: (37 / 30);
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+
+		color: #FFFFFF;
+		background-color: $dark;
+		right: 0;
+		top: 0;
+
+	}
+		&__row{
+			@include roww(40px);
+		}
+		&__date{
+			max-width: rem(95);
+			border-bottom: 1px solid $primary;
+			color: rgba($color: #FFFFFF, $alpha: .5);
+			// opacity: 0.5;
+			font-weight: 500;
+			margin-bottom: rem(20);
+			padding-bottom: 5px;
+		}
+		&__col{
+			@include media-breakpoint-up(xxl) {
+
+				max-width: rem(230);
+			}
+			@include media-breakpoint-up(sm) {
+
+				max-width: rem(330);
+			}
+			margin-bottom: 1.5rem;
+		}
+		&__text{
+			font-weight: bold;
+			font-size: $small;
+		}
 	@include media-breakpoint-up(xl) {}
 
 	@include media-breakpoint-up(lg) {}

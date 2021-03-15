@@ -1,14 +1,24 @@
 .navMenu{
+		@include media-breakpoint-up(xxl){
+
+			--sp-x: #{rem(55)};
+		}
+		--sp-x: #{rem(20)};
 	display: flex;
 	list-style: none;
-	@include roww(20px);
+	margin-left: calc(-1 * var(--sp-x));
+	margin-right: calc(-1 * var(--sp-x)); 
 	position: relative;
-	margin-bottom: 0;
-	max-width: 100%;
+	margin-bottom: 0; 
 	flex-wrap: wrap;
+	&__item{
+		padding: 0;
+	}
 	&__link{
 		display: block;
 		text-align: center;
-		padding: rem(20) rem(10);
+		padding: rem(10) calc(var(--sp-x)/ 2);
+		color: #fff ;
+		font-weight: bold;
 	}
 }

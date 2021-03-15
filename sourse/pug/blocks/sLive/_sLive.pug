@@ -1,0 +1,15 @@
+mixin sLive(data)
+	// start sLive
+	+b.SECTION.sLive.section#sLive&attributes(attributes)
+		.section__inner
+			.container-fluid
+				.row
+					.col-section.col-lg-auto
+						+b.section-title-vertical
+							+e.inner
+								h2( ) LIVE
+								+e.shadow LIVE
+					.col-main.col
+						+e.video(href="https://www.youtube.com/watch?v=7wjG4eQnuYk" data-fancybox="video").bg-wrap
+							+pic("video.jpg",'bg').picture-bg
+	// end sLive

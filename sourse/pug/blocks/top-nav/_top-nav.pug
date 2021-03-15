@@ -18,13 +18,23 @@ mixin mob-mnu()
 	//  мобильное меню
 mixin top-nav() 
 	// start top-nav
-	+b.top-nav.block-with-lazy
-		.container
-			.row
-				.col-auto.d-lg-none
-					+b.toggle-menu-mobile--js
-						span
-				.col.d-none.d-lg-block
-					+mnu()
-					
+	+b.top-nav.block-with-lazy 
+		.row
+			.col-auto
+				+e.logo(href="/")
+					img(src="img/svg/logo.svg" alt="" loadimg="lazy")
+			.col 
+				.container-fluid
+					.row
+						.col.d-none.d-lg-block
+							
+								+mnu()
+						.col-auto
+							+e.btn--reg.btn-primary(href="#") Регистрация
+						.col-auto
+							+e.btn--cabinet.btn-outline-primary(href="#")
+								+icon('user')
+						.col-auto.d-lg-none
+							+b.toggle-menu-mobile--js
+								span
 	// end top-nav

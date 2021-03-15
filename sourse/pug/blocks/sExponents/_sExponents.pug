@@ -1,0 +1,38 @@
+mixin sExponents(data)
+	// start sExponents
+	+b.SECTION.sExponents.section#sExponents&attributes(attributes)
+		.section-bg
+		.section__inner
+			.container-fluid
+				.row
+					.col-section.col-lg-auto
+						+b.section-title-vertical
+							+e.inner
+								h2( ) Экспоненты
+								+e.shadow Экспоненты
+					.col-main.col
+						.row 
+							.col
+							.col-auto
+								.control-wrap 
+									+arrow
+						+e.slider--js.swiper-container
+							.swiper-wrapper
+								+e.slide.swiper-slide
+									+slide-logo(`1`,`Hyunday`,`РОАД`)
+								+e.slide.swiper-slide
+									+slide-logo(`2`,`KIA`)
+								+e.slide.swiper-slide
+									+slide-logo(`2`,`Юг-Авто`)
+								+e.slide.swiper-slide
+									+slide-logo(`2`,`KIA`)
+								+e.slide.swiper-slide
+									+slide-logo(`2`,`Юг-Авто`)
+	// end sExponents
+mixin slide-logo(i,t, p)
+	+e.slide.swiper-slide 
+		+b.logo-item
+			+e.img-wrap
+				img.swiper-lazy(data-src=`img/@2x/webp/logo-${i}.webp`, src="#", alt="")
+			+e.title.strong= t 
+			p писание компании в одну  или несколько строк
