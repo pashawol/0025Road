@@ -1,0 +1,42 @@
+mixin sidebar()
+	+b.sCabinet-sidebar
+		.h4.pt-3.mb-4.strong Личный кабинет
+		.row.g-3
+			.col-xxl-12.col-auto
+				+e.img-wrap
+					+pic("avatar.png",'bg',0)
+			.col-xxl-12.col
+				a.smallest.fw-500(href="#") Редактировать профиль
+				+e.title Кормалина
+					br
+					| Ирина 
+					br
+					| Константиновна
+				.smallest Рустехнолоджи
+				.smallest.opacity-50.mb-3 Генеральный директор
+				+e.block 
+					.row 
+						.col-auto Москва
+						.col-auto Экпонент
+				.h5.mb-3: a(href="#").text-body  +7 985 999 88 85
+				.h5: a(href="#").text-body  sample@sample.com
+mixin sCabinet(data)
+	// start sCabinet
+	+b.sCabinet.section#sCabinet&attributes(attributes)
+		.container-fluid
+			.row
+				+e.col-aside.col-lg-3
+					+sidebar()
+				+e.col-main.col-lg-9
+					+e.head
+						+b.UL.sCabinet-nav
+							+e.link.active(href="#") Мое расписание
+							+e.link(href="#") Чаты
+							+e.link(href="#") Выставка
+					+e.body
+						if block
+							block
+						else
+							+chat
+					
+	// end sCabinet

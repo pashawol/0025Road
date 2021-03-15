@@ -7,6 +7,14 @@ $path1: '@1x/';
 $rfs-breakpoint: 1200px !default;
 
 
+$utilities: ("opacity": (property: opacity,
+    responsive: true,
+    values: (0: 0,
+      25: .25,
+      50: .5,
+      75: .75,
+      100: 1,
+    )));
 
 // Variables
 //
@@ -433,7 +441,7 @@ $line-height-lg: 2 !default;
 $h1-font-size: rem(70) !default;
 $h2-font-size: rem(66) !default;
 $h3-font-size: rem(30) !default;
-$h4-font-size: $font-size-base * 1.5 !default;
+$h4-font-size: rem(24) !default;
 $h5-font-size: rem(20) !default;
 $h6-font-size: $font-size-base !default;
 

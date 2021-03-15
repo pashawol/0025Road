@@ -23,6 +23,7 @@
 	}
 	--title-w: calc(#{rem(200)} + var(--inline-start));
 	--input-fz: #{rem(20)};
+	--cabinet-start: #{rem(40)};
 	@include media-breakpoint-up(sm) {
 
 		--logo-size: #{rem(100)};

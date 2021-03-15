@@ -1,0 +1,27 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sLive/_sLive.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sSpeakers/_sSpeakers.pug
+include ../blocks/sExponents/_sExponents.pug
+include ../blocks/sPartners/_sPartners.pug
+include ../blocks/sCabinet/_sCabinet.pug 
+
+block variables
+	- let  mainPage= null 
+	- let  bg= null
+
+block title
+	- let  title= 'Востановление пароля'
+	title= title
+block pagecontent
+	.main-wrapper
+		+mob-mnu()
+		+top-nav() 
+		+sCabinet
+		+footer
+
+	
