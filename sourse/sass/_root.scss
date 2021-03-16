@@ -23,7 +23,10 @@
 	}
 	--title-w: calc(#{rem(200)} + var(--inline-start));
 	--input-fz: #{rem(20)};
-	--cabinet-start: #{rem(40)};
+	@include media-breakpoint-up(lg) {
+		--cabinet-start: #{rem(40)};
+	}
+ 
 	@include media-breakpoint-up(sm) {
 
 		--logo-size: #{rem(100)};
@@ -49,6 +52,13 @@
 	--body-color: #fff;
 	--body-bg: #494949;
 
+
+	
+	--chat-bg: #343434;
+	--chat-messenger-bg: #fff;
+	--chat-message-text-wrapper--radius: #{rem(8)};
+	--chat-message-text-wrapper--left-bg: #{$primary};
+	--chat-message-text-wrapper--right-bg: var(--body-bg);
 }
 
 @include media-breakpoint-up(xl) {}

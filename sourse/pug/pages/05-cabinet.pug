@@ -9,6 +9,7 @@ include ../blocks/sSpeakers/_sSpeakers.pug
 include ../blocks/sExponents/_sExponents.pug
 include ../blocks/sPartners/_sPartners.pug
 include ../blocks/sCabinet/_sCabinet.pug 
+include ../blocks/sEvents/_sEvents.pug
 
 block variables
 	- let  mainPage= null 
@@ -23,6 +24,7 @@ block pagecontent
 		+top-nav() 
 		
 		+sCabinet
+			+sEvents-5
 		+footer
 
 	

@@ -1,0 +1,65 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sLive/_sLive.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sSpeakers/_sSpeakers.pug
+include ../blocks/sExponents/_sExponents.pug
+include ../blocks/sPartners/_sPartners.pug
+include ../blocks/sCabinet/_sCabinet.pug 
+
+block variables
+	- let  mainPage= null 
+	- let  bg= null
+
+block title
+	- let  title= 'Выставка'
+	title= title
+block pagecontent
+	.main-wrapper
+		+mob-mnu()
+		+top-nav() 
+		
+		+sCabinet
+			.h5.mb-3 Представитель Экспонента
+			+form-wrap.col-xl-8 
+				+input("",'text','Название компании - экспонента')(value='Kia')
+				+input("",'url','Ссылка на официальный сайт')
+				+input("",'url','Ссылка на проморолик')
+				+b.copy-block 
+					.row 
+						.col 
+							.smallest Ссылка на комнату в ZOOM
+							+e.link https://kia.zoom.us/j/6023033051?pwd=d1pITVNncTFuddasdasd
+						.col-auto
+							button.btn.btn-primary Копировать
+				+input("",'textarea','Описание компании')
+				.row 
+					.col-sm-4.col-6 
+						+b.LABEL.photo-block.mb-3
+								input(type="file")
+								+e.title  Загрузите логотип
+								+e.foot Прикрепите в&nbsp;формате PNG JPG на&nbsp;белом или прозрачном фоне 300Х300рх
+						+b.LABEL.photo-block.mb-3
+								+icon("close")
+								input(type="file")
+								img(src="img/@2x/file.png", alt="")
+								small.text-primary Выбрать другой файл
+								
+					.col-sm-4.col-6 
+						+b.LABEL.photo-block.mb-3
+								input(type="file")
+								+e.title  Загрузите банер
+								+e.foot Прикрепите в&nbsp;формате PNG JPG на&nbsp;белом или прозрачном фоне 200Х400рх
+					.col-sm-4.col-6 
+						+b.LABEL.photo-block.mb-3
+								input(type="file")
+								+e.title Загрузите презентацию
+								+e.foot Прикрепите в&nbsp;формате PDF не&nbsp;более 20&nbsp;mb
+
+				button.btn.btn-md.btn-primary.px-3.col-xxl-6 Сохранить изменения
+		+footer
+
+	

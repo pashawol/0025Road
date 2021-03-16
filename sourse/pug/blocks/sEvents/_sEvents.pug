@@ -1,0 +1,157 @@
+mixin item-ivent(data)
+	+b.program-item()&attributes(attributes)
+		+e.star(class= data.active)
+			+icon('star-active')
+		.row
+			+e.time.strong.col-auto!= data.d
+			if data.l
+				+e.col-label.col-md!= data.l
+			+e.text-block.col
+				+e.title
+					a(href="#").text-body!= data.t
+		if block
+			block
+		else
+			div.mb-1 Ольга Сигаль  
+			.smallest.pb-3 Kia
+//- mixin sEvents()
+	// start sEvents
+	+b.sEvents&attributes(attributes)
+		mixin item(d,t,l, star )
+			+e.item
+				.row
+					+e.time.strong.text-primary.col-lg-auto.col.order-first!= d
+					if !star
+						.col-auto.order-lg-last
+							+e.star.active
+								+icon('star-active')
+						+e.col-label.col-md-auto.order-md-first.order-lg-0
+							+e.label-elem!= l
+					.col-lg.order-lg-first
+						+e.text-block
+							+e.title.strong
+								a(href="#").text-body!= t
+							+e.text
+								.row
+									if block
+										block
+									else
+										.col-auto
+											strong.text-primary Ольга Сигаль 
+											| 
+											span OCS Distribution
+					//- .col-auto.order-lg-last
+					//- 	+e.star.active
+					//- 		+icon('star-active')
+					//- .col-md-auto.order-md-first.order-lg-0
+					//- 	+e.label-elem!= l
+
+
+		+item(`12:40`, `Круглый стол с Ольгой Сигаль : Digital Академия, управляющий партнер «Возможен ли цифровой прорыв для IT-гигантов?»`, `Круглый стол`)
+		+item(`13:50`, `Круглый стол с Анной Черняковой, вице-президентом OCS Distribution`, `Круглый стол`)
+
+		+item(`13:50`, `Название сессии от вендора в одну или несколько строк`, `Сессия`) 
+		+item(`13:50`, `Название сессии от вендора в одну или несколько строк`, ``,"st") 
+			.col-12
+				+e.copy-block
+					.row
+						.col-sm
+							+e.link-text https://docs.google.com/document/d/12uUxcxKaEXUW9f7X2PC-Gn_aNHgxL_g5ys_GDyPQ5oE/edit#
+						.col-auto
+							button.btn.btn-sm.btn-primary Копировать
+						.col-auto
+							button.btn.btn-sm.btn-primary Присоединится
+
+
+
+mixin sEvents-12()
+	// start sEvents
+	+b.sEvents--page.section#sEvents&attributes(attributes)
+		
+
+		.tabs.tabs--js
+			+e.head
+				.container-fluid
+					.tabs__caption
+						.tabs__btn.active 14 апреля
+						.tabs__btn 15 апреля
+			+e.body
+				.container-fluid
+					mixin cont()
+						.tabs__content&attributes(attributes)
+							.row 
+								.col-auto 
+									+e.time-line
+										+e.time-item: +e.time-item-inner 09:00
+										+e.time-item: +e.time-item-inner 10:00
+										+e.time-item: +e.time-item-inner 11:00
+										+e.time-item: +e.time-item-inner 12:00
+								.col.pt-4 
+									+e.row.row
+										+e.col.col-12(style="--size: 100%")
+											+item-ivent({
+												d:`12:30`, 
+												t:`Начало работы зоны EXPO`
+												})(class="disabled") 
+										- for (var x = 0; x < 2; x++)
+											+e.col.col-12
+												+item-ivent({
+													d:`09:30-10:30`,
+													t: `Название сессии от вендора в одну или несколько строк`, 
+													l:`Сессия`
+													})
+										+e.col.col-12
+											+item-ivent({
+												d:`09:30-10:30`,
+												t: `Название сессии от вендора в одну или несколько строк`, 
+												l:`Сессия`,
+												active:"active"
+												}).active
+										+e.col.col-12(style="--size: 100%")
+											+item-ivent({
+												d:`09:30-10:30`,
+												t: `Название сессии от вендора  `, 
+												l:`Сессия`
+												})
+										block
+					.tabs__wrap
+						+cont().active
+							- for (var x = 0; x < 2; x++)
+								+e.col.col-12
+									+item-ivent({
+										d:`09:30-10:30`,
+										t: `Название сессии от вендора в одну или несколько строк`, 
+										l:`Сессия`
+										})
+							+e.col.col-12
+								+item-ivent({
+									d:`09:30-10:30`,
+									t: `Название сессии от вендора в одну или несколько строк`, 
+									l:`Сессия`,
+									active:"active"
+									}).active
+						+cont()
+	// end sEvents
+mixin sEvents-5()
+	.row.row--lg
+		.col-md-6
+			.h5.mb-3 14 апреля
+			- for (var x = 0; x < 2; x++)
+				.col-12
+					+item-ivent({
+						d:`09:30-10:30`,
+						t: `Название сессии от вендора в одну или несколько строк`, 
+						l:`Сессия`,
+						active:"active"
+						}).active
+		.col-md-6
+			.h5.mb-3 15 апреля
+			- for (var x = 0; x < 1; x++)
+				.col-12
+					+item-ivent({
+						d:`09:30-10:30`,
+						t: `Название сессии от вендора в одну или несколько строк`, 
+						l:`Сессия`,
+						active:"active"
+						}).active
+	// end sEvents

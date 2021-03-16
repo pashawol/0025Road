@@ -1,6 +1,6 @@
 mixin sidebar()
 	+b.sCabinet-sidebar
-		.h4.pt-3.mb-4.strong Личный кабинет
+		
 		.row.g-3
 			.col-xxl-12.col-auto
 				+e.img-wrap
@@ -24,9 +24,13 @@ mixin sCabinet(data)
 	// start sCabinet
 	+b.sCabinet.section#sCabinet&attributes(attributes)
 		.container-fluid
-			.row
-				+e.col-aside.col-lg-3
-					+sidebar()
+			.row 
+				.col-auto
+					+b.link-back(href="#")
+						+icon("arrow-back")
+				.col
+					+e.title.h4.pt-3.mb-4.strong Личный кабинет
+			+e.row.row
 				+e.col-main.col-lg-9
 					+e.head
 						+b.UL.sCabinet-nav
@@ -38,5 +42,7 @@ mixin sCabinet(data)
 							block
 						else
 							+chat
+				+e.col-aside.col-lg-3.order-lg-first
+					+sidebar()
 					
 	// end sCabinet

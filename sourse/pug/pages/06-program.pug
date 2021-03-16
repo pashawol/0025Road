@@ -9,20 +9,25 @@ include ../blocks/sSpeakers/_sSpeakers.pug
 include ../blocks/sExponents/_sExponents.pug
 include ../blocks/sPartners/_sPartners.pug
 include ../blocks/sCabinet/_sCabinet.pug 
-
+include ../blocks/sEvents/_sEvents.pug
 block variables
 	- let  mainPage= null 
 	- let  bg= null
 
 block title
-	- let  title= 'Чаты'
+	- let  title= 'Программа'
 	title= title
 block pagecontent
 	.main-wrapper
 		+mob-mnu()
 		+top-nav() 
-		
-		+sCabinet
+		+b.page-head.section
+
+			.section__inner.container-fluid 
+				+b.link-back(href="#")
+					+icon("arrow-back")
+				h1= title
+		+sEvents-12()
 		+footer
 
 	

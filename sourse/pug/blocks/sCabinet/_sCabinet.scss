@@ -2,7 +2,22 @@
 	// start .sCabinet
 	.sCabinet {
 		padding-top: var(--logo-size);
-		padding-bottom: rem(150);
+		padding-bottom: rem(0);
+		@include media-breakpoint-up(lg) {
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+		.container-fluid{
+			display: flex;
+			flex-direction: column;
+
+		}
+		.container-fluid,
+		&__row{
+			flex-grow: 1;
+			min-height: 100%;
+		}
+		}
 		 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {
@@ -11,6 +26,10 @@
 		}
 		&__col-main{
 			padding-left: 0;
+		}
+		&__title{
+			position: absolute;
+			top: calc(var(--logo-size) + #{rem(0)});
 		}
 	}
 	@include media-breakpoint-up(md) {}
@@ -22,12 +41,22 @@
 	//
 	@include media-breakpoint-down(xl) {}
 	&__head{
-		border-bottom: 1px solid rgba($color: #fff, $alpha: .2);
+		position: relative;
+		&::before{
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 100vw;
+			height: 1px;
+			background-color:   rgba($color: #fff, $alpha: .2);
+		}
 		margin-bottom: rem(30);
 	}
 	&__head,
 	&__body{
 		padding-inline-start: var(--cabinet-start);
+		margin-bottom: rem(30);
 	}
 } // end.sCabinet
 
@@ -57,6 +86,9 @@
 }
 
 .sCabinet-sidebar{
+		@include media-breakpoint-up(lg){
+			padding-top: rem(60);
+		}
 	padding-bottom: rem(30);
 	@include media-breakpoint-up(sm){
 		min-height: 100%;
@@ -117,11 +149,15 @@
 		padding: 0; 
 	}
 	.item{
-		padding:  10px;
+		padding:  rem(13) rem(15); 
+		* {
+			margin-top: 0;
+			padding-top: 0;
+		}
 		@include mt;
 		&:hover,
 		&.active{
-			  background: #252c3a;
+			  background: $primary;
 		}
 	}
 	padding: rem(15) 0;
@@ -156,17 +192,16 @@
 	padding-bottom: rem(15);
 }
 .chat-block{
-	background: #252C3A;
+	background: var(--chat-messenger-bg);
 	position: relative;
 	/* 3 */
 
 	box-shadow: 0px 53.6471px 67px -11.6235px rgba(0, 0, 0, 0.21);
-	border-radius: 20px;
 	position: relative;
 	// overflow: hidden;
 	// width: rem(736);
 &__col-users {
-	border-radius: 20px;
+	// border-radius: 20px;
 	max-width: none;
 	@include media-breakpoint-down(md) {
 		overflow: hidden;
@@ -194,8 +229,8 @@
 
 	.public-chat {
 		color: #ffffff;
-		background: #2B3E5C;
-		border-radius: 20px;
+		background: var(--chat-bg);
+		// border-radius: 20px;
 		width: rem(300);
 		text-align: left;
 		padding-top: 0;
@@ -247,7 +282,7 @@
 	justify-content: space-between;
 }
 .chat-message {
-	margin-bottom: rem(20);
+	margin-bottom: rem(5);
 	max-width: rem(600);
 	padding-right: rem(16);
 }
@@ -256,6 +291,8 @@
 
 .chat-message-description {
 	font-size: rem(14);
+	opacity: 0.5;
+	color: var(--body-bg);
 	// opacity: 0.7;
 
 	&--sentTo {
@@ -280,6 +317,8 @@
 
 .chat-message-text {
 	margin-bottom: 1rem;
+	font-size: 14px;
+	line-height: 130%;
 }
 
 .chat-message-text-wrapper {
@@ -288,7 +327,7 @@
 	}
 
 		padding: rem(10) rem(10) rem(1);
-	margin-bottom: rem(15);
+	margin-bottom: rem(10);
 	position: relative;
 
 	&::after {
@@ -301,10 +340,10 @@
 // end.sCabinet
 
 .chat-message-text-wrapper--left {
-	border-radius: rem(10) rem(10) rem(10) 0px;
-	background: #2B3E5C;
+	border-radius: var(--chat-message-text-wrapper--radius) var(--chat-message-text-wrapper--radius) var(--chat-message-text-wrapper--radius) 0px;
+	background: var(--chat-message-text-wrapper--left-bg);
 	&::after {
-		@include triangle(12px 8px, #2B3E5C, up-left);
+		@include triangle(12px 8px, var(--chat-message-text-wrapper--left-bg), up-left);
 		left: 0;
 	}
 
@@ -320,11 +359,11 @@
 }
 
 .chat-message-text-wrapper--right {
-	border-radius: rem(10) rem(10) 0 rem(10);
-	background-color:#10171D;
+	border-radius: var(--chat-message-text-wrapper--radius) var(--chat-message-text-wrapper--radius) 0 var(--chat-message-text-wrapper--radius);
+	background-color:var(--chat-message-text-wrapper--right-bg);
 
 	&::after {
-		@include triangle(12px 8px,#10171D, up-right);
+		@include triangle(12px 8px,var(--chat-message-text-wrapper--right-bg), up-right);
 		right: 0;
 	}
 
@@ -382,7 +421,7 @@
 		border: 1px solid #030A0F;
 		border-radius: 4px;
 		padding: rem(10) rem(17);
-		border-radius: 150px;
+		border-radius: 4px;
 
 		@include media-breakpoint-up(md) {
 			padding-left: rem(17);

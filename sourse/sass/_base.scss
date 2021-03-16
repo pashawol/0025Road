@@ -246,7 +246,27 @@ ul {
 
 
 .tabs {
+	&__caption{
+		position: relative;
+		display: flex;
+	 
+	}
 	&__btn {
+				display: 500;
+				padding: rem(14) rem(14);
+				font-size: rem(20);
+				border-bottom: 1px solid transparent;
+				text-align: center;
+				font-weight: bold;
+				color: #ffffff;
+				margin-right: rem(20);
+				@include mt;
+
+				&:hover,
+				&.active {
+					color: $primary;
+					border-color: currentColor;
+				}
 		&:hover {
 			cursor: pointer;
 		}
@@ -459,14 +479,14 @@ iframe {
 		-webkit-box-shadow: none;
 	}
 
-	--scroll-size: 2px;
+	--scroll-size: 4px;
 	&::-webkit-scrollbar {
 		width: var(--scroll-size, 2);
 		height: var(--scroll-size, 2);
-		background-color: transparent;
+		background-color: $light;
 		// border-right: 2px;
 		/* or add it to the track */
-		border-color: transparent;
+		border-color: $light;
 		opacity: 0;
 		-webkit-box-shadow: none;
 
@@ -634,9 +654,14 @@ padding-left: var(--inline-start);
 
 		.photo-block{
 			border: 1px dashed #2988E1;
+			@include mt;
+			&:hover{
+				border-color: rgba($color: $primary, $alpha: .5);
+			}
 			box-sizing: border-box;
 			border-radius: 8px;
 			margin-bottom: rem(40);
+			max-width: 100%;
 			@include media-breakpoint-up(xxl) {
 
 				width: rem(271.29);
@@ -663,6 +688,19 @@ padding-left: var(--inline-start);
 				position: absolute;
 				@include a-cent;
 				@extend .invisible;
+			}
+			position: relative;
+			.icon-close{
+				font-size: 1rem;
+				position: absolute;
+				color: #fff;
+				right: 10px;
+				top: 10px;
+				stroke: currentColor;
+			}
+			img{
+				max-width: 90%;
+
 			}
 		}
 
@@ -696,3 +734,32 @@ padding-left: var(--inline-start);
 					display: none;
 				}
 		}
+
+.row--lg{
+	--bs-gutter-x: #{rem(40)};
+}
+
+.copy-block{
+	border: 1px solid #949494; 
+	border-radius: 8px;
+	padding: rem(12) rem(12);
+	margin-bottom: rem(40);
+	.row{
+		align-items: center;
+		--bs-gutter-x: #{rem(30)};
+	}
+	.col{
+		max-width: calc(100% - #{rem(170px)});
+	}
+	.btn{
+		border-radius: 8px;
+		font-size: 1rem;
+		padding: rem(10) rem(10);
+	}
+	.smallest{
+		color: #949494;
+	}
+	&__link{
+		@include ellips;
+	}
+}

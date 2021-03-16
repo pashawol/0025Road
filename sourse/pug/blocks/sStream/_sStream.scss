@@ -356,7 +356,7 @@
 .public-chat {
 	@include media-breakpoint-up(lg) {
 
-		padding: rem(20) rem(8) .5rem;
+		padding: rem(20) rem(24) 0;
 		padding-right: 0;
 	}
 
@@ -479,7 +479,7 @@
 	border-radius: 0;
 	// box-shadow: none !important;
 	width: 100%;
-	color: #ffffff;
+	// color: #ffffff;
 }
 
 .public-chat-form-btn {
