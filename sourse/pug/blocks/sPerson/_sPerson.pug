@@ -1,0 +1,30 @@
+mixin sPerson(data)
+	// start sPerson
+	+b.SECTION.sPerson.section.pt-0#sPerson&attributes(attributes)
+		.container-fluid 
+			h1= title
+			+pic("speaker-2_12.jpg",'bg')
+			.pb-4
+				.h5.opacity-50 Министерство образования и науки Российской Федерации
+				.h5 Product designer
+			.h3.strong.mb-4 Сессии в которых учавствует
+			.col-12
+				+item-ivent({
+					d:`09:30-10:30`,
+					t: `Название сессии от вендора в одну или несколько строк`, 
+					l:`Сессия`
+					})
+			.col-12
+				+item-ivent({
+					d:`09:30-10:30`,
+					t: `Название сессии от вендора в одну или несколько строк`, 
+					l:`Сессия`,
+					active:"active"
+					}).active
+			.col-12
+				+item-ivent({
+					d:`09:30-10:30`,
+					t: `Название сессии от вендора в одну или несколько строк`, 
+					l:`Сессия`
+					})
+	// end sPerson

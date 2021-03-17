@@ -23,11 +23,24 @@ mixin sSpeakers(data)
 								+e.slide.swiper-slide
 									+slide-speaker(`2`,`Александр  Морозов`,`Corporation long`, `Генеральный директор`)
 	// end sSpeakers
+mixin sSpeakers12(data)
+	// start sSpeakers
+	+b.SECTION.sSpeakers.section#sSpeakers&attributes(attributes) 
+		.row
+			.col-lg-4.col-sm-6
+					+slide-speaker(`1`,`Олег  Мосеев`,`РОАД`,`Президент РОАД, <br> член совета директоров  <br> ГК «Блок Роско»`)
+			.col-lg-4.col-sm-6
+					+slide-speaker(`2`,`Александр  Морозов`,`Corporation long`, `Генеральный директор`)
+			.col-lg-4.col-sm-6
+					+slide-speaker(`3`,`Дмитрий Масловатый`,`Corporation long`, `Генеральный директор`)
+			.col-lg-4.col-sm-6
+					+slide-speaker(`2`,`Александр  Морозов`,`Corporation long`, `Генеральный директор`)
+	// end sSpeakers
 mixin slide-speaker(i,t,pr, p)
 	+e.slide.swiper-slide 
 		+b.speaker-item
 			+e.img-wrap.bg-wrap
-				img.swiper-lazy.img-bg(src="#" data-src=`img/@2x/webp/speak-${i}.webp`, alt="")
+				img.img-bg(src=`img/@2x/webp/speak-${i}.webp` loadimg="lazy", alt="")
 			+e.title= t
 			p.strong= pr
 			p!= p

@@ -1,0 +1,50 @@
+
+	// start .sPerson
+	.sPerson {
+		// --sPT: ;
+		// --sPB: ;
+		// --sTPB: ;
+		.container-fluid{
+			position: relative;
+			@include media-breakpoint-up(xl) {
+
+				padding-right: rem(600);
+			}
+			@include media-breakpoint-up(md) {
+				
+				padding-right: rem(440);
+			}
+		}
+		picture{
+			@include media-breakpoint-up(md) {
+			position: absolute;
+			width: rem(504 * .8);
+			height: rem(642 * .8);
+			right: 0;
+			top: 0;
+			max-width: 100%;
+			margin-top: 0;
+		}
+		margin-top: 1rem;
+			max-width: rem(504 * .6); 
+			margin-bottom: rem(40);
+			@include media-breakpoint-up(xl) {
+				width: rem(504);
+				height: rem(642);
+				right: 4.5rem;
+			}
+		}
+		 .program-item{
+			 max-width: rem(504);
+		 }
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	//
+	@include media-breakpoint-between(md, xl) { }
+	//
+	@include media-breakpoint-only(xl) {}
+	//
+	@include media-breakpoint-down(xl) {}
+} // end.sPerson

@@ -1,5 +1,8 @@
-
+#fullpage .sPartners {
+		--body-color: var(--body-bg);
+}
 	// start .sPartners
+	
 	.sPartners {
 		// --sPT: ;
 		// --sPB: ;
@@ -9,7 +12,7 @@
 					padding-bottom: 0;
 				}
 			}
-			--body-color: var(--body-bg);
+		
 				.section-bg {
 					background-color: #fff;
 				}
@@ -80,6 +83,30 @@
 				margin-bottom: rem(30);
 				img{
 					margin-bottom: rem(10);
+				}
+			}
+
+			&--page{
+				padding-bottom: var(--sPB);
+				.row{
+
+					--bs-gutter-x: #{rem(40)};
+					align-items: inherit
+				}
+			}
+			&__item{
+				background-color: #fff;
+				// margin-bottom: rem(20);
+				img{
+					margin-bottom: 0;
+					max-width: 90%;
+					@include a-cent1;
+					max-height: 90%;
+				}
+				picture{
+					width: 100%;
+					@include block(368,241);
+					text-align: center;
 				}
 			}
 	@include media-breakpoint-up(xl) {}

@@ -991,7 +991,7 @@ $pagination-padding-x-lg: 1.5rem !default;
 $pagination-color: $link-color !default;
 $pagination-bg: $white !default;
 $pagination-border-width: $border-width !default;
-$pagination-border-radius: $border-radius !default;
+$pagination-border-radius: 0 !default;
 $pagination-margin-start: -$pagination-border-width !default;
 $pagination-border-color: $gray-300 !default;
 

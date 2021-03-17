@@ -1,0 +1,188 @@
+mixin sMembers()
+	// start sMembers
+	+b.sMembers&attributes(attributes)
+		.container
+			+b.section-title.text-center(  )
+				h2 Ключевые спикеры
+			//- +e.filter
+			//- 	.row
+			//- 		+e.col.col-xl-auto
+			//- 			+b.search-block
+			//- 				+input('Поиск по участникам')
+			//- 				+e.btn(type="submit")
+			//- 					+icon('search')
+			//- 		+e.col-toggle.col-md.d-lg-block
+			//- 			+input("Не выбрано",'select','Должность')
+			//- 		+e.col-toggle.col-md.d-lg-block
+			//- 			+input("Не выбрано",'select','Компания')
+			//- 		+e.col-toggle.col-md.d-lg-block
+			//- 			+input("Не выбрано",'select','Город') 
+			//- 	+e.toggle.d-lg-none
+			//- 		span.show Больше фильтров
+			//- 		span.hide Скрыть
+			+e.slider--js.swiper-container(  )
+				.swiper-wrapper
+					mixin item(i,t)
+						+e.slide.swiper-slide 
+							+e.item
+								+e.img-wrap.bg-wrap
+									+pic(`teamPers-${i}.jpg`,'bg',0)(class="picture-bg")
+									//- +e.DIV.img-inner
+									//- 	+e.DIV.btn(href="#").text-white
+									//- 		+e.DIV.icon-wrap
+									//- 			+icon("comment")
+									//- 		+e.DIV.btn-text.text-white Написать <br> сообщение 
+									//- 	+e.DIV.btn-text
+									//- 		a(href="#").text-white Открыть биографию
+									+e.caption
+										+e.DIV.title
+											a(href="#")= t
+										+e.DIV.text Управляющий партнер 
+						// /+e.slide.swiper-slide 
+					+item('1','Виктория Моршанская')
+					+item('2','Виктор Моршанский')
+					+item('5','Виктория Моршанская')
+					+item('4','Виктор Моршанский')
+				+arrow
+			.text-center.pt-2
+				a.btn.btn-primary.px-3(href="#") Все спикеры
+			//- 	+item('5','Виктор Моршанский')
+			//- 	+item('6','Виктор Моршанский')
+			//- 	+item('7','Виктор Моршанский')
+			//- 	+item('8','Виктор Моршанский')
+			//- 	+item('9','Виктория Моршанская')
+			//- 	+item('10','Виктория Моршанская')
+			//- 	+item('11','Виктория Моршанская')
+			//- 	+item('12','Виктория Моршанская')
+			//- +pugin()
+	// end sMembers
+
+	
+mixin sMembers7()
+	// start sMembers
+	+b.sMembers&attributes(attributes)
+		.container-fluid
+			+b.head-filter(  )
+				.row
+					+e.col.col-xxl-6.col-xl-4
+						+b.search-block
+							+input('Поиск по ФИО')
+							+e.btn(type="submit")
+								+icon('search')
+					.col-md
+						+input("Регион",'select')
+					.col-md
+						+input("Компания",'select')
+					.col-md
+						+input("Должность",'select') 
+			.row
+				mixin item(i,t)
+					.col-xl-3.col-lg-4.col-sm-6(  )
+						+e.item--hovered
+							+e.label Участник
+							+e.img-wrap.bg-wrap
+								+pic(`teamPers-${i}.jpg`,'bg',0)(class="picture-bg")
+								//- +e.DIV.img-inner
+								//- 	+e.DIV.btn(href="#").text-white
+								//- 		+e.DIV.icon-wrap
+								//- 			+icon("comment")
+								//- 		+e.DIV.btn-text.text-white Написать <br> сообщение 
+								//- 	+e.DIV.btn-text
+								//- 		a(href="#").text-white Открыть биографию
+							+e.caption
+								div
+									+e.DIV.title
+										a(href="#")= t
+									+e.DIV.text--md Управляющий партнер 
+									.small.mb-3 Product designer
+								+e.toggle-block
+									a.btn.btn-primary.w-100.mb-4(href="#") Написать #[span.d-none.d-md-inline сообщение]
+					// /.col-xl-3.col-lg-4.col-sm-6
+				- for (var x = 0; x < 3; x++)
+					+item('1','Виктория Моршанская')
+					+item('2','Виктор Моршанский')
+					+item('5','Виктория Моршанская')
+					+item('4','Виктор Моршанский')
+			+pugin()
+			//- 	+item('5','Виктор Моршанский')
+			//- 	+item('6','Виктор Моршанский')
+			//- 	+item('7','Виктор Моршанский')
+			//- 	+item('8','Виктор Моршанский')
+			//- 	+item('9','Виктория Моршанская')
+			//- 	+item('10','Виктория Моршанская')
+			//- 	+item('11','Виктория Моршанская')
+			//- 	+item('12','Виктория Моршанская')
+			//- +pugin()
+	// end sMembers
+
+mixin sMembers8()
+	// start sMembers
+	+b.sMembers&attributes(attributes)
+		.container.container-large
+			+b.head-filter(  )
+				.row
+					+e.col.col-xl-6
+						+b.search-block
+							+input('Поиск по ФИО')
+							+e.btn(type="submit")
+								+icon('search')
+					.col-md
+						+input2("Компания",'select')
+					//- .col-md
+					//- 	+input2("Должность",'select') 
+					.col-md
+						+input2("Город",'select') 
+			.row
+				mixin item(i,t)
+					.col-xxl-3.col-lg-4.col-sm-6(  )
+						+e.item--hovered
+							block
+							+e.img-wrap.bg-wrap
+								+pic(`teamPers-${i}.jpg`,'bg',0)(class="picture-bg")
+								//- +e.DIV.img-inner
+								//- 	+e.DIV.btn(href="#").text-white
+								//- 		+e.DIV.icon-wrap
+								//- 			+icon("comment")
+								//- 		+e.DIV.btn-text.text-white Написать <br> сообщение 
+								//- 	+e.DIV.btn-text
+								//- 		a(href="#").text-white Открыть биографию
+							+e.caption
+								div
+									+e.DIV.title
+										a(href="#")= t
+									+e.DIV.text--md Управляющий партнер 
+									.small Product designer
+								+e.toggle-block
+									a.btn.btn-outline-primary.btn-block.mb-2(href="#") Написать #[span.d-none.d-md-inline сообщение]
+					// /.col-xl-3.col-lg-4.col-sm-6
+				- for (var x = 0; x < 3; x++)
+					+item('1','Виктория Моршанская')
+						+e.labels
+							+e.label(style="background: #2A2D31;") Партнер
+							+e.label.ml-auto(style="background: #219653;") Online
+					+item('2','Виктор Моршанский')
+						+e.labels
+							+e.label(style="background: #2A2D31;") Партнер
+							+e.label.ml-auto(style="background: #219653;") Online
+					+item('5','Виктория Моршанская')
+						+e.labels
+							+e.label(style="background: #2A2D31;") Партнер
+							+e.label.ml-auto(style="background: #C5351C;") Offline
+					+item('4','Виктор Моршанский')
+						+e.labels
+							+e.label(style="background: #FF803E;") Партнер
+							+e.label.ml-auto(style="background: #219653;") Online
+			//- .text-center.pt-2(class="wow  animate__fadeInUp "   )
+			//- 	a.btn.btn-outline-primary.btn-more(href="#") Показать еще
+			//- 	+item('5','Виктор Моршанский')
+			//- 	+item('6','Виктор Моршанский')
+			//- 	+item('7','Виктор Моршанский')
+			//- 	+item('8','Виктор Моршанский')
+			//- 	+item('9','Виктория Моршанская')
+			//- 	+item('10','Виктория Моршанская')
+			//- 	+item('11','Виктория Моршанская')
+			//- 	+item('12','Виктория Моршанская')
+			+pugin()
+	// end sMembers
+
+	
