@@ -577,7 +577,7 @@ padding-left: var(--inline-start);
 				// margin-bottom: rem(-40);
 				// margin-bottom: -.5em;
 			@include media-breakpoint-up(xxl) {
-				font-size: rem(280);
+				font-size: rem(240);
 				margin-top: em(-14);
 			}
 			@include rfs(200px);
@@ -780,4 +780,38 @@ padding-left: var(--inline-start);
 	.btn{
 		width: 270px;
 	}
+}
+
+#fullpage  {
+	.fp-section,
+	.fp-tableCell{
+		@include media-breakpoint-down(xl ) {
+
+			height: auto !important;
+			min-height: 100vh;
+		}
+	}
+}
+
+
+#fp-nav ul li {
+	margin-bottom: rem(15);
+}
+#fp-nav ul li a span{
+	background: #FFFFFF;
+	width: 8px !important;
+	height: 8px !important;
+	margin: 0 !important;
+}
+#fp-nav ul li a:hover span,
+#fp-nav ul li a.active span{
+	background-color: $primary;
+	// width: 8px;
+	// height: 8px;
+	// margin: 7px;
+}
+
+#fp-nav.fp-left{
+	left: calc(var(--logo-size) / 2 - 20px);
+	// transform: translateX(-50%);
 }

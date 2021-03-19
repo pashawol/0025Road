@@ -5,21 +5,23 @@ mixin headerBlock()
 			+pic("head-bg2.jpg",'bg').picture-bg
 			.container-fluid
 				+e.center
-					+e.center-bg
+					+e.center-bg.wow
 					+e.data  
+						+e.data-bg.wow
 						div 10 — 12  <br> апреля <br> 2021
-					+e.head-text Конвенция
-					h1 РОАД 2021
-					p Главный отраслевой форум российских автодилеров, автопроизводителей, представителей государственной власти, экспертов отрасли и&nbsp;СМИ
-					+e.btn(href="#") Зарегистрироваться
-					+pic("head-car.png",'',0).car-top
-				+e.right
+					+e.text-wrap(class="wow ")
+						+e.head-text Конвенция
+						h1 РОАД 2021
+						p Главный отраслевой форум российских автодилеров, автопроизводителей, представителей государственной власти, экспертов отрасли и&nbsp;СМИ
+						+e.btn(href="#") Зарегистрироваться
+					+pic("head-car.png",'',0).car-top.wow
+				+e.right.wow
 				+e.footer 
 					+e.row.row 
-						+e.col.col-auto
+						+e.col.col-auto(class="wow  animate__fadeInUp" data-wow-delay=".4s")
 							+e.date 14 Апр
 							+e.text GM&nbsp;делает ставку на&nbsp;онлайн-бронирование
-						+e.col.col-auto
+						+e.col.col-auto(class="wow  animate__fadeInUp" data-wow-delay=".6s")
 							+e.date 15 Апр
 							+e.text АВТОDOM приобрел дилерские центры Audi ГК&nbsp;&laquo;АвтоСпецЦентр&raquo;
 	// end headerBlock

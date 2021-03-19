@@ -10,11 +10,14 @@
 		.section-title-vertical {
 			padding-left: 15px;
 			&__inner {
+					@include media-breakpoint-up(xl) {
 
+						overflow: hidden;
+					}
 				@include media-breakpoint-up(lg) {
 					max-height: rem(250);
 					max-width: 100vh;
-					overflow: hidden;
+					// overflow: hidden;
 					padding-left: 10%; 
 				}
 

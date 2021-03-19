@@ -30,10 +30,13 @@
 
 				&__inner {
 
+					@include media-breakpoint-up(xl) {
+
+						overflow: hidden;
+					}
 					@include media-breakpoint-up(lg) {
 						max-height: rem(250);
 						max-width: 100vh;
-						overflow: hidden;
 						padding-left: 10%;
 					}
 
@@ -61,7 +64,7 @@
 			// 	}
 			// }
 			.col-main{
-					@include media-breakpoint-up(lg) {
+					@include media-breakpoint-up(xl) {
 
 						height: auto;
 						max-height: calc(var(--vh, 1vh) * 100 - var(--sPT));

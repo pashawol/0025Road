@@ -27,15 +27,15 @@ mixin mnu()
 mixin mnu()
 	-
 		var nav= {
-			"Партнеры":"#sContact",
-			"Участники  ":"#",
-			"Спикеры":"#",
+			"LIVE  ":"#",
 			"EXPO ":"#",
 			"3D EXPO":"#",
-			"Программа":"#",
-			"Live о РОАД ":"#"
+			"Спикеры":"#",
+			"Участники":"#",
+			"Партнеры":"#",
+			"О РОАД ":"#",
 			}
-	+b.UL.navMenu(itemscope itemtype="http://schema.org/SiteNavigationElement")
+	+b.UL.navMenu--not-login.--not-login-js(itemscope itemtype="http://schema.org/SiteNavigationElement")
 		each linkPatch, linkName in nav
 			+e.LI.item( itemprop="item" ): +e.A.link(href= linkPatch  itemprop="url")= linkName
 //- /menu

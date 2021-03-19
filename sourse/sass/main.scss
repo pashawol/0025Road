@@ -129,5 +129,6 @@ $output-bourbon-deprecation-warnings: false;
 @import "root";
 @import "base";
 @import '../pug/blocks/**/*.scss';
+@import 'animate';
 @import "media"; // Всегда в конце
 

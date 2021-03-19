@@ -146,7 +146,7 @@ mixin logoitem(i, a, cl="col-6", modal)
 		if block
 			block
 		else
-			.smallest.text-center.pt-2 ООО «Газпромнефть-СМ»
+			//- .smallest.text-center.pt-2 ООО «Газпромнефть-СМ»
 		if modal 
 			.d-none 
 				+b.logo-modal-content--js
@@ -169,8 +169,8 @@ mixin logoitem(i, a, cl="col-6", modal)
 mixin logop(i, a)
 	+e.col.col-md-3.col-6 
 		+pic(`logop-${i}.png`,'',0)
-		if a
-			a(href="#")= a 
+		//- if a
+		//- 	a(href="#")= a 
 //- 	+e.slide.swiper-slide 
 //- 		+b.speaker-item
 //- 			+e.img-wrap.bg-wrap

@@ -1,11 +1,12 @@
 
 	// start .sContact
 	.sContact {
+		position: relative;
 		.section-title-vertical {
 			&__inner{
 
 			}
-			@include media-breakpoint-up(xl) {
+			@include media-breakpoint-up(lg) {
 				&__shadow {
 					margin-inline-start: -5%;
 				}
@@ -15,7 +16,7 @@
 				}
 			}
 		} 
-		 --sTPB:;
+
 
 		 @include media-breakpoint-up(lg) {
 		 	.section__inner {

@@ -22,3 +22,42 @@
 		font-weight: bold;
 	}
 }
+
+.navMenu--not-login{
+	li{
+		position: relative;
+		&::before{
+			content: 'Пожалуйста войдите или зарегистрируйтесь';
+			position: absolute;
+			@include a-cent1(x);
+			top: calc(100% + #{rem(6px)});
+			background-color: $primary;
+			color: var(--body-color);
+			border-radius: 4px;
+			padding: rem(4) rem(8);
+			text-align: center;
+			max-width: rem(240);
+			font-size: rem(12);
+			opacity: 0;
+			@include mt;
+		}
+		&::after{
+			content: '';
+			@include triangle(rem(12px), $primary, up);
+			@include a-cent1(x);
+			top: 100%;
+			opacity: 0;
+			@include mt;
+
+		}
+		&:hover{
+			&::after,
+			&::before{
+				opacity: 1;
+			}
+		}
+	}
+	a{
+		pointer-events: none;
+	}
+}

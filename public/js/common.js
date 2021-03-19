@@ -280,6 +280,11 @@ function eventHandler() {
 		}
 	})); // modal window
 
+	var wow = new WOW({
+		mobile: false,
+		animateClass: 'animate__animated',
+		live: true
+	});
 	$('#fullpage').fullpage({
 		scrollingSpeed: 800,
 		// loopHorizontal: true,
@@ -319,9 +324,10 @@ function eventHandler() {
 		// scrollOverflow: true,
 		// scrollOverflowReset: true,
 		// scrollOverflowReset: true,
-		afterRender: function afterRender() {// wow.init();
-			// var rellax = new Rellax('.rellax', {});
+		afterRender: function afterRender() {
 			// wow.init();
+			// var rellax = new Rellax('.rellax', {});
+			wow.init();
 		}
 	}); // табы на радиокнопках
 

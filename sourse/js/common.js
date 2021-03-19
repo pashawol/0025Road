@@ -296,6 +296,12 @@ function eventHandler() {
 	// modal window
 
 
+	var wow = new WOW({
+		mobile: false,
+		animateClass: 'animate__animated',
+		live: true
+	});
+
 
 
 	$('#fullpage').fullpage({
@@ -338,12 +344,13 @@ function eventHandler() {
 		afterRender: function () {
 			// wow.init();
 			// var rellax = new Rellax('.rellax', {});
-			// wow.init();
+			wow.init();
 
 
 
 		},
 	});
+
 
 	// табы на радиокнопках
 	$('[data-tab-radio]').change(function () {
