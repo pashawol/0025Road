@@ -2,11 +2,15 @@
 	// display: block;
 	width: 100%;
 	position: relative;
-	max-width: 485px;
+	// max-width: 485px;
+	// @extend .container;
+	max-width: 600px;
+
 
 	&--lg {
 
-		max-width: 1200px;
+		max-width: 1400px;
+		background-color: var(--body-bg);
 
 		.form-wrap--border {
 			padding: 0;

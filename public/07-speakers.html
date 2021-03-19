@@ -65,12 +65,24 @@
 										</li>
 									</ul>
 								</div>
-								<div class="col-auto"><a class="top-nav__btn top-nav__btn--reg btn-primary" href="#">Регистрация</a>
-								</div>
-								<div class="col-auto"><a class="top-nav__btn top-nav__btn--cabinet btn-outline-primary" href="#">
-									<svg class="icon icon-user ">
-										<use xlink:href="img/svg/sprite.svg#user"></use>
-									</svg></a>
+								<div class="col-auto">
+									<div class="login-block"> 
+										<div class="row"> 
+											<div class="col"><a class="login-block__avatar" href="#"><img src="img/@2x/avatar.png" alt=""/><span class="login-block__name d-none d-lg-block">Александр В.</span></a>
+											</div>
+											<div class="col-auto"><a class="login-block__link" href="#">
+												<div class="badge bg-danger">25</div>
+												<svg class="icon icon-chat ">
+													<use xlink:href="img/svg/sprite.svg#chat"></use>
+												</svg></a>
+											</div>
+											<div class="col-auto"><a class="login-block__link" href="#">
+												<svg class="icon icon-log-out ">
+													<use xlink:href="img/svg/sprite.svg#log-out"></use>
+												</svg></a>
+											</div>
+										</div>
+									</div>
 								</div>
 								<div class="col-auto d-lg-none">
 									<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
@@ -95,7 +107,7 @@
 				<div class="container-fluid">
 					<div class="head-filter">
 						<div class="row">
-							<div class="head-filter__col col-xxl-6 col-xl-4">
+							<div class="head-filter__col col-xl-6">
 								<div class="search-block">
 									<div class="search-block__input-wrap form-group"><input class="search-block__input form-control has-title-js" name="text" type="text" placeholder="Поиск по ФИО" value=""/>
 									</div>
@@ -106,18 +118,6 @@
 										</svg>
 									</button>
 								</div>
-							</div>
-							<div class="col-md">
-								<div class="head-filter__input-wrap form-group">
-									<select class="head-filter__input form-select has-title-js" name="select">
-										<option class="d-none" value="Регион">Регион</option>
-										<option value=" placeholder 1">placeholder 1</option>
-										<option value=" placeholder 2">placeholder 2</option>
-										<option value=" placeholder 3">placeholder 3</option>
-										<option value=" placeholder 4">placeholder 4</option>
-									</select>
-								</div>
-								<!-- +e.input-wrap-->
 							</div>
 							<div class="col-md">
 								<div class="head-filter__input-wrap form-group">
@@ -144,12 +144,11 @@
 								<!-- +e.input-wrap-->
 							</div>
 						</div>
+						<div class="text-end"> <a class="text-primary" href="#"> Сбросить фильтр</a></div>
 					</div>
 					<div class="row">
 								<div class="col-xl-3 col-lg-4 col-sm-6">
 									<div class="sMembers__item sMembers__item--hovered">
-										<div class="sMembers__label">Участник
-										</div>
 										<div class="sMembers__img-wrap bg-wrap">
 											<!-- picture-->
 											<picture class="picture-bg"> 
@@ -173,8 +172,6 @@
 								<!-- /.col-xl-3.col-lg-4.col-sm-6-->
 								<div class="col-xl-3 col-lg-4 col-sm-6">
 									<div class="sMembers__item sMembers__item--hovered">
-										<div class="sMembers__label">Участник
-										</div>
 										<div class="sMembers__img-wrap bg-wrap">
 											<!-- picture-->
 											<picture class="picture-bg"> 
@@ -198,8 +195,6 @@
 								<!-- /.col-xl-3.col-lg-4.col-sm-6-->
 								<div class="col-xl-3 col-lg-4 col-sm-6">
 									<div class="sMembers__item sMembers__item--hovered">
-										<div class="sMembers__label">Участник
-										</div>
 										<div class="sMembers__img-wrap bg-wrap">
 											<!-- picture-->
 											<picture class="picture-bg"> 
@@ -223,8 +218,6 @@
 								<!-- /.col-xl-3.col-lg-4.col-sm-6-->
 								<div class="col-xl-3 col-lg-4 col-sm-6">
 									<div class="sMembers__item sMembers__item--hovered">
-										<div class="sMembers__label">Участник
-										</div>
 										<div class="sMembers__img-wrap bg-wrap">
 											<!-- picture-->
 											<picture class="picture-bg"> 
@@ -248,8 +241,6 @@
 								<!-- /.col-xl-3.col-lg-4.col-sm-6-->
 								<div class="col-xl-3 col-lg-4 col-sm-6">
 									<div class="sMembers__item sMembers__item--hovered">
-										<div class="sMembers__label">Участник
-										</div>
 										<div class="sMembers__img-wrap bg-wrap">
 											<!-- picture-->
 											<picture class="picture-bg"> 
@@ -273,8 +264,6 @@
 								<!-- /.col-xl-3.col-lg-4.col-sm-6-->
 								<div class="col-xl-3 col-lg-4 col-sm-6">
 									<div class="sMembers__item sMembers__item--hovered">
-										<div class="sMembers__label">Участник
-										</div>
 										<div class="sMembers__img-wrap bg-wrap">
 											<!-- picture-->
 											<picture class="picture-bg"> 
@@ -298,8 +287,6 @@
 								<!-- /.col-xl-3.col-lg-4.col-sm-6-->
 								<div class="col-xl-3 col-lg-4 col-sm-6">
 									<div class="sMembers__item sMembers__item--hovered">
-										<div class="sMembers__label">Участник
-										</div>
 										<div class="sMembers__img-wrap bg-wrap">
 											<!-- picture-->
 											<picture class="picture-bg"> 
@@ -323,8 +310,6 @@
 								<!-- /.col-xl-3.col-lg-4.col-sm-6-->
 								<div class="col-xl-3 col-lg-4 col-sm-6">
 									<div class="sMembers__item sMembers__item--hovered">
-										<div class="sMembers__label">Участник
-										</div>
 										<div class="sMembers__img-wrap bg-wrap">
 											<!-- picture-->
 											<picture class="picture-bg"> 
@@ -348,8 +333,6 @@
 								<!-- /.col-xl-3.col-lg-4.col-sm-6-->
 								<div class="col-xl-3 col-lg-4 col-sm-6">
 									<div class="sMembers__item sMembers__item--hovered">
-										<div class="sMembers__label">Участник
-										</div>
 										<div class="sMembers__img-wrap bg-wrap">
 											<!-- picture-->
 											<picture class="picture-bg"> 
@@ -373,8 +356,6 @@
 								<!-- /.col-xl-3.col-lg-4.col-sm-6-->
 								<div class="col-xl-3 col-lg-4 col-sm-6">
 									<div class="sMembers__item sMembers__item--hovered">
-										<div class="sMembers__label">Участник
-										</div>
 										<div class="sMembers__img-wrap bg-wrap">
 											<!-- picture-->
 											<picture class="picture-bg"> 
@@ -398,8 +379,6 @@
 								<!-- /.col-xl-3.col-lg-4.col-sm-6-->
 								<div class="col-xl-3 col-lg-4 col-sm-6">
 									<div class="sMembers__item sMembers__item--hovered">
-										<div class="sMembers__label">Участник
-										</div>
 										<div class="sMembers__img-wrap bg-wrap">
 											<!-- picture-->
 											<picture class="picture-bg"> 
@@ -423,8 +402,98 @@
 								<!-- /.col-xl-3.col-lg-4.col-sm-6-->
 								<div class="col-xl-3 col-lg-4 col-sm-6">
 									<div class="sMembers__item sMembers__item--hovered">
-										<div class="sMembers__label">Участник
+										<div class="sMembers__img-wrap bg-wrap">
+											<!-- picture-->
+											<picture class="picture-bg"> 
+												<source type="image/webp" srcset="img/@2x/webp/teamPers-4.webp"/><img class="object-fit-js" src="img/@2x/teamPers-4.jpg" alt="" loading="lazy" decoding="async"/>
+											</picture>
+											<!-- /picture-->
 										</div>
+										<div class="sMembers__caption">
+											<div>
+												<div class="sMembers__title"><a href="#">Виктор Моршанский</a>
+												</div>
+												<div class="sMembers__text sMembers__text--md">Управляющий партнер 
+												</div>
+												<div class="small mb-3">Product designer</div>
+											</div>
+											<div class="sMembers__toggle-block"><a class="btn btn-primary w-100 mb-4" href="#">Написать <span class="d-none d-md-inline">сообщение</span></a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- /.col-xl-3.col-lg-4.col-sm-6-->
+								<div class="col-xl-3 col-lg-4 col-sm-6">
+									<div class="sMembers__item sMembers__item--hovered">
+										<div class="sMembers__img-wrap bg-wrap">
+											<!-- picture-->
+											<picture class="picture-bg"> 
+												<source type="image/webp" srcset="img/@2x/webp/teamPers-1.webp"/><img class="object-fit-js" src="img/@2x/teamPers-1.jpg" alt="" loading="lazy" decoding="async"/>
+											</picture>
+											<!-- /picture-->
+										</div>
+										<div class="sMembers__caption">
+											<div>
+												<div class="sMembers__title"><a href="#">Виктория Моршанская</a>
+												</div>
+												<div class="sMembers__text sMembers__text--md">Управляющий партнер 
+												</div>
+												<div class="small mb-3">Product designer</div>
+											</div>
+											<div class="sMembers__toggle-block"><a class="btn btn-primary w-100 mb-4" href="#">Написать <span class="d-none d-md-inline">сообщение</span></a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- /.col-xl-3.col-lg-4.col-sm-6-->
+								<div class="col-xl-3 col-lg-4 col-sm-6">
+									<div class="sMembers__item sMembers__item--hovered">
+										<div class="sMembers__img-wrap bg-wrap">
+											<!-- picture-->
+											<picture class="picture-bg"> 
+												<source type="image/webp" srcset="img/@2x/webp/teamPers-2.webp"/><img class="object-fit-js" src="img/@2x/teamPers-2.jpg" alt="" loading="lazy" decoding="async"/>
+											</picture>
+											<!-- /picture-->
+										</div>
+										<div class="sMembers__caption">
+											<div>
+												<div class="sMembers__title"><a href="#">Виктор Моршанский</a>
+												</div>
+												<div class="sMembers__text sMembers__text--md">Управляющий партнер 
+												</div>
+												<div class="small mb-3">Product designer</div>
+											</div>
+											<div class="sMembers__toggle-block"><a class="btn btn-primary w-100 mb-4" href="#">Написать <span class="d-none d-md-inline">сообщение</span></a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- /.col-xl-3.col-lg-4.col-sm-6-->
+								<div class="col-xl-3 col-lg-4 col-sm-6">
+									<div class="sMembers__item sMembers__item--hovered">
+										<div class="sMembers__img-wrap bg-wrap">
+											<!-- picture-->
+											<picture class="picture-bg"> 
+												<source type="image/webp" srcset="img/@2x/webp/teamPers-5.webp"/><img class="object-fit-js" src="img/@2x/teamPers-5.jpg" alt="" loading="lazy" decoding="async"/>
+											</picture>
+											<!-- /picture-->
+										</div>
+										<div class="sMembers__caption">
+											<div>
+												<div class="sMembers__title"><a href="#">Виктория Моршанская</a>
+												</div>
+												<div class="sMembers__text sMembers__text--md">Управляющий партнер 
+												</div>
+												<div class="small mb-3">Product designer</div>
+											</div>
+											<div class="sMembers__toggle-block"><a class="btn btn-primary w-100 mb-4" href="#">Написать <span class="d-none d-md-inline">сообщение</span></a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- /.col-xl-3.col-lg-4.col-sm-6-->
+								<div class="col-xl-3 col-lg-4 col-sm-6">
+									<div class="sMembers__item sMembers__item--hovered">
 										<div class="sMembers__img-wrap bg-wrap">
 											<!-- picture-->
 											<picture class="picture-bg"> 
@@ -459,6 +528,10 @@
 									<li><a class="page-numbers" href="#">2</a>
 									</li>
 									<li><a class="page-numbers" href="#">3</a>
+									</li>
+									<li><a class="page-numbers" href="#">4</a>
+									</li>
+									<li><a class="page-numbers" href="#">5</a>
 									</li>
 									<li><a class="next page-numbers" href="#">
 											<svg class="icon icon-chevron-right ">
@@ -500,7 +573,7 @@
 		<div class="modal-win" id="modal-ask-question" style="display: none">
 			<div class="form-wrap">
 				<form>
-					<div class="form-wrap__title form-data h3 ttu">Задать вопрос
+					<div class="form-wrap__title form-data h3 ttu mb-3">Задать вопрос
 					</div>
 					<div class="form-wrap__input-wrap form-group">
 						<label>
@@ -515,7 +588,7 @@
 					</div>
 					<!-- +e.input-wrap-->
 					<div class="form-wrap__input-wrap form-group">
-						<label><textarea class="form-wrap__input form-control has-title-js" name="textarea" placeholder="Вопрос для спикера" value=""></textarea><span class="form-wrap__input-title">Вопрос для спикера</span>
+						<label><textarea class="form-wrap__input form-control has-title-js" name="textarea" placeholder="" value=""></textarea><span class="form-wrap__input-title">Вопрос для спикера</span>
 						</label>
 					</div>
 					<!-- +e.input-wrap-->
@@ -572,6 +645,155 @@
 		</div>
 		<div class="modal-win modal-content" id="modal-content" style="display: none">
 			<div class="modal-inner"></div>
+		</div>
+		<div class="modal-win modal-win--lg" id="modal-reg" style="display: none">
+			<div class="form-wrap">
+				<form>
+					<div class="row"> 
+						<div class="col-lg-auto order-lg-last">
+							<label class="photo-block">
+								<input type="file"/><span class="photo-block__title"> Выберите фото вашего профиля</span><span class="photo-block__foot">Изображение JPG или PNG не&nbsp;более 2&nbsp;mb</span>
+							</label>
+						</div>
+						<div class="col">
+							<div class="form-wrap__inner-reg">
+								<div class="row"> 
+									<div class="col-xl-4 col-sm-6"> 
+										<div class="form-wrap__input-wrap form-group">
+											<label><input class="form-wrap__input form-control has-title-js" name="text" type="text" placeholder="" value="Юрий"/><span class="form-wrap__input-title">Имя</span>
+											</label>
+										</div>
+										<!-- +e.input-wrap-->
+									</div>
+									<div class="col-xl-4 col-sm-6"> 
+										<div class="form-wrap__input-wrap form-group">
+											<label><input class="form-wrap__input form-control has-title-js" name="text" type="text" placeholder="" value=""/><span class="form-wrap__input-title">Отчество</span>
+											</label>
+										</div>
+										<!-- +e.input-wrap-->
+									</div>
+									<div class="col-xl-4 col-sm-6"> 
+										<div class="form-wrap__input-wrap form-group">
+											<label><input class="form-wrap__input form-control has-title-js" name="text" type="text" placeholder="" value=""/><span class="form-wrap__input-title">Фамилия</span>
+											</label>
+										</div>
+										<!-- +e.input-wrap-->
+									</div>
+									<div class="col-xl-4 col-sm-6"> 
+										<div class="form-wrap__input-wrap form-group">
+											<label><input class="form-wrap__input form-control has-title-js" name="email" type="email" placeholder="" value=""/><span class="form-wrap__input-title">E-mail</span>
+											</label>
+										</div>
+										<!-- +e.input-wrap-->
+									</div>
+									<div class="col-xl-4 col-sm-6"> 
+										<div class="form-wrap__input-wrap form-group">
+											<label><input class="form-wrap__input form-control has-title-js" name="tel" type="tel" placeholder="" value=""/><span class="form-wrap__input-title">Телефон</span>
+											</label>
+										</div>
+										<!-- +e.input-wrap-->
+									</div>
+									<div class="col-xl-4 col-sm-6"> 
+										<div class="form-wrap__input-wrap form-group">
+											<label>
+												<select class="form-wrap__input form-select has-title-js" name="select">
+													<option class="d-none" value=""></option>
+													<option value=" placeholder 1">placeholder 1</option>
+													<option value=" placeholder 2">placeholder 2</option>
+													<option value=" placeholder 3">placeholder 3</option>
+													<option value=" placeholder 4">placeholder 4</option>
+												</select><span class="form-wrap__input-title">Выберите регион</span>
+											</label>
+										</div>
+										<!-- +e.input-wrap-->
+									</div>
+									<div class="col-12">
+										<div class="h5 fw-400 mb-3">Тип участия:</div>
+										<div class="row">
+											<div class="col-auto mb-4">
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio" type="radio" data-tab-radio="block-base" checked="checked"/><span class="custom-input__text form-check-label">Дилер</span>
+												</label>
+											</div>
+											<div class="col-auto mb-4">
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio" type="radio" data-tab-radio="block-exponent"/><span class="custom-input__text form-check-label">Экспонент</span>
+												</label>
+											</div>
+											<div class="col-auto mb-4">
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio" type="radio" data-tab-radio="block-base"/><span class="custom-input__text form-check-label">Партнер</span>
+												</label>
+											</div>
+											<div class="col-auto mb-4">
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio" type="radio" data-tab-radio="block-base"/><span class="custom-input__text form-check-label">Производитель</span>
+												</label>
+											</div>
+											<div class="col-auto mb-4">
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio" type="radio" data-tab-radio="block-base"/><span class="custom-input__text form-check-label">СМИ</span>
+												</label>
+											</div>
+											<div class="col-auto mb-4">
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio" type="radio" data-tab-radio="block-base"/><span class="custom-input__text form-check-label">Другое</span>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="col-xl-4 col-sm-6">
+										<div class="tab-radio-content" id="block-base"> 
+											<div class="form-wrap__input-wrap form-group">
+												<label><input class="form-wrap__input form-control has-title-js" name="text" type="text" placeholder="" value=""/><span class="form-wrap__input-title">Компания</span><span class="smallest">название компании без ООО и “”</span>
+												</label>
+											</div>
+											<!-- +e.input-wrap-->
+										</div>
+										<div class="tab-radio-content" id="block-exponent">
+											<div class="form-wrap__input-wrap form-group">
+												<label>
+													<select class="form-wrap__input form-select has-title-js" name="select">
+														<option class="d-none" value=""></option>
+														<option value=" placeholder 1">placeholder 1</option>
+														<option value=" placeholder 2">placeholder 2</option>
+														<option value=" placeholder 3">placeholder 3</option>
+														<option value=" placeholder 4">placeholder 4</option>
+													</select><span class="form-wrap__input-title">Компания</span>
+												</label>
+											</div>
+											<!-- +e.input-wrap-->
+										</div>
+									</div>
+									<div class="col-xl-4 col-sm-6"> 
+										<div class="form-wrap__input-wrap form-group">
+											<label><input class="form-wrap__input form-control has-title-js" name="text" type="text" placeholder="" value=""/><span class="form-wrap__input-title">Должность</span> 
+											</label>
+										</div>
+										<!-- +e.input-wrap-->
+									</div>
+									<div class="col-12"></div>
+									<div class="col-xl-4 col-sm-6"> 
+										<div class="form-wrap__input-wrap form-group">
+											<label><input class="form-wrap__input form-control has-title-js" name="password" type="password" placeholder="" value=""/><span class="form-wrap__input-title">Пароль</span>
+											</label>
+										</div>
+										<!-- +e.input-wrap-->
+									</div>
+									<div class="col-xl-4 col-sm-6"> 
+										<div class="form-wrap__input-wrap form-group">
+											<label><input class="form-wrap__input form-control has-title-js" name="password" type="password" placeholder="" value=""/><span class="form-wrap__input-title">Повторите пароль</span>
+											</label>
+										</div>
+										<!-- +e.input-wrap-->
+									</div>
+									<div class="col-12"> </div>
+									<div class="col-xl-4 col-sm-6 mb-3">
+										<button class="btn btn-md btn-primary w-100">Зарегистрироваться</button>
+									</div>
+									<div class="col-xl-4 col-sm-6 pt-2"> 
+										<div class="smallest">Отправляя форму я принимаю условия <a href="#">Политики конфиденциальности</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
 		</div>
 		<!-- end modals-->
 		<!-- modal libs-->

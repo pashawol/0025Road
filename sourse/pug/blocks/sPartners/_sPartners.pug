@@ -80,65 +80,65 @@ mixin sPartners11(data)
 			+e.group
 				+e.group-title.h4 Дилеры
 				.row
-					+logoitem(1,'ООО «Газпромнефть-СМ»') 
+					+logoitem(1,'ООО «Газпромнефть-СМ»',"col-sm-6") 
 						.pt-3 
 							.strong Hyunday
 							p Описание компании в одну  или несколько строк
-					+logoitem(1,'ООО «Газпромнефть-СМ»') 
+					+logoitem(1,'ООО «Газпромнефть-СМ»',"col-sm-6") 
 						.pt-3 
 							.strong Hyunday
 							p Описание компании в одну  или несколько строк
-					+logoitem(1,'ООО «Газпромнефть-СМ»') 
+					+logoitem(1,'ООО «Газпромнефть-СМ»',"col-sm-6") 
 						.pt-3 
 							.strong Hyunday
 							p Описание компании в одну  или несколько строк
-					+logoitem(1,'ООО «Газпромнефть-СМ»') 
+					+logoitem(1,'ООО «Газпромнефть-СМ»',"col-sm-6") 
 						.pt-3 
 							.strong Hyunday
 							p Описание компании в одну  или несколько строк
 			+e.group
 				+e.group-title.h4 Информационные технологии
 				.row
-					+logoitem(2)
+					+logoitem(2,'', "col-sm-6") 
 						.pt-3 
 							.strong Hyunday
 							p Описание компании в одну  или несколько строк
-					+logoitem(3) 
+					+logoitem(3,'', "col-sm-6") 
 						.pt-3 
 							.strong Hyunday
 							p Описание компании в одну  или несколько строк
-					+logoitem(2)
+					+logoitem(2,'', "col-sm-6") 
 						.pt-3 
 							.strong Hyunday
 							p Описание компании в одну  или несколько строк
-					+logoitem(3) 
+					+logoitem(3,'', "col-sm-6") 
 						.pt-3 
 							.strong Hyunday
 							p Описание компании в одну  или несколько строк
 				+e.group
 					+e.group-title.h4 Автосалоны
 					.row
-						+logoitem(4)
+						+logoitem(4,'', "col-sm-6") 
 							.pt-3 
 								.strong Hyunday
 								p Описание компании в одну  или несколько строк
-						+logoitem(5)
+						+logoitem(5,'', "col-sm-6") 
 							.pt-3 
 								.strong Hyunday
 								p Описание компании в одну  или несколько строк
-						+logoitem(6)
+						+logoitem(6,'', "col-sm-6") 
 							.pt-3 
 								.strong Hyunday
 								p Описание компании в одну  или несколько строк
-						+logoitem(7)
+						+logoitem(7,'', "col-sm-6") 
 							.pt-3 
 								.strong Hyunday
 								p Описание компании в одну  или несколько строк
 								
 			+pugin
 	// end sPartners
-mixin logoitem(i, a)
-	+e.col.col-sm-3.col-6 
+mixin logoitem(i, a, cl="col-6")
+	+e.col.col-md-3(class= cl)
 		+e.item()
 			+pic(`logop-${i}.png`,'',0)
 		if block
@@ -146,7 +146,7 @@ mixin logoitem(i, a)
 		else
 			.smallest.text-center.pt-2 ООО «Газпромнефть-СМ»
 mixin logop(i, a)
-	+e.col.col-sm-3.col-6 
+	+e.col.col-md-3.col-6 
 		+pic(`logop-${i}.png`,'',0)
 		if a
 			a(href="#")= a 

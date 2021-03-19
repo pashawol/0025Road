@@ -22,97 +22,65 @@ mixin ie11()
 	 
 	<!--[if lt IE 11]><p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->
 
-mixin chat()
-	+b.chat-block.row.g-0
-		+e.col-users.col-auto
-			.public-chat.d-flex.flex-column
-				input(type='hidden', value='307befb6-b8bf-469c-860e-7eb1504f594c')
-				// 
-				+b.public-chat-header
-					+b.search-block
-						input(type="text" placeholder="Поиск ")
-						button
-							+icon("search")
-					.public-chat-header-count.ml-auto.text-primary
-						| 35
-				.public-chat-pinned.ps
-					mixin item(i,t)
-						.item&attributes(attributes)
-							.row.g-3
-								.col-auto
-									.public-chat-message-photo-wrapper.me-0
-										img.public-chat-message-photo(src=`img/@1x/avatar-${i}.png` alt="" loading="lazy")
-								.col
-									.row.g-1
-										.col
-											.public-chat-message-name= t
-										+e.time.col-auto 15:50
-									.public-chat-message-text Последнее сообщени...
-					.public-chat-messages.ps.ps--active-y
-						+item("1",'Вячеслав Чморшанский').active
-						- for (var x = 0; x < 2; x++)
-							+item("2",'Юия Кирпа')
-							+item("3",'Олег Олаф')
-							+item("4",'Марина Олексеева')
-							+item("5",'Ким Кин')
-							+item("6",'Олег Вертегел')
-							+item("7",'Риза Чалиев') 
-		.col
-						.public-chat.d-flex.flex-column
-							input(type='hidden', value='307befb6-b8bf-469c-860e-7eb1504f594c')
-								
-								//- .ps__rail-x(style='left: 0px; bottom: 0px;')
-								//- 	.ps__thumb-x(tabindex='0', style='left: 0px; width: 0px;')
-								//- .ps__rail-y(style='top: 0px; right: 0px;')
-								//- 	.ps__thumb-y(tabindex='0', style='top: 0px; height: 0px;')
-							.public-chat-messages.ps.ps--active-y
-								//- .ps__rail-x(style='left: 0px; bottom: -21209px;')
-								//- 	.ps__thumb-x(tabindex='0', style='left: 0px; width: 0px;')
-								//- .ps__rail-y(style='top: 21209px; right: 0px; height: 282px;')
-								//- 	.ps__thumb-y(tabindex='0', style='top: 279px; height: 3px;')
-								- for (var x = 0; x <4; x++)
-									.chat-message
-										.chat-message-text-wrapper.chat-message-text-wrapper--left
-											.chat-message-text
-												| MTS StartUp Hub – это платформа открытых инноваций включающая в себя акселератор
-										.chat-message-description
-											| Вячеслав, 13:06 12.04.2020
-									+b.chat-message--right
-										.chat-message-text-wrapper.chat-message-text-wrapper--right
-											.chat-message-text
-												| MTS StartUp Hub – это платформа открытых инноваций включающая в себя акселератор
-										.chat-message-description.chat-message-description--sentTo.chat-message-description--read 
-											| Вы 13:06 12.04.2020
-								//- .chat-message
-								//- 	+b.chat-message-file-wrapper
-								//- 		+icon("ion_document")
-								//- 		+e.caption
-								//- 			+e.name Filename.pdf
-								//- 			+e.size 12 mb 
-								//- 	.chat-message-description
-								//- 		| Вячеслав, 13:06 12.04.2020
-								//- +b.chat-message--right
-								//- 	+b.chat-message-file-wrapper
-								//- 		+icon("ion_document")
-								//- 		+e.caption
-								//- 			+e.name Filename.pdf
-								//- 			+e.size 12 mb
-								//- 	.chat-message-description.chat-message-description--sentTo
-								//- 		| Вы 13:06 12.04.2020
-							.d-none
-								// блок если не вошел
-								.mt-auto.px-1-5.py-1
-									| Для отправки сообщений
-									a(href='/login?_target_path=/live') Войдите
-									|  или
-									a(href='/registration') Зарегистрируйтесь
-									| .
-							form.public-chat-form
-								//- button.public-chat-form-btn(type='submit')
-								//- 	+icon("ion_attach-outline")
-								input.public-chat-form-input(type='text', placeholder='Написать сообщение')
-								//- button.public-chat-form-btn(type='submit')
-								//- 	+icon("uil_smile")
-								button.public-chat-form-btn(type='submit')
-									+icon("feather_send")
 
+
+
+
+
+
+mixin reg()
+	+form-wrap
+		.row 
+			.col-lg-auto.order-lg-last
+				+b.LABEL.photo-block
+					input(type="file")
+					+e.title  Выберите фото вашего профиля
+					+e.foot Изображение JPG или PNG не&nbsp;более 2&nbsp;mb
+			.col
+				+e.inner-reg
+					.row 
+						.col-xl-4.col-sm-6 
+							+input("",'text','Имя')(value='Юрий')
+						.col-xl-4.col-sm-6 
+							+input("",'text','Отчество')
+						.col-xl-4.col-sm-6 
+							+input("",'text','Фамилия')
+						.col-xl-4.col-sm-6 
+							+input("",'email','E-mail')
+						.col-xl-4.col-sm-6 
+							+input("",'tel','Телефон')
+						.col-xl-4.col-sm-6 
+							+input("",'select','Выберите регион')
+						.col-12
+							.h5.fw-400.mb-3 Тип участия:
+							.row
+								.col-auto.mb-4
+										+in-c('radio','Дилер')(data-tab-radio="block-base",checked)
+								.col-auto.mb-4
+									+in-c('radio','Экспонент')(data-tab-radio="block-exponent")
+								.col-auto.mb-4
+									+in-c('radio','Партнер')(data-tab-radio="block-base")
+								.col-auto.mb-4
+									+in-c('radio','Производитель')(data-tab-radio="block-base")
+								.col-auto.mb-4
+									+in-c('radio','СМИ')(data-tab-radio="block-base")
+								.col-auto.mb-4
+									+in-c('radio','Другое')(data-tab-radio="block-base")
+						.col-xl-4.col-sm-6
+							.tab-radio-content#block-base 
+								+input("",'text','Компания')
+									span.smallest название компании без ООО и “”
+							.tab-radio-content#block-exponent
+								+input("",'select','Компания')
+						.col-xl-4.col-sm-6 
+							+input("",'text','Должность') 
+						.col-12
+						.col-xl-4.col-sm-6 
+							+input("",'password','Пароль')
+						.col-xl-4.col-sm-6 
+							+input("",'password','Повторите пароль')
+						.col-12 
+						.col-xl-4.col-sm-6.mb-3
+							button.btn.btn-md.btn-primary.w-100 Зарегистрироваться
+						.col-xl-4.col-sm-6.pt-2 
+							.smallest Отправляя форму я принимаю условия #[a(href="#"  ) Политики конфиденциальности]

@@ -744,6 +744,10 @@ padding-left: var(--inline-start);
 	border-radius: 8px;
 	padding: rem(12) rem(12);
 	margin-bottom: rem(40);
+	.icon{
+		font-size: 1rem;
+		color: #fff;
+	}
 	.row{
 		align-items: center;
 		--bs-gutter-x: #{rem(30)};
@@ -761,5 +765,19 @@ padding-left: var(--inline-start);
 	}
 	&__link{
 		@include ellips;
+	}
+}
+
+.container-fluid .container{
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.main-row__questions-col {
+	.section-title{
+		padding-bottom: 1.8rem;
+	}
+	.btn{
+		width: 270px;
 	}
 }

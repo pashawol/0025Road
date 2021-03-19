@@ -16,7 +16,7 @@ mixin mob-mnu()
 			+mnu()
 			.text-right
 	//  мобильное меню
-mixin top-nav() 
+mixin top-nav(login) 
 	// start top-nav
 	+b.top-nav.block-with-lazy 
 		.row
@@ -29,11 +29,27 @@ mixin top-nav()
 						.col.d-none.d-lg-block
 							
 								+mnu()
-						.col-auto
-							+e.btn--reg.btn-primary(href="#") Регистрация
-						.col-auto
-							+e.btn--cabinet.btn-outline-primary(href="#")
-								+icon('user')
+						if login
+							.col-auto
+								+b.login-block 
+									.row 
+										.col
+											+e.avatar(href="#")
+													img(src="img/@2x/avatar.png", alt="")
+													+e.name.d-none.d-lg-block Александр В.
+										.col-auto
+											+e.link(href="#")
+												.badge.bg-danger 25
+												+icon('chat')
+										.col-auto
+											+e.link(href="#")
+												+icon('log-out')
+						else
+							.col-auto
+								+e.btn--reg.btn-primary(href="#") Регистрация
+							.col-auto
+								+e.btn--cabinet.btn-outline-primary(href="#")
+									+icon('user')
 						.col-auto.d-lg-none
 							+b.toggle-menu-mobile--js
 								span
