@@ -1,3 +1,5 @@
+mixin partner-head()
+	+e.title.h5 Если вы&nbsp;хотите стать нашим партнером, свяжитесь с&nbsp;нами по&nbsp;почте #[a(href="mailto:asroad@asroad.org") asroad@asroad.org] или телефону&nbsp; #[a.strong.text-body(href="tel:+7(495)211-29-88") +7 (495) 211-29-88]
 mixin sPartners(data)
 	// start sPartners
 	+b.SECTION.sPartners.section.scrollable#sPartners&attributes(attributes)
@@ -11,8 +13,7 @@ mixin sPartners(data)
 								h2( ) Партнеры
 								+e.shadow Партнеры
 					.col-main.col
-						+e.title.h5 Если вы&nbsp;хотите стать нашим партнером, свяжитесь с&nbsp;нами по&nbsp;почте #[a(href="mailto:asroad@asroad.org") asroad@asroad.org] или телефону&nbsp; #[a.strong.text-body(href="tel:+7(495)211-29-88") +7 (495) 211-29-88]
-						
+						+partner-head()
 						+e.group
 							+e.group-title Генеральный партнер
 							.row
@@ -40,13 +41,12 @@ mixin sPartners10(data)
 	// start sPartners
 	+b.sPartners--page.section.scrollable#sPartners&attributes(attributes) 
 		.container-fluid 
-			+e.title.h5 Если вы&nbsp;хотите стать нашим партнером, свяжитесь с&nbsp;нами по&nbsp;почте #[a(href="mailto:asroad@asroad.org") asroad@asroad.org] или телефону&nbsp; #[a.strong.text-body(href="tel:+7(495)211-29-88") +7 (495) 211-29-88]
-			
+			+partner-head()
 			+e.group
 				+e.group-title.h4 Генеральный партнер
 				.row
-					+logoitem(1,'ООО «Газпромнефть-СМ»') 
-					+logoitem(1,'ООО «Газпромнефть-СМ»') 
+					+logoitem(1,'ООО «Газпромнефть-СМ»','col-6','modal')
+					+logoitem(1,'ООО «Газпромнефть-СМ»')
 			+e.group
 				+e.group-title.h4 Золотые партнеры
 				.row
@@ -137,14 +137,35 @@ mixin sPartners11(data)
 								
 			+pugin
 	// end sPartners
-mixin logoitem(i, a, cl="col-6")
-	+e.col.col-md-3(class= cl)
-		+e.item()
+mixin logoitem(i, a, cl="col-6", modal)
+	- let ifModal = modal ? "#modal-content" : null
+	- let ifModalClass = modal ? "link-modal" : null
+	+e.col.col-md-3(class= cl )
+		+e.item(class=ifModalClass href=ifModal)
 			+pic(`logop-${i}.png`,'',0)
 		if block
 			block
 		else
 			.smallest.text-center.pt-2 ООО «Газпромнефть-СМ»
+		if modal 
+			.d-none 
+				+b.logo-modal-content--js
+					.row 
+						+e.col.col
+							p: strong Главный отраслевой форум соберет около 1000 участников — российских автодилеров, автопроизводителей, представителей государственной власти, экспертов отрасли и СМИ.
+
+							p На площадках Конвенции запланированы более 25 мероприятий, в числе которых генеральные сессии, круглые столы и семинары Академии РОАД и партнеров Ассоциации. Важной составляющей Конвенции станет отраслевая выставка, экспоненты которой представят товары и услуги,  На площадках Конвенции запланированы более 25 мероприятий, в числе которых генеральные сессНа площадках Конвенции запланированы более 25 мероприятий, в числе которых генеральные сессии, круглые столы и семинары Академии РОАД и партнеров Ассоциации. Важной составляющей Конвенции станет отраслевая выставка, экспоненты которой представят товары и услуги, ориентированные на повышение эффективности 
+
+							p: strong Приглашаем всех участников авторитейла! 
+						+e.aside.col-md-auto
+							+e.logo.col-md-12.col-sm-6.col-12 
+								+pic(`logop-${i}.png`,'',0)
+							+e.btns.col-md-12.col-sm-6.col-12 
+								+e.btn(href="#") Официальный сайт
+								+e.btn(href="#") Стенд компании
+
+
+
 mixin logop(i, a)
 	+e.col.col-md-3.col-6 
 		+pic(`logop-${i}.png`,'',0)

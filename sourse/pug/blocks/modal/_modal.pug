@@ -24,39 +24,15 @@ mixin modal()
 	//- 			a.btn.btn-danger(href="#") Регистрация
 	// #modal-call
 	
-	+b.modal-win(id="modal-signup" class=" " style="display: none" )
-		+form-wrap
-			+e.input-wrap.form-group
-				label
-					+b.SPAN.input-title Страна
-					+e.SELECT.input.form-control
-						option Россия
-						option Казахстан
-						option Азербайджан
-			+e.input-wrap.form-group
-				label
-					+b.SPAN.input-title Дата
-					+e.SELECT.input.form-control
-						option 16 октября  
-						option 17 октября
-			+e.input-wrap.form-group
-				label
-					+b.SPAN.input-title Время
-					+e.SELECT.input.form-control
-						option 14:00
-						option 14:30
-						option 15:00
-						option 15:30
-						option 16:00
-						option 16:30
-						option 17:00
-						option 17:30
-			+e.btn(type="submit") Записаться
-
-
-	+b.modal-win(id="modal-content" class="modal-content" style="display: none" )
+ 
+	+b.modal-win--lg.--white.p-0(id="modal-content"   style="display: none" )
 		.modal-inner
+
 	+b.modal-win--lg(id="modal-reg"  style="display: none" )
 		+reg()
 
 	// end modals
+
+
+
+	

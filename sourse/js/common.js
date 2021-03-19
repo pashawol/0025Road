@@ -62,6 +62,12 @@ const JSCCommon = {
 			})
 		}
 		if (linkModal) addData();
+
+		$('[href="#modal-content"]').click(function(){
+			console.log(1);
+			$('#modal-content .modal-inner').html('');
+			$(this).parent().find('.logo-modal-content--js').clone().prependTo('#modal-content .modal-inner');
+		})	
 	},
 	// /modalCall
 	toggleMenu() {

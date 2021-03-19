@@ -5,11 +5,12 @@
 	// max-width: 485px;
 	// @extend .container;
 	max-width: 600px;
+	overflow: hidden;
 
 
 	&--lg {
 
-		max-width: 1400px;
+		max-width: 1456px;
 		background-color: var(--body-bg);
 
 		.form-wrap--border {
@@ -17,61 +18,65 @@
 			border: none;
 		}
 	}
-
+	&--white{
+		background-color: #fff;
+		color: #494949;
+	}
+	
 	border-radius: rem(5);
 	background-color: $body-bg;
-
+	
 	@include media-breakpoint-up(xl) {
 		padding: rem(30);
 	}
-
+	
 	padding: rem(20) rem(20);
-
+	
 	.modal-content {
 		// padding-right: 40px 15px;
 	}
-
+	
 	.mfp-close {
 		color: $primary;
 		font-size: 40px;
 		font-weight: 100;
 	}
-
+	
 	//modal-speaker start
 	&.modal-content {
 		overflow: hidden;
-
+		
 		@include media-breakpoint-up(md) {
 			// padding: 0;
 			padding-top: 0;
 			padding-bottom: 0;
 		}
-
+		
 		background-color: #fff;
 		max-width: 1260px;
 		color: $black;
-
+		
 		.row {
 			@include roww(40px);
 		}
-
+		
 		p {
 			line-height: calc(26/16);
 			margin-bottom: .7rem;
 		}
 	}
-
+	
 	//modal-speaker end
 }
 
 .modal-row {
-
+	
 	&__imgWrap {
 		background: #43454B;
 		overflow: hidden;
 		display: block;
 		@include block(360, 481);
-
+		
 		img {
 			width: 100%;
 			height: 100%;
@@ -79,7 +84,7 @@
 			object-fit: cover;
 			z-index: 1;
 		}
-
+		
 		&::after {
 			content: '';
 			width: rem(151);
@@ -91,18 +96,18 @@
 			background-position: center;
 		}
 	}
-
+	
 	&__title {
 		@extend .h4;
 		margin-bottom: .1rem;
 	}
-
+	
 	&__text {
 		font-size: 12px;
 		color: rgba($color: #161C28, $alpha: 0.5);
 		margin-bottom: rem(24);
 	}
-
+	
 	&__textCol {
 		@include media-breakpoint-up(md) {
 			padding-top: rem(34);
@@ -110,7 +115,7 @@
 			padding-bottom: rem(30);
 		}
 	}
-
+	
 	&__imgCol {
 		@include media-breakpoint-up(md) {
 			max-width: rem(400);
@@ -168,7 +173,7 @@ a {
 	margin-top: -5px;
 	margin-right: -5px;
 	@include mt;
-
+	
 	&:hover {
 		// background-color: #e3f3f6;
 	}
@@ -185,7 +190,7 @@ a {
 		color: $primary;
 		cursor: pointer;
 		text-decoration: underline;
-
+		
 		:hover {
 			display: none;
 		}
@@ -232,46 +237,101 @@ a {
 .modal-welocome {
 	max-width: rem(955);
 	padding: 0;
-
+	
 	&__head {
 		// padding: 0 rem(20);
 		padding-right: rem(20);
 		background-color: $dark;
 		padding-bottom: 0;
-
+		
 		@include media-breakpoint-up(sm) {
 			padding-left: 0;
 			padding-top: 0;
 		}
-
+		
 		padding-top: rem(20);
 		padding-left: rem(20);
-
+		
 		.row {
 			align-items: center;
 		}
 	}
-
+	
 	&__body {
 		padding: rem(20);
-
+		
 		color: $dark;
 	}
-
+	
 	p {
 		font-size: rem(20);
 	}
-
+	
 	.h6 {
 		line-height: 1.5;
 		max-width: rem(570);
 		font-weight: normal;
 		padding-top: 1rem;
 		padding-bottom: 1rem;
-
+		
 	}
-
+	
 	img {
 		max-width: rem(191);
+	}
+}
+
+.logo-modal-content{
+
+	p{
+		font-size: rem(20);
+	}
+	&__aside{
+		border-left: 1px solid rgba($color: #949494, $alpha: .52);
+		display: flex;
+		flex-wrap: wrap;
+			@include media-breakpoint-up(md) {
+			flex-direction: column;
+			width: rem(368);
+		}
+		> * {
+			min-height: 50%;
+			padding: rem(20);
+			@include media-breakpoint-up(md){
+					padding: rem(30);
+				}
+				@include media-breakpoint-up(md) {
+					width: 100%;
+				}
+		}
+	}
+	&__logo{
+		border-bottom: 1px solid rgba($color: #949494, $alpha: .52);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	&__btns{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	&__btn{
+		@extend .btn;
+		@extend .btn-primary;
+		width: rem(272);
+		margin-bottom: rem(20);
+	}
+	&__col{
+			@include media-breakpoint-up(md){
+				
+				padding: rem(52);
+			}
+			padding: rem(20);
+	}
+	.row{
+		// @include roww(0);
+		--bs-gutter-x: 0;
 	}
 }
