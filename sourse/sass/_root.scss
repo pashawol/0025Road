@@ -54,11 +54,7 @@
 
 
 	
-	--chat-bg: #343434;
-	--chat-messenger-bg: #fff;
-	--chat-message-text-wrapper--radius: #{rem(8)};
-	--chat-message-text-wrapper--left-bg: #{$primary};
-	--chat-message-text-wrapper--right-bg: var(--body-bg);
+
 }
 
 @include media-breakpoint-up(xl) {}

@@ -1,7 +1,7 @@
 mixin sQuestions()
 	// start sQuestions
 	+b.sQuestions&attributes(attributes)
-		.container 
+		.container-fluid 
 			+e.wrap
 				.live-track-info-questions-box.ps.ps--active-y
 					section.live-track-info-questions-item
@@ -21,6 +21,22 @@ mixin sQuestions()
 							.live-track-info-questions-item-like
 								img(src='img/live/like.svg')
 								|  2
+						
+						section.live-track-info-questions-item
+							header.live-track-info-questions-item-title
+								div.text-primary Ответ
+								.live-track-info-questions-item-date
+									| 11:46
+							.live-track-info-questions-item-text
+								div
+									p: strong Станет виртуальным событием и главным бесплатным техноло гическим мероприятием   станет виртуальным событием  станет виртуальным событием и главным бесплатным Станет виртуальным событием и главным бесплатным техноло гическим мероприятием   
+							footer.live-track-info-questions-item-footer
+								.live-track-info-questions-item-author
+									| Виктор Пайет, Москва
+								.live-track-info-questions-item-like
+									img(src='img/live/like.svg')
+									|  2
+
 					section.live-track-info-questions-item
 						header.live-track-info-questions-item-title
 							div

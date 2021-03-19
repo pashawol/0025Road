@@ -6,7 +6,7 @@ mixin sidebar()
 				+e.img-wrap
 					+pic("avatar.png",'bg',0)
 			.col-xxl-12.col
-				a.smallest.fw-500(href="#") Редактировать профиль
+				a.smallest.fw-500(href="#modal-reg").link-modal Редактировать профиль
 				+e.title Кормалина
 					br
 					| Ирина 
@@ -41,7 +41,7 @@ mixin sCabinet(data)
 						if block
 							block
 						else
-							+chat
+							+public-chat()
 				+e.col-aside.col-lg-3.order-lg-first
 					+sidebar()
 					

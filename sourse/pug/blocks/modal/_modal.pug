@@ -4,10 +4,10 @@ mixin modal()
 
 	+b.modal-win(id="modal-ask-question" class=" " style="display: none" )
 		+form-wrap
-			+e.title.form-data.h3.ttu Задать вопрос
+			+e.title.form-data.h3.ttu.mb-3 Задать вопрос
  
 			+input("Не выбрано",'select','Выберите спикера')
-			+input("Вопрос для спикера",'textarea','Вопрос для спикера')
+			+input("",'textarea','Вопрос для спикера')
 			.row
 
 				.col-sm-auto.order-sm-last.mb-2
@@ -56,5 +56,7 @@ mixin modal()
 
 	+b.modal-win(id="modal-content" class="modal-content" style="display: none" )
 		.modal-inner
+	+b.modal-win--lg(id="modal-reg"  style="display: none" )
+		+reg()
 
 	// end modals

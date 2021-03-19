@@ -81,4 +81,27 @@
 		text-transform: uppercase;
 		min-height: 2.5em;
 	}
+ 
+}
+
+.main-row {
+	.speaker-item {
+		margin-bottom: rem(30);
+		&__title {
+			@extend .h5;
+		font-weight: 500;
+		text-transform: none;
+		min-height: 1px;
+		}
+	}
+	p.strong{
+		font-weight: normal;
+		opacity: 0.5;
+	}
+	.sSpeakers{
+		.row{
+			--bs-gutter-x: #{rem(40)};
+		}
+		padding-bottom: rem(40);
+	}
 }

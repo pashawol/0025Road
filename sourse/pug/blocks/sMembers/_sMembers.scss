@@ -58,12 +58,7 @@
 		z-index: 3;
 
 	 
-		@include media-breakpoint-up(xl) {
 
-			.row {
-				@include roww(40px);
-			}
-		}
  
 			option {
 				background-color: var(--body-bg);
@@ -75,7 +70,12 @@
 	}
 	// start .sMembers
 	.sMembers {
-		
+				@include media-breakpoint-up(xl) {
+
+					.row {
+						@include roww(40px);
+					}
+				}
 	&__item{
 		margin-bottom: rem(40);
 		display: block;

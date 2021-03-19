@@ -9,6 +9,16 @@ mixin item-ivent(data)
 			+e.text-block.col
 				+e.title
 					a(href="#").text-body!= data.t
+		if data.copy
+			+b.copy-block 
+				.row 
+					.col-12
+						.smallest Ссылка на комнату в ZOOM
+						+e.link https://kia.zoom.us/j/6023033051?pwd=d1pITVNncTFuddasdasd
+					.col-auto
+						button.btn.btn-primary Копировать
+					.col-auto
+						button.btn.btn-primary Подключитьсяы
 		if block
 			block
 		else
@@ -152,6 +162,8 @@ mixin sEvents-5()
 						d:`09:30-10:30`,
 						t: `Название сессии от вендора в одну или несколько строк`, 
 						l:`Сессия`,
-						active:"active"
+						active:"active",
+						copy: true
 						}).active
+							
 	// end sEvents

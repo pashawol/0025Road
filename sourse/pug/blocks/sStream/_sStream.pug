@@ -301,20 +301,21 @@ mixin sStream()
 								button.public-chat-form-btn(type='submit')
 									+icon("feather_send")
 			 
-			.col-xl-8.g-0
+			.col-xl-12.g-0
 				+e.line.row
+					.col-sm-auto.py-1: +e.data.strong.text-primary 18.08.2020 14:30
 					.col.h3.strong.pb-1 Название Трека в одну строку
 
 					.col-sm-auto
 						+e.like-wrap.d-flex.align-items-center.small
-							.live-track-info-vote.d-flex.align-items-center.voted.text-secondary
+							.live-track-info-vote.d-flex.align-items-center.voted
 								img(src='img/live/dislike-lg.svg')
 								| 5
-							.live-track-info-vote.d-flex.align-items-center.text-secondary
+							.live-track-info-vote.d-flex.align-items-center
 								img(src='img/live/like-lg.svg')
 								| 13 
 				+e.text Станет виртуальным событием и главным бесплатным техноло гическим мероприятием   станет виртуальным событием  станет виртуальным событием и главным бесплатным Станет виртуальным событием и главным бесплатным техноло гическим мероприятием   
-				+e.data.h5.strong.text-primary 18.08.2020 14:30
+			
 
 	// end sStream
 

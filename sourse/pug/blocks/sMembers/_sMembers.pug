@@ -64,6 +64,64 @@ mixin sMembers7()
 		.container-fluid
 			+b.head-filter(  )
 				.row
+					+e.col.col-xl-6
+						+b.search-block
+							+input('Поиск по ФИО')
+							+e.btn(type="submit")
+								+icon('search')
+					//- .col-md
+					//- 	+input("Регион",'select')
+					.col-md
+						+input("Компания",'select')
+					.col-md
+						+input("Должность",'select') 
+				.text-end 
+					a.text-primary(href="#")  Сбросить фильтр
+			.row
+				mixin item(i,t)
+					.col-xl-3.col-lg-4.col-sm-6(  )
+						+e.item--hovered
+							//- +e.label Участник
+							+e.img-wrap.bg-wrap
+								+pic(`teamPers-${i}.jpg`,'bg',0)(class="picture-bg")
+								//- +e.DIV.img-inner
+								//- 	+e.DIV.btn(href="#").text-white
+								//- 		+e.DIV.icon-wrap
+								//- 			+icon("comment")
+								//- 		+e.DIV.btn-text.text-white Написать <br> сообщение 
+								//- 	+e.DIV.btn-text
+								//- 		a(href="#").text-white Открыть биографию
+							+e.caption
+								div
+									+e.DIV.title
+										a(href="#")= t
+									+e.DIV.text--md Управляющий партнер 
+									.small.mb-3 Product designer
+								+e.toggle-block
+									a.btn.btn-primary.w-100.mb-4(href="#") Написать #[span.d-none.d-md-inline сообщение]
+					// /.col-xl-3.col-lg-4.col-sm-6
+				- for (var x = 0; x < 4; x++)
+					+item('1','Виктория Моршанская')
+					+item('2','Виктор Моршанский')
+					+item('5','Виктория Моршанская')
+					+item('4','Виктор Моршанский')
+			+pugin()
+			//- 	+item('5','Виктор Моршанский')
+			//- 	+item('6','Виктор Моршанский')
+			//- 	+item('7','Виктор Моршанский')
+			//- 	+item('8','Виктор Моршанский')
+			//- 	+item('9','Виктория Моршанская')
+			//- 	+item('10','Виктория Моршанская')
+			//- 	+item('11','Виктория Моршанская')
+			//- 	+item('12','Виктория Моршанская')
+			//- +pugin()
+	// end sMembers
+mixin sMembers8()
+	// start sMembers
+	+b.sMembers&attributes(attributes)
+		.container-fluid
+			+b.head-filter(  )
+				.row
 					+e.col.col-xxl-6.col-xl-4
 						+b.search-block
 							+input('Поиск по ФИО')
@@ -75,6 +133,8 @@ mixin sMembers7()
 						+input("Компания",'select')
 					.col-md
 						+input("Должность",'select') 
+				.text-end 
+					a.text-primary(href="#")  Сбросить фильтр
 			.row
 				mixin item(i,t)
 					.col-xl-3.col-lg-4.col-sm-6(  )
@@ -98,7 +158,7 @@ mixin sMembers7()
 								+e.toggle-block
 									a.btn.btn-primary.w-100.mb-4(href="#") Написать #[span.d-none.d-md-inline сообщение]
 					// /.col-xl-3.col-lg-4.col-sm-6
-				- for (var x = 0; x < 3; x++)
+				- for (var x = 0; x < 4; x++)
 					+item('1','Виктория Моршанская')
 					+item('2','Виктор Моршанский')
 					+item('5','Виктория Моршанская')
@@ -115,7 +175,7 @@ mixin sMembers7()
 			//- +pugin()
 	// end sMembers
 
-mixin sMembers8()
+mixin sMembers9()
 	// start sMembers
 	+b.sMembers&attributes(attributes)
 		.container.container-large
@@ -155,7 +215,7 @@ mixin sMembers8()
 								+e.toggle-block
 									a.btn.btn-outline-primary.btn-block.mb-2(href="#") Написать #[span.d-none.d-md-inline сообщение]
 					// /.col-xl-3.col-lg-4.col-sm-6
-				- for (var x = 0; x < 3; x++)
+				- for (var x = 0; x < 4; x++)
 					+item('1','Виктория Моршанская')
 						+e.labels
 							+e.label(style="background: #2A2D31;") Партнер

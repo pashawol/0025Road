@@ -22,7 +22,7 @@ block title
 block pagecontent
 	.main-wrapper
 		+mob-mnu()
-		+top-nav()
+		+top-nav('asas')
 		+b.page-head.section
 
 			.section__inner.container-fluid 
@@ -34,10 +34,10 @@ block pagecontent
 			+b.main-row.row.row--lg 
 				+e.speakers-col.col-xl-6
 					.section-title
-						h2 Спикеры
+						h3.strong Спикеры
 					+sSpeakers12
 				+e.questions-col.col-xl-6
-					.section-title
+					.section-title.text-sm-end
 						a.btn.btn-primary.link-modal(href="#modal-ask-question") Задать Вопрос
 					+sQuestions
 		+footer

@@ -96,3 +96,45 @@ body:not(.main-page) .top-nav {
 }
 
 
+.login-block{
+	&__avatar{
+		display: flex;
+		align-items: center;
+	}
+	img{
+		--size: #{rem(56)};
+		flex: 0 0 auto;
+		width: var(--size);
+		height: var(--size);
+		border-radius: 50%;
+		object-fit: cover;
+		object-position: top;
+	}
+	&__name{
+		font-weight: bold;
+		margin-left: rem(20);
+		color: #fff;
+	}
+	&__link{
+		position: relative;
+		color: #fff;
+		.badge{
+			font-weight: bold;
+			font-size: rem(12);
+			position: absolute;
+			right: rem(-8);
+			top: rem(-8);
+			z-index: 2;
+			padding: 0 3px;
+			border-radius: 4px;
+		}
+		.icon{
+			font-size: rem(24);
+			&-log-out{
+				fill: transparent;
+				stroke: currentColor;
+				stroke-width: 2.4px;
+			}
+		}
+	}
+}
