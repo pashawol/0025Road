@@ -19,12 +19,17 @@
 					
 				} 
 			.section-bg{
-			position: fixed; 
-			opacity: 0;
+			@include media-breakpoint-up(xl) {
+				position: fixed;
+				opacity: 0;
+				left: var(--logo-size);
+			}
+
+			position: absolute;
 			@include mt;
 			// position: absolute;
 
-			left: var(--logo-size);
+			left: var(0);
 			@include media-breakpoint-up(lg) {
 			width: rem(270);
 			z-index: 4;

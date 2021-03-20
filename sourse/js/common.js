@@ -320,8 +320,7 @@ function eventHandler() {
 		fadingEffect: true,
 		
 		onLeave: function (origin, destination, direction) {
-			var leavingSection = origin.item;
-			console.log(leavingSection);
+			var leavingSection = origin.item; 
 			$('.section').removeClass('moveDown').removeClass('moveUp');
 			if (leavingSection) {
 

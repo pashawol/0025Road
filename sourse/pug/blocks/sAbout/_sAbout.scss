@@ -6,8 +6,12 @@
 		--sPB: 0;
 
 		.section-bg{
+			@include media-breakpoint-up(xl) {
 			position: fixed;
 			left: var(--logo-size);
+		}
+		left: 0;
+			position: absolute;
 		}
 		@include media-breakpoint-up(xxl) {
 
