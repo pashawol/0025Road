@@ -167,7 +167,7 @@
 @mixin block($w: 1, $h: 1) {
   display: block;
   position: relative;
-  --ratio: calc(#{$h}/#{$w});
+  --ratio: #{$h}/#{$w};
 
   &::before {
     content: '';
