@@ -21,6 +21,7 @@
 		}
 		&__video{
 			@include block(1184,688);
+			overflow: hidden;
 			picture{
 				&::before,
 				&::after{
