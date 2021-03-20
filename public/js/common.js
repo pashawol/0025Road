@@ -293,42 +293,37 @@ function eventHandler() {
 		// responsiveHeight: 600,
 		// responsiveHeight: 1200,
 		animateAnchor: true,
-		navigation: true,
 		navigationPosition: 'left',
 		recordHistory: false,
 		// css3: true,
+		navigation: true,
 		scrollBar: true,
-		// scrollOverflow: true,
-		// allowPageScroll: true,
-		// verticalCentered: false,
-		// fixedElements: '.top-nav',
-		// anchors: ['header', 'sBase', 'sProf', 'sCorp', 'sWhy', 'sStart', 'sTeam', "sDemo", 'sRew', 'sGift', 'sLogo', 'sGift2', 'sFaq', 'sApplication'],
-		// menu: '.menu',
-		// scrollBar: true,
-		parallaxOptions: {
-			type: 'reveal',
-			percentage: 62,
-			property: 'translate'
-		},
-		afterLoad: function afterLoad(origin, destination, direction) {
-			var loadedSection = destination.item; // console.log(this);
+		fadingEffect: true,
+		onLeave: function onLeave(origin, destination, direction) {
+			var leavingSection = origin.item;
+			console.log(leavingSection);
+			$('.section').removeClass('moveDown').removeClass('moveUp');
 
-			if (loadedSection.classList.contains('section--dark')) {
-				document.querySelector('body').classList.add('body-dark');
-			} else {
-				document.querySelector('body').classList.remove('body-dark');
+			if (leavingSection) {
+				if (direction == 'down') {
+					leavingSection.classList.remove('moveDown');
+					leavingSection.classList.add('moveUp');
+				} else if (direction == 'up') {
+					leavingSection.classList.remove('moveUp');
+					leavingSection.classList.add('moveDown');
+				}
 			}
 		},
-		// continuousVertical: true,
-		// autoScrolling: true,
-		// scrollOverflow: true,
-		// scrollOverflowReset: true,
-		// scrollOverflowReset: true,
+		// afterLoad: function (anchorLink, index) {
+		// },
 		afterRender: function afterRender() {
-			// wow.init();
-			// var rellax = new Rellax('.rellax', {});
 			wow.init();
-		}
+			$('.section.active').removeClass('moveDown').removeClass('moveUp');
+		} // onLeave: function (origin, destination, direction) {
+		// 	let active = $('.fp-section.active')
+		// 	active.removeClass("prev-section").removeClass("next-section");
+		// }
+
 	}); // табы на радиокнопках
 
 	$('[data-tab-radio]').change(function () {
@@ -356,12 +351,7 @@ function eventHandler() {
 }
 
 ;
-
-if (document.readyState !== 'loading') {
-	eventHandler();
-} else {
-	document.addEventListener('DOMContentLoaded', eventHandler);
-} // window.onload = function () {
+document.addEventListener('DOMContentLoaded', eventHandler); // window.onload = function () {
 // 	document.body.classList.add('loaded_hiding');
 // 	window.setTimeout(function () {
 // 		document.body.classList.add('loaded');

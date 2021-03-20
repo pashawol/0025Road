@@ -34,11 +34,11 @@ html(lang="ru")
 	//- 	.loaded_hiding {  opacity: 0; pointer-events: none;  } .loaded_hiding::before { display: none; }
 	//- body.loaded_hiding(class= mainPage) 
 	body(class= mainPage data-bg= bg)
-		
-		block pagecontent
-			h3 content
-		+b.btn-top--js 
-			img(src="img/svg/mouse.svg" loading="lazy", alt="")
+		.body-inner
+			block pagecontent
+				h3 content
+			+b.btn-top--js 
+				img(src="img/svg/mouse.svg" loading="lazy", alt="")
 		+modal()
 		+allcjs()
 		

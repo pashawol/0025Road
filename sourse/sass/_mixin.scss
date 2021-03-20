@@ -140,8 +140,10 @@
   background-image: url($img);
 }
 
-@mixin mt($s: .36) {
-  transition: all #{$s}s ease-in-out;
+
+@mixin mt($s: .36s) {
+  --s: #{$s};
+  transition: all var(--s) ease-in-out;
 }
 
 // михин многоточия

@@ -1,5 +1,7 @@
 #fullpage .sPartners {
 		--body-color: var(--body-bg);
+		position: relative;
+		// overflow: hidden;
 }
 	// start .sPartners
 	
@@ -32,7 +34,7 @@
 
 					@include media-breakpoint-up(xl) {
 
-						overflow: hidden;
+						// overflow: hidden;
 					}
 					@include media-breakpoint-up(lg) {
 						max-height: rem(250);

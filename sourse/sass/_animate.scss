@@ -6,7 +6,7 @@
 		}
 	.car-top {
 		// &:not(.start) {
-			@include mt(2);
+			@include mt(2s);
 			&:not(.animate__animated){ 
 				transform: translate3d(calc(100% + 50vh), calc(100% + 50vh), 0);
 			}
@@ -20,12 +20,12 @@
 			}
 		} 
 		.headerBlock__center-bg{
-			@include mt(2);
+			@include mt(2s);
 			animation-fill-mode: forwards;
 			// transform-origin: 0 0;
 			transform-origin: 0 0;
 			
-			animation: origin 2s ease-in-out;
+			animation: origin 1s ease-in-out;
 			&:not(.animate__animated) { 
 			}
 		}
@@ -43,7 +43,7 @@
 			}
 		}
 		.headerBlock__data-bg{
-			@include mt(2);
+			@include mt(1s);
 			// animation-fill-mode: forwards;
 			// transform-origin: 0 0;
 			transform-origin: 0 0;
@@ -56,7 +56,7 @@
 		}
 		
 		.headerBlock__right{
-			@include mt(2);
+			@include mt(1s);
 			// animation-fill-mode: forwards;
 			// transform-origin: 0 0;
 			transform-origin: 0 100%;
@@ -75,4 +75,184 @@
 			}
 		}
 		
+		
+		// live
+		.sLive{
+			&__video{
+			 @include mt(1s); 
+			}
+			 h2, .section-title-vertical__shadow {
+				@include mt(1s); 
+				transform: translateX(0);
+			}
+			// &.section-prev &__video {
+			// 	transform: translate3d(0,-100%, 0);
+			// 	opacity: 0;
+			// }	
+			&:not(.active) {
+				h2,
+				.section-title-vertical__shadow {
+
+					transform: translateX(100vh);
+				}
+				.sLive__video {
+					transform: translate3d(100%, 0,0);
+					opacity: 0;
+				}	
+			}
+			&.moveUp {
+				h2,
+				.section-title-vertical__shadow {
+
+					transform: translateX(-100vh);
+				}
+				.sLive__video {
+					transform: translate3d(100%, 0,0);
+					opacity: 0;
+				}	
+			}
+		}
+		// /live
+		
+		#fullpage {
+			.section{
+				h2,
+				.section-title-vertical__shadow {
+
+					@include mt(1s); 
+					transform: translateX(0);
+				}
+				&:not(.active) {
+
+					h2,
+					.section-title-vertical__shadow {
+
+						transform: translateX(100vh);
+					}
+			}
+		}
+		}
+		// live
+		.sAbout{
+			.section-bg {
+			 @include mt(1s); 
+			 transform-origin: 0 0;
+			 width: 100%
+			}
+			h2, .section-title-vertical__shadow {
+				@include mt(1s); 
+				transform: translateX(0);
+			}
+			picture{
+				@include mt(1s); 
+				transform-origin: top right;
+			}
+			// &.section-prev &__video {
+			// 	transform: translate3d(0,-100%, 0);
+			// 	opacity: 0;
+			// }	
+			&:not(.active) {
+				h2,
+				.section-title-vertical__shadow {
+					
+					transform: translateX(100vh);
+				}
+				.section-bg{
+					// opacity: 0;
+					transform: translate(-100%, -100%)  ;
+					// visibility: hidden;
+					// z-index: -1;
+				}
+				picture{
+					transform: scale(0);
+				}
+			}
+			&.moveUp {
+				h2,
+				.section-title-vertical__shadow {
+
+					transform: translateX(-100vh);
+				}
+				.section-bg {
+					transform: translate(0, 0);
+					width: rem(270);
+					// opacity: 0;
+				}	
+			}
+		}
+		.sSpeakers {
+			.section-bg {
+			 @include mt(1s); 
+			 transform-origin: 0 0;
+			}
+			.sSpeakers__slider {
+				@include mt(2s); 
+				transform: translateX(0);
+			}
+			 
+			// &.section-prev &__video {
+			// 	transform: translate3d(0,-100%, 0);
+			// 	opacity: 0;
+			// }	
+			&:not(.active) {
+				h2,
+				.section-title-vertical__shadow {
+					
+					transform: translateX(100vh);
+				}
+				.sSpeakers__slider{
+					opacity: 0;
+				}
+			}
+			&.moveUp {
+				h2,
+				.section-title-vertical__shadow {
+
+					transform: translateX(-100vh);
+				}
+				.sSpeakers__slider{
+					transform: translateY(-100vh);
+				}
+			}
+		}
+
+		
+		.sPartners {
+			.section-bg{
+				// transform-origin: 100% 0;
+				@include mt(1.5s); 
+			}
+			.col-main {
+				@include mt(1.5s); 
+				transform: translateX(0);
+			}
+			 
+			// &.section-prev &__video {
+			// 	transform: translate3d(0,-100%, 0);
+			// 	opacity: 0;
+			// }	
+			&:not(.active) {
+				h2,
+				.section-title-vertical__shadow {
+					
+					transform: translateX(100vh);
+				}
+				.sSpeakers__slider{
+					opacity: 0;
+				}
+			}
+			&.moveUp {
+				.section-bg {
+	
+					transform: translate(100%, 100%) scaleX(.2) rotateY(180deg);
+				}
+				.col-main {
+					transform: translate(100%, 100%);
+				}
+			}
+		}
+
+
+		// /live
+
 	}

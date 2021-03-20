@@ -1,8 +1,14 @@
 
 	// start .sAbout
 	.sAbout {
-		z-index: 2;
+		z-index: 5;
+		position: relative;
 		--sPB: 0;
+
+		.section-bg{
+			position: fixed;
+			left: var(--logo-size);
+		}
 		@include media-breakpoint-up(xxl) {
 
 			--w1: #{rem(368)};

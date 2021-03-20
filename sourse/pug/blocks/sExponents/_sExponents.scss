@@ -4,6 +4,8 @@
 		// --sPT: ;
 		// --sPB: ;
 		// --sTPB: ;
+		position: relative;
+		z-index: 7;
 		h2{
 			color: $dark;
 		}
@@ -14,11 +16,15 @@
 
 						overflow: hidden;
 					}
+					@include media-breakpoint-up(xxl) {
+					padding-left: 10%; 
+
+				}
 				@include media-breakpoint-up(lg) {
 					max-height: rem(250);
 					max-width: 100vh;
 					// overflow: hidden;
-					padding-left: 10%; 
+					padding-left: 5%; 
 				}
 
 				h2 {

@@ -1,12 +1,18 @@
 
 	// start .sLive
 	.sLive {
+		@include media-breakpoint-up(xl) {
+
+			--sPB: 0;
+			.fp-tableCell{
+				vertical-align: top;
+			}
+		}
 		@include media-breakpoint-up(xxl) {
 
-			--sPT: calc(var(--logo-size) + 80px);
+			--sPT: calc(var(--logo-size) + 10px);
 		}
 		// --sPB: ;
-		// --sTPB: ;
 		h2{
 			@include media-breakpoint-up(xxl) {
 				@include rfs(130px);
