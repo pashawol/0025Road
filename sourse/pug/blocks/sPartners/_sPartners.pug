@@ -137,7 +137,7 @@ mixin sPartners11(data)
 								
 			+pugin
 	// end sPartners
-mixin logoitem(i, a, cl="col-6", modal)
+mixin logoitem(i, a, cl="col-sm-6", modal)
 	- let ifModal = modal ? "#modal-content" : null
 	- let ifModalClass = modal ? "link-modal" : null
 	+e.col.col-md-3(class= cl )
@@ -167,8 +167,9 @@ mixin logoitem(i, a, cl="col-6", modal)
 
 
 mixin logop(i, a)
-	+e.col.col-md-3.col-6 
-		+pic(`logop-${i}.png`,'',0)
+	+e.col.col-md-3.col-sm-6 
+		+e.item
+			+pic(`logop-${i}.png`,'',0)
 		//- if a
 		//- 	a(href="#")= a 
 //- 	+e.slide.swiper-slide 
