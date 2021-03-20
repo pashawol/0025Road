@@ -1,3 +1,5 @@
+const { reload } = require("browser-sync");
+
 module.exports = function (){
 
   $.gulp.task('serv', function() {
@@ -5,10 +7,10 @@ module.exports = function (){
         server: {
             baseDir: './' + $.public
       },
-      notify: false,
-      // online: false
+      // notify: false,
+      online: true,
 		// online: false, // Work offline without internet connection
-		// tunnel: true, tunnel: 'projectname', // Demonstration page: http://projectname.localtunnel.me
+		tunnel: 'reload',   // Demonstration page: http://projectname.localtunnel.me
     });
 
 });

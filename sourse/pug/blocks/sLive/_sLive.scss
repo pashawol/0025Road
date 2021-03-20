@@ -26,7 +26,7 @@
 				&::before,
 				&::after{
 					content: '';
-					@include a-cent1;
+					@include a-cent1;z-index: 2;
 				}
 				&::before{ 
 					width: rem(96);
@@ -34,11 +34,13 @@
 					border-radius: 50%;
 					@extend .btn;
 					@extend .btn-primary;
+				
 				}
 				&::after{
 				content: url(../img/svg/play.svg);
 				margin-top: rem(4);
 				margin-left: rem(2);
+			
 				}	
 			}
 		}
