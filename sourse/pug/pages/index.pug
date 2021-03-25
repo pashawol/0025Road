@@ -11,7 +11,7 @@ include ../blocks/sPartners/_sPartners.pug
 
 block variables
 	- let  mainPage= 'main-page'
-	- let  bg= null
+	- const bg= null;
 
 block title
 	- let  title= 'title'
@@ -28,7 +28,9 @@ block pagecontent
 		+sExponents
 		+sPartners
 		//- +sForm()
+
 		+sContact()
+
 
 
 		

@@ -17,29 +17,24 @@ const fileSources = {
 	pug: `mixin {blockName}(data)
 	// start {blockName}
 	+b.SECTION.{blockName}.section#{blockName}&attributes(attributes)
-		.section__inner
-			.container
-				+b.section-title.text-center
-					h2 {blockName}
-					
-				.row
+		.container
+			+b.section-title.text-center
+				h2 {blockName}
+				
+			.row
 	// end {blockName}`,
-	scss: `
-	// start .{blockName}
-	.{blockName} \{
+	scss: `// start .{blockName}
+.{blockName} \{
 		// --sPT: ;
 		// --sPB: ;
 		// --sTPB: ;
-		 
+
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
 	@include media-breakpoint-up(sm) {}
-	//
-	@include media-breakpoint-between(md, xl) { }
-	//
+	@include media-breakpoint-between(md, xl) {}
 	@include media-breakpoint-only(xl) {}
-	//
 	@include media-breakpoint-down(xl) {}
 } // end.{blockName}`
 	,

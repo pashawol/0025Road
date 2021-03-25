@@ -66,13 +66,14 @@
 			// 	}
 			// }
 			.col-main{
+				@extend .custom-scroll;
 					@include media-breakpoint-up(xl) {
 
 						height: auto;
 						max-height: calc(var(--vh, 1vh) * 100 - var(--sPT));
 						overflow-y: auto;
 						// @extend .custom-scroll;
-						// --scroll-size: 10px;
+						--scroll-size: 10px;
 						padding-top: rem(80);
 						padding-bottom: var(--sTPB);
 					}
