@@ -273,6 +273,7 @@ function eventHandler() {
 		freeMode: true,
 		loopFillGroupWithBlank: true,
 		// touchRatio: 0.2,
+		loop: false,
 		slideToClickedSlide: true,
 		freeModeMomentum: true,
 

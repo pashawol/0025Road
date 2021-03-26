@@ -140,7 +140,7 @@
 			 width: 100%
 			}
 			h2, .section-title-vertical__shadow {
-				@include mt(1s); 
+				// @include mt(1s); 
 				transform: translateX(0);
 			}
 			picture{
@@ -247,7 +247,7 @@
 					transform: translate(100%, 100%) scaleX(.2) rotateY(180deg);
 				}
 				.col-main {
-					transform: translate(100%, 100%);
+					transform: translateX(100%, 100%);
 				}
 			}
 		}

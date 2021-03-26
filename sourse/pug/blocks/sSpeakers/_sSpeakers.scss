@@ -2,6 +2,7 @@
 	// start .sSpeakers
 	.sSpeakers {
 		position: relative;
+		z-index: 20;
 		@include media-breakpoint-up(xxl) {
 		--title-w: calc(#{rem(240)} + var(--inline-start));
 		}
@@ -19,6 +20,7 @@
 					
 				} 
 			.section-bg{
+			// z-index: 4;
 			@include media-breakpoint-up(xl) {
 				position: fixed;
 				opacity: 0;
