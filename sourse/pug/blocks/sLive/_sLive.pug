@@ -10,6 +10,8 @@ mixin sLive(data)
 								h2( ) LIVE
 								+e.shadow LIVE
 					.col-main.col-lg.col-12
-						+e.video(href="https://www.youtube.com/watch?v=7wjG4eQnuYk" data-fancybox="video").bg-wrap
-							+pic("video.jpg",'bg').picture-bg
+						//- +e.video(href="https://www.youtube.com/watch?v=7wjG4eQnuYk" data-fancybox="video").bg-wrap
+						//- 	+pic("video.jpg",'bg').picture-bg
+						+e.video 
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/KLYkx5MWHFs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" loading="lazy" allowfullscreen></iframe>
 	// end sLive
