@@ -12,6 +12,12 @@ mixin sContact()
 					+e.body
 						.h3.strong.mb-3 Ассоциация РОАД
 						+e.item 
+							+e.item-title Телефон:
+							+e.item-text: a.text-body(href="tel:+7(495)211-29-88") +7 (495) 211-29-88
+						+e.item 
+							+e.item-title E-mail:
+							+e.item-text: a.text-body(href="mailto:asroad@asroad.org") asroad@asroad.org
+						+e.item 
 							+e.item-title Адрес: 
 							+e.item-text 107031, Россия, г. Москва, ул.Кузнецкий мост, д. 21/5, ГСП-6
 
@@ -19,12 +25,6 @@ mixin sContact()
 						//- +e.item 
 						//- 	+e.item-title Метро:
 						//- 	+e.item-text «Выставочная», «Деловой центр»
-						+e.item 
-							+e.item-title Телефон:
-							+e.item-text: a.text-body(href="tel:+7(495)211-29-88") +7 (495) 211-29-88
-						+e.item 
-							+e.item-title E-mail:
-							+e.item-text: a.text-body(href="mailto:asroad@asroad.org") asroad@asroad.org
 					+e.footer
 						+soc
 						+e.copy © Все права защищены, Ассоциация РОАД
