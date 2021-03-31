@@ -3,7 +3,8 @@ mixin item-ivent(data)
 		+e.star(class= data.active)
 			+icon('star-active')
 		.row
-			+e.time.strong.col-auto!= data.d
+			if data.d
+				+e.time.strong.col-auto!= data.d
 			if data.l
 				+e.col-label.col-md!= data.l
 			+e.text-block.col
@@ -98,11 +99,19 @@ mixin sEvents-12()
 										+e.time-item: +e.time-item-inner 12:00
 								.col.pt-4 
 									+e.row.row
-										+e.col.col-12(style="--size: 100%")
+										+e.col.col-12
 											+item-ivent({
-												d:`12:30`, 
-												t:`Начало работы зоны EXPO`
-												})(class="disabled") 
+												t: `Лидерство/ HR`,
+												}).active.program-item--head 
+										+e.col.col-12
+											+item-ivent({
+												t: `Маркетинг`,
+												}).active.program-item--head 
+										+e.col.col-12
+											+item-ivent({
+												t: `Проблематика отрасли`,
+												}).active.program-item--head 
+
 										- for (var x = 0; x < 2; x++)
 											+e.col.col-12
 												+item-ivent({

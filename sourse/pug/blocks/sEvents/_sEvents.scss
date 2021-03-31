@@ -409,4 +409,10 @@
 					}
 				}
 			}
+			&--head{
+				font-size: 1.25rem;
+				.program-item__star{
+					display: none;
+				}
+			}
 }

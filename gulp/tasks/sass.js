@@ -6,7 +6,7 @@ module.exports = () => {
 			$.autoprefixer(),
 			$.nested(),
 			$.cssnano(),
-			$.postcssMerge(),
+			// $.postcssMerge(),
 			// $.cmq(),
 			// $.flexGapPolyfill(),
 			// $.postcssPresetEnv(),
