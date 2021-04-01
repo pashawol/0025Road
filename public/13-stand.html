@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>Программа</title>
+		<title>KIA motors</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -67,12 +67,24 @@
 											</li>
 										</ul>
 									</div>
-									<div class="col-auto"><a class="top-nav__btn top-nav__btn--reg btn-primary" href="#">Регистрация</a>
-									</div>
-									<div class="col-auto"><a class="top-nav__btn top-nav__btn--cabinet btn-outline-primary" href="#">
-										<svg class="icon icon-user ">
-											<use xlink:href="img/svg/sprite.svg#user"></use>
-										</svg></a>
+									<div class="col-auto">
+										<div class="login-block"> 
+											<div class="row"> 
+												<div class="col"><a class="login-block__avatar" href="#"><img src="img/@2x/avatar.png" alt=""/><span class="login-block__name d-none d-lg-block">Александр В.</span></a>
+												</div>
+												<div class="col-auto"><a class="login-block__link" href="#">
+													<div class="badge bg-danger">25</div>
+													<svg class="icon icon-chat ">
+														<use xlink:href="img/svg/sprite.svg#chat"></use>
+													</svg></a>
+												</div>
+												<div class="col-auto"><a class="login-block__link" href="#">
+													<svg class="icon icon-log-out ">
+														<use xlink:href="img/svg/sprite.svg#log-out"></use>
+													</svg></a>
+												</div>
+											</div>
+										</div>
 									</div>
 									<div class="col-auto d-lg-none">
 										<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
@@ -84,419 +96,138 @@
 					</div>
 				</div>
 				<!-- end top-nav-->
-				<div class="page-head section">
-					<div class="section__inner container-fluid"> <a class="link-back" href="#">
+				<div class="page-head page-head--presentation section">
+					<div class="section__inner container-fluid"><a class="link-back" href="#">
 						<svg class="icon icon-arrow-back ">
 							<use xlink:href="img/svg/sprite.svg#arrow-back"></use>
 						</svg></a>
-						<h1>Программа</h1>
+						<h1>KIA motors</h1>
 					</div>
 				</div>
-				<!-- start sEvents-->
-				<div class="sEvents sEvents--page section" id="sEvents">
-					<div class="tabs tabs--js">
-						<div class="sEvents__head">
-							<div class="container-fluid">
-								<div class="tabs__caption">
-									<div class="tabs__btn active">14 апреля</div>
-									<div class="tabs__btn">15 апреля</div>
+				<!-- start sPresentationHead-->
+				<div class="sPresentationHead" id="sPresentationHead">
+					<div class="sPresentationHead__inner bg-wrap">
+						<picture class="picture-bg">
+							<source srcset="img/@2x/webp/presentation-bg.webp" type="image/webp"/><img src="img/@2x/presentation-bg.png" alt=""/>
+						</picture>
+						<div class="canvas-block">
+							<div class="canvas-block__number">150 
+							</div>
+							<div class="canvas-block__block canvas-block__block--video-banner">
+								<script src="https://broadcast.comdi.com/player/js/embed.min.js" data-comdi-event="r5ftb9xd" data-login="anonymous" data-registration="{&quot;email&quot;:&quot;anonymous@startupvillage.ru&quot;}" lang="ru" async=""></script>
+							</div>
+							<div class="row">
+								<div class="col-auto"> 
+									<div class="canvas-block__block canvas-block__block--aside canvas-block__block--left">
+										<!-- picture-->
+										<picture> 
+											<source type="image/webp" srcset="img/@2x/webp/page-left-img.webp"/><img src="img/@2x/page-left-img.png" alt="" loading="lazy"/>
+										</picture>
+										<!-- /picture-->
+									</div>
+								</div>
+								<div class="col">
+									<div class="canvas-block__block canvas-block__block--logo">
+										<!-- picture-->
+										<picture> 
+											<source type="image/webp" srcset="img/@2x/webp/logo-2.webp"/><img src="img/@2x/logo-2.png" alt="" loading="lazy"/>
+										</picture>
+										<!-- /picture-->
+									</div>
+								</div>
+								<div class="col-auto">
+									<div class="canvas-block__block canvas-block__block--manager">
+										<div class="canvas-block__slide">
+											<div class="canvas-block__slide-img-wrap"><img loading="lazy" src="img/@2x/avatar-4.png" alt=""/>
+											</div>
+											<div class="canvas-block__caption">
+												<div class="canvas-block__name">Виктор <br> Барышников
+												</div>
+												<div class="canvas-block__prof">Менеджер
+												</div><a class="canvas-block__btn-manager" href="#">Начать   чат</a>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
+							<div class="canvas-block__block canvas-block__block--btn"><a class="canvas-block__btn" href="#"><span class="canvas-block__icon-wrap">
+								<svg class="icon icon-btn-1 ">
+									<use xlink:href="img/svg/sprite.svg#btn-1"></use>
+								</svg></span><span class="canvas-block__btn-title">Пройти <br> опрос</span></a><a class="canvas-block__btn" href="#"><span class="canvas-block__icon-wrap">
+								<svg class="icon icon-btn-2 ">
+									<use xlink:href="img/svg/sprite.svg#btn-2"></use>
+								</svg></span><span class="canvas-block__btn-title">Скачать <br> материалы</span> </a><a class="canvas-block__btn disabled" href="#"><span class="canvas-block__icon-wrap">
+								<svg class="icon icon-btn-4 ">
+									<use xlink:href="img/svg/sprite.svg#btn-4"></use>
+								</svg></span><span class="canvas-block__btn-title">Войти <br> в демо-зону</span> <span class="canvas-block__caption"><span class="canvas-block__title">Я&nbsp;пока занят, напишите пожалйста в&nbsp;чат</span></span></a>
+							</div>
+							<div class="canvas-block__btn-bottom"><svg width="360" height="195" viewBox="0 0 360 195" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M62.9141 74L179 99.9752L299 74" stroke="#2988e1"/>
+<path d="M62.9141 84.0144L179 109.99L299 84.0144" stroke="#2988e1"/>
+<path d="M62.9141 94.7803L179 120.755L299 94.7803" stroke="#2988e1"/>
+</svg>
+							</div>
 						</div>
-						<div class="sEvents__body">
-							<div class="container-fluid">
-								<div class="tabs__wrap">
-										<div class="tabs__content active">
-											<div class="sEvents__main-row row"> 
-												<div class="col-auto"> 
-													<div class="sEvents__time-line">
-														<div class="sEvents__time-item">
-															<div class="sEvents__time-item-inner">09:00
-															</div>
-														</div>
-														<div class="sEvents__time-item">
-															<div class="sEvents__time-item-inner">10:00
-															</div>
-														</div>
-														<div class="sEvents__time-item">
-															<div class="sEvents__time-item-inner">11:00
-															</div>
-														</div>
-														<div class="sEvents__time-item">
-															<div class="sEvents__time-item-inner">12:00
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="col pt-4"> 
-													<div class="sEvents__scroll"> 
-														<div class="sEvents__wrapper">
-															<div class="sEvents__row row">
-																<div class="sEvents__col col-12">
-																	<div class="program-item active program-item program-item--head">
-																		<div class="program-item__star">
-																			<svg class="icon icon-star-active ">
-																				<use xlink:href="img/svg/sprite.svg#star-active"></use>
-																			</svg>
-																		</div>
-																		<div class="row">
-																			<div class="program-item__text-block col">
-																				<div class="program-item__title"><a class="text-body" href="#">Лидерство/ HR</a>
-																				</div>
-																			</div>
-																		</div> 
-																	</div>
-																</div>
-																<div class="sEvents__col col-12">
-																	<div class="program-item active program-item program-item--head">
-																		<div class="program-item__star">
-																			<svg class="icon icon-star-active ">
-																				<use xlink:href="img/svg/sprite.svg#star-active"></use>
-																			</svg>
-																		</div>
-																		<div class="row">
-																			<div class="program-item__text-block col">
-																				<div class="program-item__title"><a class="text-body" href="#">Маркетинг</a>
-																				</div>
-																			</div>
-																		</div> 
-																	</div>
-																</div>
-																<div class="sEvents__col col-12">
-																	<div class="program-item active program-item program-item--head">
-																		<div class="program-item__star">
-																			<svg class="icon icon-star-active ">
-																				<use xlink:href="img/svg/sprite.svg#star-active"></use>
-																			</svg>
-																		</div>
-																		<div class="row">
-																			<div class="program-item__text-block col">
-																				<div class="program-item__title"><a class="text-body" href="#">Проблематика отрасли</a>
-																				</div>
-																			</div>
-																		</div> 
-																	</div>
-																</div>
-																<div class="sEvents__col col-12">
-																	<div class="program-item">
-																		<div class="program-item__star">
-																			<svg class="icon icon-star-active ">
-																				<use xlink:href="img/svg/sprite.svg#star-active"></use>
-																			</svg>
-																		</div>
-																		<div class="row">
-																			<div class="program-item__time strong col-auto">09:30-10:30
-																			</div>
-																			<div class="program-item__col-label col-md">Сессия
-																			</div>
-																			<div class="program-item__text-block col">
-																				<div class="program-item__title"><a class="text-body" href="#">Название сессии от вендора в одну или несколько строк</a>
-																				</div>
-																			</div>
-																		</div>
-																		<div class="mb-1">Ольга Сигаль  </div>
-																		<div class="smallest pb-3">Kia</div>
-																	</div>
-																</div>
-																<div class="sEvents__col col-12">
-																	<div class="program-item">
-																		<div class="program-item__star">
-																			<svg class="icon icon-star-active ">
-																				<use xlink:href="img/svg/sprite.svg#star-active"></use>
-																			</svg>
-																		</div>
-																		<div class="row">
-																			<div class="program-item__time strong col-auto">09:30-10:30
-																			</div>
-																			<div class="program-item__col-label col-md">Сессия
-																			</div>
-																			<div class="program-item__text-block col">
-																				<div class="program-item__title"><a class="text-body" href="#">Название сессии от вендора в одну или несколько строк</a>
-																				</div>
-																			</div>
-																		</div>
-																		<div class="mb-1">Ольга Сигаль  </div>
-																		<div class="smallest pb-3">Kia</div>
-																	</div>
-																</div>
-																<div class="sEvents__col col-12">
-																	<div class="program-item active">
-																		<div class="program-item__star active">
-																			<svg class="icon icon-star-active ">
-																				<use xlink:href="img/svg/sprite.svg#star-active"></use>
-																			</svg>
-																		</div>
-																		<div class="row">
-																			<div class="program-item__time strong col-auto">09:30-10:30
-																			</div>
-																			<div class="program-item__col-label col-md">Сессия
-																			</div>
-																			<div class="program-item__text-block col">
-																				<div class="program-item__title"><a class="text-body" href="#">Название сессии от вендора в одну или несколько строк</a>
-																				</div>
-																			</div>
-																		</div>
-																		<div class="mb-1">Ольга Сигаль  </div>
-																		<div class="smallest pb-3">Kia</div>
-																	</div>
-																</div>
-																<div class="sEvents__col col-12" style="--size: 100%">
-																	<div class="program-item">
-																		<div class="program-item__star">
-																			<svg class="icon icon-star-active ">
-																				<use xlink:href="img/svg/sprite.svg#star-active"></use>
-																			</svg>
-																		</div>
-																		<div class="row">
-																			<div class="program-item__time strong col-auto">09:30-10:30
-																			</div>
-																			<div class="program-item__col-label col-md">Сессия
-																			</div>
-																			<div class="program-item__text-block col">
-																				<div class="program-item__title"><a class="text-body" href="#">Название сессии от вендора  </a>
-																				</div>
-																			</div>
-																		</div>
-																		<div class="mb-1">Ольга Сигаль  </div>
-																		<div class="smallest pb-3">Kia</div>
-																	</div>
-																</div>
-																<div class="sEvents__col col-12">
-																	<div class="program-item">
-																		<div class="program-item__star">
-																			<svg class="icon icon-star-active ">
-																				<use xlink:href="img/svg/sprite.svg#star-active"></use>
-																			</svg>
-																		</div>
-																		<div class="row">
-																			<div class="program-item__time strong col-auto">09:30-10:30
-																			</div>
-																			<div class="program-item__col-label col-md">Сессия
-																			</div>
-																			<div class="program-item__text-block col">
-																				<div class="program-item__title"><a class="text-body" href="#">Название сессии от вендора в одну или несколько строк</a>
-																				</div>
-																			</div>
-																		</div>
-																		<div class="mb-1">Ольга Сигаль  </div>
-																		<div class="smallest pb-3">Kia</div>
-																	</div>
-																</div>
-																<div class="sEvents__col col-12">
-																	<div class="program-item">
-																		<div class="program-item__star">
-																			<svg class="icon icon-star-active ">
-																				<use xlink:href="img/svg/sprite.svg#star-active"></use>
-																			</svg>
-																		</div>
-																		<div class="row">
-																			<div class="program-item__time strong col-auto">09:30-10:30
-																			</div>
-																			<div class="program-item__col-label col-md">Сессия
-																			</div>
-																			<div class="program-item__text-block col">
-																				<div class="program-item__title"><a class="text-body" href="#">Название сессии от вендора в одну или несколько строк</a>
-																				</div>
-																			</div>
-																		</div>
-																		<div class="mb-1">Ольга Сигаль  </div>
-																		<div class="smallest pb-3">Kia</div>
-																	</div>
-																</div>
-																<div class="sEvents__col col-12">
-																	<div class="program-item active">
-																		<div class="program-item__star active">
-																			<svg class="icon icon-star-active ">
-																				<use xlink:href="img/svg/sprite.svg#star-active"></use>
-																			</svg>
-																		</div>
-																		<div class="row">
-																			<div class="program-item__time strong col-auto">09:30-10:30
-																			</div>
-																			<div class="program-item__col-label col-md">Сессия
-																			</div>
-																			<div class="program-item__text-block col">
-																				<div class="program-item__title"><a class="text-body" href="#">Название сессии от вендора в одну или несколько строк</a>
-																				</div>
-																			</div>
-																		</div>
-																		<div class="mb-1">Ольга Сигаль  </div>
-																		<div class="smallest pb-3">Kia</div>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
+					</div>
+				</div>
+				<!-- end sPresentationHead-->
+				<div class="sContent sContent--presentation section"> 
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col order-first">
+								<div class="sContent__text">
+									<h4>KIA motors</h4>
+									<p>Компания KIA Motors основана в 1994 году. Став лидером в Южной Корее, марка KIA вышла на международный рынок и за несколько десятилетий завоевала репутацию динамично развивающегося бренда. В 2018 году было реализовано 227 584 экземпляров, и это далеко не предел. Модели KIA совершенствуются. Каждое новое поколение поднимает планку надежности, безопасности и комфорта на новый уровень.</p>
+									<p>Популярность KIA легко объяснима. Прекрасные эксплуатационные характеристики, оригинальный дизайн и надежность в сочетании с выгодной ценой – неоспоримое преимущество перед конкурентами. Если вы задумываетесь о приобретении нового автомобиля, то купить в Москве у официального дилера одну из моделей KIA – более чем разумное решения. Новый автомобиль 2020-2021 г. в. станет надежным помощником, доставит удовольствие от вождения, обеспечит комфортное передвижение и все это по разумной цене.</p>
+								</div>
+							</div>
+							<div class="col-xl-4 col-lg-6">
+								<h4>Афиша</h4>
+								<!-- start sEvents-->
+								<div class="sEvents sEvents--speaker">
+									<div class="program-item">
+										<div class="program-item__star">
+											<svg class="icon icon-star-active ">
+												<use xlink:href="img/svg/sprite.svg#star-active"></use>
+											</svg>
+										</div>
+										<div class="row">
+											<div class="program-item__time strong col-auto">09:30-10:30
+											</div>
+											<div class="program-item__col-label col-md">Сессия
+											</div>
+											<div class="program-item__text-block col">
+												<div class="program-item__title"><a class="text-body" href="#">Название сессии от вендора в одну или несколько строк</a>
 												</div>
 											</div>
 										</div>
-										<div class="tabs__content">
-											<div class="sEvents__main-row row"> 
-												<div class="col-auto"> 
-													<div class="sEvents__time-line">
-														<div class="sEvents__time-item">
-															<div class="sEvents__time-item-inner">09:00
-															</div>
-														</div>
-														<div class="sEvents__time-item">
-															<div class="sEvents__time-item-inner">10:00
-															</div>
-														</div>
-														<div class="sEvents__time-item">
-															<div class="sEvents__time-item-inner">11:00
-															</div>
-														</div>
-														<div class="sEvents__time-item">
-															<div class="sEvents__time-item-inner">12:00
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="col pt-4"> 
-													<div class="sEvents__scroll"> 
-														<div class="sEvents__wrapper">
-															<div class="sEvents__row row">
-																<div class="sEvents__col col-12">
-																	<div class="program-item active program-item program-item--head">
-																		<div class="program-item__star">
-																			<svg class="icon icon-star-active ">
-																				<use xlink:href="img/svg/sprite.svg#star-active"></use>
-																			</svg>
-																		</div>
-																		<div class="row">
-																			<div class="program-item__text-block col">
-																				<div class="program-item__title"><a class="text-body" href="#">Лидерство/ HR</a>
-																				</div>
-																			</div>
-																		</div> 
-																	</div>
-																</div>
-																<div class="sEvents__col col-12">
-																	<div class="program-item active program-item program-item--head">
-																		<div class="program-item__star">
-																			<svg class="icon icon-star-active ">
-																				<use xlink:href="img/svg/sprite.svg#star-active"></use>
-																			</svg>
-																		</div>
-																		<div class="row">
-																			<div class="program-item__text-block col">
-																				<div class="program-item__title"><a class="text-body" href="#">Маркетинг</a>
-																				</div>
-																			</div>
-																		</div> 
-																	</div>
-																</div>
-																<div class="sEvents__col col-12">
-																	<div class="program-item active program-item program-item--head">
-																		<div class="program-item__star">
-																			<svg class="icon icon-star-active ">
-																				<use xlink:href="img/svg/sprite.svg#star-active"></use>
-																			</svg>
-																		</div>
-																		<div class="row">
-																			<div class="program-item__text-block col">
-																				<div class="program-item__title"><a class="text-body" href="#">Проблематика отрасли</a>
-																				</div>
-																			</div>
-																		</div> 
-																	</div>
-																</div>
-																<div class="sEvents__col col-12">
-																	<div class="program-item">
-																		<div class="program-item__star">
-																			<svg class="icon icon-star-active ">
-																				<use xlink:href="img/svg/sprite.svg#star-active"></use>
-																			</svg>
-																		</div>
-																		<div class="row">
-																			<div class="program-item__time strong col-auto">09:30-10:30
-																			</div>
-																			<div class="program-item__col-label col-md">Сессия
-																			</div>
-																			<div class="program-item__text-block col">
-																				<div class="program-item__title"><a class="text-body" href="#">Название сессии от вендора в одну или несколько строк</a>
-																				</div>
-																			</div>
-																		</div>
-																		<div class="mb-1">Ольга Сигаль  </div>
-																		<div class="smallest pb-3">Kia</div>
-																	</div>
-																</div>
-																<div class="sEvents__col col-12">
-																	<div class="program-item">
-																		<div class="program-item__star">
-																			<svg class="icon icon-star-active ">
-																				<use xlink:href="img/svg/sprite.svg#star-active"></use>
-																			</svg>
-																		</div>
-																		<div class="row">
-																			<div class="program-item__time strong col-auto">09:30-10:30
-																			</div>
-																			<div class="program-item__col-label col-md">Сессия
-																			</div>
-																			<div class="program-item__text-block col">
-																				<div class="program-item__title"><a class="text-body" href="#">Название сессии от вендора в одну или несколько строк</a>
-																				</div>
-																			</div>
-																		</div>
-																		<div class="mb-1">Ольга Сигаль  </div>
-																		<div class="smallest pb-3">Kia</div>
-																	</div>
-																</div>
-																<div class="sEvents__col col-12">
-																	<div class="program-item active">
-																		<div class="program-item__star active">
-																			<svg class="icon icon-star-active ">
-																				<use xlink:href="img/svg/sprite.svg#star-active"></use>
-																			</svg>
-																		</div>
-																		<div class="row">
-																			<div class="program-item__time strong col-auto">09:30-10:30
-																			</div>
-																			<div class="program-item__col-label col-md">Сессия
-																			</div>
-																			<div class="program-item__text-block col">
-																				<div class="program-item__title"><a class="text-body" href="#">Название сессии от вендора в одну или несколько строк</a>
-																				</div>
-																			</div>
-																		</div>
-																		<div class="mb-1">Ольга Сигаль  </div>
-																		<div class="smallest pb-3">Kia</div>
-																	</div>
-																</div>
-																<div class="sEvents__col col-12" style="--size: 100%">
-																	<div class="program-item">
-																		<div class="program-item__star">
-																			<svg class="icon icon-star-active ">
-																				<use xlink:href="img/svg/sprite.svg#star-active"></use>
-																			</svg>
-																		</div>
-																		<div class="row">
-																			<div class="program-item__time strong col-auto">09:30-10:30
-																			</div>
-																			<div class="program-item__col-label col-md">Сессия
-																			</div>
-																			<div class="program-item__text-block col">
-																				<div class="program-item__title"><a class="text-body" href="#">Название сессии от вендора  </a>
-																				</div>
-																			</div>
-																		</div>
-																		<div class="mb-1">Ольга Сигаль  </div>
-																		<div class="smallest pb-3">Kia</div>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
+										<div class="mb-1">Ольга Сигаль  </div>
+										<div class="smallest pb-3">Kia</div>
+									</div>
+									<div class="program-item">
+										<div class="program-item__star">
+											<svg class="icon icon-star-active ">
+												<use xlink:href="img/svg/sprite.svg#star-active"></use>
+											</svg>
+										</div>
+										<div class="row">
+											<div class="program-item__time strong col-auto">09:30-10:30
+											</div>
+											<div class="program-item__col-label col-md">Сессия
+											</div>
+											<div class="program-item__text-block col">
+												<div class="program-item__title"><a class="text-body" href="#">Название сессии от вендора в одну или несколько строк</a>
 												</div>
 											</div>
 										</div>
+										<div class="mb-1">Ольга Сигаль  </div>
+										<div class="smallest pb-3">Kia</div>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<!-- end sEvents-->
 				<footer class="footer">
 					<div class="container-fluid">
 						<div class="row"> 

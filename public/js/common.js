@@ -149,7 +149,7 @@ var JSCCommon = {
 					element.dataset.tabBtn == data ? element.classList.add('active') : element.classList.remove('active');
 				});
 				content.forEach(function (element) {
-					element.dataset.tabContent == data ? (element.classList.add('active'), element.previousSibling.classList.add('active')) : element.classList.remove('active');
+					element.dataset.tabContent == data ? element.classList.add('active') : element.classList.remove('active');
 				});
 			}, {
 				passive: true

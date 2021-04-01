@@ -140,7 +140,7 @@ const JSCCommon = {
 				});
 				content.forEach(element => {
 					element.dataset.tabContent == data
-						? (element.classList.add('active'), element.previousSibling.classList.add('active'))
+						? (element.classList.add('active') )
 						: element.classList.remove('active')
 				});
 			}, { passive: true })

@@ -90,7 +90,7 @@ mixin sEvents-12()
 				.container-fluid
 					mixin cont()
 						.tabs__content&attributes(attributes)
-							.row 
+							+e.main-row.row 
 								.col-auto 
 									+e.time-line
 										+e.time-item: +e.time-item-inner 09:00
@@ -98,41 +98,43 @@ mixin sEvents-12()
 										+e.time-item: +e.time-item-inner 11:00
 										+e.time-item: +e.time-item-inner 12:00
 								.col.pt-4 
-									+e.row.row
-										+e.col.col-12
-											+item-ivent({
-												t: `Лидерство/ HR`,
-												}).active.program-item--head 
-										+e.col.col-12
-											+item-ivent({
-												t: `Маркетинг`,
-												}).active.program-item--head 
-										+e.col.col-12
-											+item-ivent({
-												t: `Проблематика отрасли`,
-												}).active.program-item--head 
+									+e.scroll 
+										+e.wrapper
+											+e.row.row
+												+e.col.col-12
+													+item-ivent({
+														t: `Лидерство/ HR`,
+														}).active.program-item--head 
+												+e.col.col-12
+													+item-ivent({
+														t: `Маркетинг`,
+														}).active.program-item--head 
+												+e.col.col-12
+													+item-ivent({
+														t: `Проблематика отрасли`,
+														}).active.program-item--head 
 
-										- for (var x = 0; x < 2; x++)
-											+e.col.col-12
-												+item-ivent({
-													d:`09:30-10:30`,
-													t: `Название сессии от вендора в одну или несколько строк`, 
-													l:`Сессия`
-													})
-										+e.col.col-12
-											+item-ivent({
-												d:`09:30-10:30`,
-												t: `Название сессии от вендора в одну или несколько строк`, 
-												l:`Сессия`,
-												active:"active"
-												}).active
-										+e.col.col-12(style="--size: 100%")
-											+item-ivent({
-												d:`09:30-10:30`,
-												t: `Название сессии от вендора  `, 
-												l:`Сессия`
-												})
-										block
+												- for (var x = 0; x < 2; x++)
+													+e.col.col-12
+														+item-ivent({
+															d:`09:30-10:30`,
+															t: `Название сессии от вендора в одну или несколько строк`, 
+															l:`Сессия`
+															})
+												+e.col.col-12
+													+item-ivent({
+														d:`09:30-10:30`,
+														t: `Название сессии от вендора в одну или несколько строк`, 
+														l:`Сессия`,
+														active:"active"
+														}).active
+												+e.col.col-12(style="--size: 100%")
+													+item-ivent({
+														d:`09:30-10:30`,
+														t: `Название сессии от вендора  `, 
+														l:`Сессия`
+														})
+												block
 					.tabs__wrap
 						+cont().active
 							- for (var x = 0; x < 2; x++)
@@ -176,3 +178,18 @@ mixin sEvents-5()
 						}).active
 							
 	// end sEvents
+
+
+mixin sEvents7()
+	// start sEvents
+	+b.sEvents&attributes(attributes)
+		+item-ivent({
+						d:`09:30-10:30`,
+						t: `Название сессии от вендора в одну или несколько строк`, 
+						l:`Сессия`,
+						})
+		+item-ivent({
+						d:`09:30-10:30`,
+						t: `Название сессии от вендора в одну или несколько строк`, 
+						l:`Сессия`,
+						})

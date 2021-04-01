@@ -1,0 +1,52 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sLive/_sLive.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sSpeakers/_sSpeakers.pug
+include ../blocks/sExponents/_sExponents.pug
+include ../blocks/sPartners/_sPartners.pug
+include ../blocks/sMembers/_sMembers.pug
+include ../blocks/sStream/_sStream.pug
+include ../blocks/sQuestions/_sQuestions.pug
+include ../blocks/sPresentationHead/_sPresentationHead.pug
+include ../blocks/sEvents/_sEvents.pug
+include ../blocks/sShow/_sShow.pug
+
+block variables
+	- let  mainPage= null 
+	- let  bg= null
+
+block title
+	- let  title= 'KIA motors'
+	title= title
+block pagecontent
+	.main-wrapper
+		+mob-mnu()
+		+top-nav('asas')
+		+b.page-head--presentation.section
+
+			.section__inner.container-fluid
+
+				+b.link-back(href="#")
+					+icon("arrow-back")
+				h1= title
+		+sPresentationHead({img: 'presentation-bg'})
+		+b.sContent--presentation.section 
+			.container-fluid
+				.row
+					.col.order-first
+						+e.text
+							h4 KIA motors
+							p Компания KIA Motors основана в 1994 году. Став лидером в Южной Корее, марка KIA вышла на международный рынок и за несколько десятилетий завоевала репутацию динамично развивающегося бренда. В 2018 году было реализовано 227 584 экземпляров, и это далеко не предел. Модели KIA совершенствуются. Каждое новое поколение поднимает планку надежности, безопасности и комфорта на новый уровень.
+
+							p Популярность KIA легко объяснима. Прекрасные эксплуатационные характеристики, оригинальный дизайн и надежность в сочетании с выгодной ценой – неоспоримое преимущество перед конкурентами. Если вы задумываетесь о приобретении нового автомобиля, то купить в Москве у официального дилера одну из моделей KIA – более чем разумное решения. Новый автомобиль 2020-2021 г. в. станет надежным помощником, доставит удовольствие от вождения, обеспечит комфортное передвижение и все это по разумной цене.
+					.col-xl-4.col-lg-6
+						h4 Афиша
+						+sEvents7().--speaker
+				//- .col-xxl-2.order-xxl-first
+		+footer
+
+	

@@ -648,6 +648,15 @@ padding-left: var(--inline-start);
 		.page-head{
 			padding-top: rem(40);
 			--sPB: #{rem(10)};
+				@include media-breakpoint-up(lg ) {
+
+					&--presentation{
+						position: absolute;
+						top: 0;
+						z-index: 10;
+						width: calc(100% - 100px);
+					}
+				}
 			h1{
 				font-weight: 900;
 				max-width: rem(800);
@@ -655,6 +664,24 @@ padding-left: var(--inline-start);
 			}
 			& + * .section__inner {
 				padding-top: 0;
+			}
+			.tabs__caption{
+				margin-left: auto;
+				flex-wrap: wrap;
+			}
+			.tabs__btn{
+				color: #fff;
+				border: none;
+				font-size: 1rem;
+				font-weight: bold;
+				padding: rem(5) rem(10);
+				background-color: $primary;
+				margin-right: rem(2);
+				&:hover,
+				&.active{
+					background-color: #fff;
+					color: $primary;
+				}
 			}
 		}
 

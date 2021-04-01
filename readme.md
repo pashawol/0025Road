@@ -12,3 +12,4 @@
 1. <https://pashawol.github.io/0025Road/public/10-partners.html>
 1. <https://pashawol.github.io/0025Road/public/11-expo.html>
 1. <https://pashawol.github.io/0025Road/public/12-live.html>
+2. <https://pashawol.github.io/0025Road/public/13-stand.html>

@@ -1,6 +1,15 @@
 
 	// start .sContent
 	.sContent {
+
+
+		&__text{
+			max-width: em(910);
+		}
+		h4{
+			font-weight: 700;
+			margin-bottom: rem(26);
+		}
 		 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

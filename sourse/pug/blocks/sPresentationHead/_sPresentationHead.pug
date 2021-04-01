@@ -1,0 +1,52 @@
+mixin sPresentationHead(data)
+	// start sPresentationHead
+	+b.sPresentationHead#sPresentationHead&attributes(attributes)
+	
+		+e.inner.bg-wrap
+			picture.picture-bg
+				source(srcset=`img/@2x/webp/${data.img}.webp`   type='image/webp')
+				img(src=`img/@2x/${data.img}.png` alt='')
+
+			+b.canvas-block
+				+e.number 150 
+				+e.block--video-banner
+					script(src='https://broadcast.comdi.com/player/js/embed.min.js', data-comdi-event='r5ftb9xd', data-login='anonymous', data-registration='{"email":"anonymous@startupvillage.ru"}', lang='ru', async='')
+				.row
+					.col-auto 
+						+e.block--aside.--left
+							+pic("page-left-img.png",'',0)
+					.col
+						+e.block--logo
+							+pic("logo-2.png",'',0)
+					.col-auto
+						+e.block--manager
+							+e.slide
+								+e.slide-img-wrap
+									img(loading="lazy" src=`img/@2x/avatar-4.png`, alt="")
+								+e.caption
+									+e.name!= `Виктор <br> Барышников`
+									+e.prof Менеджер
+									+e.btn-manager(href="#") Начать   чат
+				+e.block--btn
+					mixin btn(i,t,img)
+						+e.btn(href="#")&attributes(attributes)
+							+e.icon-wrap
+								if i 
+									+icon(`btn-`+ i)
+								else
+									img(src=`img/svg/btn-1.svg`, alt="")
+								
+							+e.btn-title!= t
+							block
+					+btn('1',`Пройти <br> опрос`)
+					+btn('2',`Скачать <br> материалы`) 
+					+btn('4',`Войти <br> в демо-зону`)(class="disabled")  
+						+e.caption
+							+e.title Я&nbsp;пока занят, напишите пожалйста в&nbsp;чат
+				+e.btn-bottom
+					<svg width="360" height="195" viewBox="0 0 360 195" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M62.9141 74L179 99.9752L299 74" stroke="#2988e1"/>
+						<path d="M62.9141 84.0144L179 109.99L299 84.0144" stroke="#2988e1"/>
+						<path d="M62.9141 94.7803L179 120.755L299 94.7803" stroke="#2988e1"/>
+						</svg>
+	// end sPresentationHead

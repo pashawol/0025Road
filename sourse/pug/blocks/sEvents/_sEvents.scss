@@ -1,5 +1,17 @@
 	// start .sEvents
 .sEvents {
+	&__main-row{
+		flex-wrap: nowrap;
+	}
+	&__scroll{
+		position: relative;
+		overflow-x: auto;
+	}
+	&__wrapper{
+		min-width: rem(1200);
+		// padding-left: 15px;
+		// padding-right: 15px;
+	}
 	&__head{
 		border-bottom: 1px solid rgba($color: #fff, $alpha: .2);
 	}
@@ -153,15 +165,15 @@
 	&__col{
 		min-width: rem(280);
 	 
-		@include media-breakpoint-up(xl) {
-			// --size: calc(100% / 4)
-			--size: calc(100% / 3)
-		}
-		@include media-breakpoint-up(lg) {
-		}
-		@include media-breakpoint-up(md) {
-			--size: calc(100% / 2)
-		}
+		--size: calc(100% / 3);
+		// @include media-breakpoint-up(xl) {
+		// 	// --size: calc(100% / 4)
+		// }
+		// @include media-breakpoint-up(lg) {
+		// }
+		// @include media-breakpoint-up(md) {
+		// 	--size: calc(100% / 2)
+		// }
 		flex: 0 0 var(--size);
 		max-width: var(--size);
 	}
@@ -411,6 +423,7 @@
 			}
 			&--head{
 				font-size: 1.25rem;
+				font-weight: bold;
 				.program-item__star{
 					display: none;
 				}
