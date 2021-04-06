@@ -34,6 +34,7 @@ global.$ = {
     // cmq: require('postcss-combine-media-query'),
     plumber: require('gulp-plumber'),
     webpack: require('webpack-stream'),
+    resizer: require('gulp-images-resizer'),
     path: {
         tasks: require('./gulp/config/tasks.js'),
     },
@@ -45,16 +46,16 @@ $.path.tasks.forEach(function (taskPath) {
 });
 
 
-$.gulp.task('img', $.gulp.series('cleanimg', 'img-responsive'));
+$.gulp.task('img', $.gulp.series('cleanimg', 'img-responsive', 'img1x'));
 $.gulp.task('libs', $.gulp.series('cleanlibs', 'copylibs'));
 
 $.gulp.task('default', $.gulp.series('svg', 'svgCopy',
     // $.gulp.parallel('svg','pug','scripts:lib','scripts','file'),
     // $.gulp.parallel('file'),
 
+    'img',
     $.gulp.parallel(
         'pug',
-        'img',
         'libs',
         'scripts',
         'scripts:common',
