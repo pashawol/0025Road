@@ -1,0 +1,77 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sLive/_sLive.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sSpeakers/_sSpeakers.pug
+include ../blocks/sExponents/_sExponents.pug
+include ../blocks/sPartners/_sPartners.pug
+include ../blocks/sMembers/_sMembers.pug
+include ../blocks/sStream/_sStream.pug
+include ../blocks/sQuestions/_sQuestions.pug
+include ../blocks/sPresentationHead/_sPresentationHead.pug
+include ../blocks/sEvents/_sEvents.pug
+include ../blocks/sShow/_sShow.pug
+
+block variables
+	- let  mainPage= null 
+	- let  bg= null
+
+block title
+	- let  title= 'О РОАД'
+	title= title
+block pagecontent
+	.main-wrapper
+		+mob-mnu()
+		+top-nav('asas') 
+		+b.page-head.section
+
+				.section__inner.container-fluid
+
+					+b.link-back(href="#")
+						+icon("arrow-back")
+					.row 
+						.col
+							h1= title
+		.sContent.container-fluid
+			.section__inner.pt-3
+				+pic("about-page.jpg")
+			.row.gx-5.section__inner
+				.col
+					p: strong Ассоциация «Российские автомобильные дилеры» (РОАД) – профессиональное объединение официальных дилеров России – организована в 1994 году.
+
+					p Основные цели Ассоциации – защита инвестиций официальных дилеров, представление интересов на государственном уровне, формирование консолидированной позиции по вопросам регулирующей базы сектора экономики, взаимодействие с автопроизводителями, обмен опытом и информацией внутри дилерского сообщества в целях повышения эффективности дилерского бизнеса.
+
+					p В настоящее время Ассоциация представляет интересы более 1300 дилерских центров. В рядах РОАД крупнейшие дилерские сети, большое количество столичных и региональных дилерских предприятий. На долю компаний, входящих в РОАД, приходится более 70% продаж новых автомобилей в России. Члены ассоциации ведут свою деятельность практически на всей территории Российской Федерации.
+
+					p: strong Эксперты РОАД входят в состав рабочих групп и экспертных советов ГД РФ, Мипромторга, Минэкономразвития, ФАС, ЦБ РФ, ТПП
+				.col-xl-auto
+					+pic("about-right-img.jpg")
+		//- +b.sContent--presentation.section
+		//- 	.container.container-large
+		//- 		.row
+		//- 			.col.order-first
+		//- 				h2 AVAYA&nbsp;&mdash; ОДИН ИЗ&nbsp;КРУПНЕЙШИХ ПОСТАВЩИКОВ БАТАРЕЙ
+		//- 				p 26&nbsp;лет назад наша компания была создана командой людей, хорошо знакомых с&nbsp;ИТ-каналом и&nbsp;понимавших, каким должен быть хороший дистрибьютор. Эти знания, преданность идеям крепкого партнерства и&nbsp;желание развивать рынок помогли нам вырасти и&nbsp;стать теми, кто мы&nbsp;есть сегодня.
+
+		//- 				p В&nbsp;нашем портфеле почти 500 продуктовых линеек&nbsp;&mdash; от&nbsp;инфраструктур в&nbsp;коробке до наушников и&nbsp;детских конструкторов. В&nbsp;команде почти 2500 специалистов&nbsp;&mdash; от&nbsp;тех, кто знает слово &laquo;конвергентный&raquo;, до&nbsp;тех, кто покажет как управлять гироскутером. У&nbsp;нас 27 городов присутствия в&nbsp;России, и&nbsp;если менеджер в&nbsp;одном офисе спит, то&nbsp;в&nbsp;другом скорее всего уже работает. Наш партнерский канал насчитывает почти 7500
+		//- 				p: a(href="#") Example.com
+		//- 			.col-xxl-4.col-lg-6
+		//- 				h4 Полезные ссылки
+		//- 				+sEvents7().--speaker
+		//- 			.col-xxl-2.order-xxl-first
+		//- render_gold
+		//- +sSpeakers 
+		//- +sMembers8
+		//- +sLive()
+		//- +sSpeakers()
+		//- +sQuestions()
+		//- +sTrackPlan()
+		//- +sLogos09
+		//- +sContact()
+		+footer()
+
+
+	

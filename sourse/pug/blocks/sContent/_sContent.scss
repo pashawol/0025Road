@@ -10,8 +10,20 @@
 			font-weight: 700;
 			margin-bottom: rem(26);
 		}
+
+		
 		 
-	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(xxl) {
+		p{
+			font-size: rem(20);
+		}
+	}
+		 
+	@include media-breakpoint-up(xl) {
+		p{
+			font-size: rem(18);
+		}
+	}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
 	@include media-breakpoint-up(sm) {}
