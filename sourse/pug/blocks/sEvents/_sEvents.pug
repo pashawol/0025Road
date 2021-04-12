@@ -10,6 +10,8 @@ mixin item-ivent(data)
 			+e.text-block.col
 				+e.title
 					a(href="#").text-body!= data.t
+				if data.p 
+					.small.mb-1!= data.p
 		if data.copy
 			+b.copy-block 
 				.row 
@@ -119,6 +121,7 @@ mixin sEvents-12()
 														+item-ivent({
 															d:`09:30-10:30`,
 															t: `Название сессии от вендора в одну или несколько строк`, 
+															p:`Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, ipsa.`,
 															l:`Сессия`
 															})
 												+e.col.col-12

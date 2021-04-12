@@ -10,14 +10,17 @@ mixin sPresentationHead(data)
 			+b.canvas-block
 				+e.number 150 
 				+e.block--video-banner
-					script(src='https://broadcast.comdi.com/player/js/embed.min.js', data-comdi-event='r5ftb9xd', data-login='anonymous', data-registration='{"email":"anonymous@startupvillage.ru"}', lang='ru', async='')
+					iframe(src="https://www.youtube.com/embed/gJHkTvE8Dhk", frameborder="0") 
 				.row
 					.col-auto 
 						+e.block--aside.--left
-							+pic("page-left-img.png",'',0)
+							//- +pic("page-left-img.png",'',0)
+							picture 
+								img(src="https://storage.yandexcloud.net/asroad-data/uploads/93/e4fed75bec26f174dbe74bbbb1cc39.png", alt="")
 					.col
 						+e.block--logo
-							+pic("logo-2.png",'',0)
+							picture 
+								img(src="https://storage.yandexcloud.net/asroad-data/uploads/27/a0a346c8d2f62961ecac57d258258e.png", alt="")
 					.col-auto
 						+e.block--manager
 							+e.slide

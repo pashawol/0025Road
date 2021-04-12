@@ -1,0 +1,84 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sLive/_sLive.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sSpeakers/_sSpeakers.pug
+include ../blocks/sExponents/_sExponents.pug
+include ../blocks/sPartners/_sPartners.pug
+include ../blocks/sMembers/_sMembers.pug
+include ../blocks/sStream/_sStream.pug
+include ../blocks/sQuestions/_sQuestions.pug
+include ../blocks/sPresentationHead/_sPresentationHead.pug
+include ../blocks/sEvents/_sEvents.pug
+include ../blocks/sShow/_sShow.pug
+
+block variables
+	- let  mainPage= null 
+	- let  bg= null
+
+block title
+	- let  title= 'FAQ'
+	title= title
+block pagecontent
+	.main-wrapper
+		+mob-mnu()
+		+top-nav('asas') 
+		+b.page-head.section
+
+				.section__inner.container-fluid
+
+					+b.link-back(href="#")
+						+icon("arrow-back")
+					.row 
+						.col
+							h1= title
+		.sContent.container-fluid.section__inner.pt-0 
+			h3 Друзья!
+			p Рад приветствовать вас на&nbsp;Конвенции РОАД ONLINE 2021!
+			p Мы&nbsp;подготовили для вас полезную информацию и&nbsp;основные вопросы, которые помогут лучше ориентироваться на&nbsp;нашей платформе.
+			p: strong Платформа может не&nbsp;работать в&nbsp;браузере Internet Explorer.
+			p: strong Регистрация.
+			p Чтобы начать работу, вам нужно #[strong &laquo;Зарегистрироваться&raquo;] (нужна к&nbsp;слову гиперссылка на&nbsp;страницу #[a(href="https://convention.asroad.org/registratio") https://convention.asroad.org/registration]), и&nbsp;заполнить профиль в&nbsp;личном кабинете. Только после регистрации для вас будет доступен полный функционал платформы, дающий возможность смотреть прямой эфир конференции, общаться с&nbsp;участниками и&nbsp;посетить виртуальную выставку.
+			p Подтверждение о&nbsp;успешной регистрации вам придёт на&nbsp;указанный E-mail.
+			p Пароль после регистрации сохраняется браузером автоматически. Если он&nbsp;сбросился, и&nbsp;вы&nbsp;не&nbsp;может вспомнить пароль, необходимо при входе в&nbsp;Личный кабинет нажать &laquo;Забыли пароль&raquo;. Инструкция по&nbsp;восстановлению придёт на&nbsp;указанный вами E-mail.
+			p: strong Онлайн-общение.
+			p Для успешного онлайн-общения на&nbsp;стендах с&nbsp;вендорами рекомендуем вам #[strong: a(href="https://zoom.us/download")  установить ZOOM], если он&nbsp;у&nbsp;Вас уже есть&nbsp;&mdash; всё в&nbsp;порядке.
+			p: strong Личный кабинет.
+			p #[strong: a(href="https://convention.asroad.org/login") Войти в&nbsp;Личный кабинет вы&nbsp;можете тут], или нажав на&nbsp;кнопку рядом с&nbsp;&laquo;Регистрацией&raquo; в&nbsp;верхнем меню.
+			p В&nbsp;личном кабинете вы&nbsp;можете:
+			p &mdash;&nbsp;Составить индивидуальную программу. Для этого на&nbsp;вкладке #[strong: a(href="https://convention.asroad.org/program")  &laquo;Программа&raquo;]  необходимо поставить &laquo;звездочку&raquo; понравившемся вам сессиям. Тогда они отобразятся в&nbsp;Личном кабинете.
+			p &mdash;&nbsp;Видеть сообщения от&nbsp;участников и&nbsp;спикеров. Чтобы начать общение самому, необходимо на&nbsp;вкладках #[strong: a(href="https://convention.asroad.org/speakers")  &laquo;Спикеры&raquo;]  и&nbsp;#[strong: a(href="https://convention.asroad.org/participants") &laquo;Участники&raquo;]  написать сообщение.
+			p: strong LIVE&nbsp;&mdash; прямая трансляция.
+			p Основная трансляция нашей программы. Здесь вы&nbsp;можете задать вопрос, и&nbsp;написать в&nbsp;чат. Спикеры постараться ответить на&nbsp;ваше сообщение. Проверить сообщения можно в&nbsp;Личном кабинете.
+			p Если вдруг трансляция &laquo;отстает или притормаживает, то&nbsp;в&nbsp;настройках плеера уменьшите разрешение до&nbsp;360 и&nbsp;480, возможно ваше соединение интернета в&nbsp;данный момент не&nbsp;поддерживает высокое качество потокового видео.
+			p #[strong: a(href="#") Виртуальная выставка, EXPO]  и&nbsp;#[strong: a(href="#") 3D&nbsp;стенды] .
+			p Посетите все стенды! Ознакомьтесь с&nbsp;программой, презентациями, проводите онлайн-встречи. На&nbsp;стендах виртуальной выставки вы&nbsp;можете:
+			p &mdash;&nbsp;Участвовать в&nbsp;викторине, если её&nbsp;проводит экспонент. Результаты участники узнают через некоторое время после мероприятия. 
+			p &mdash;&nbsp;Смотреть видео, скачать материалы и&nbsp;презентации.
+			p &mdash;&nbsp;Общаться с&nbsp;представителями вендора и&nbsp;посетить демо-зоны (общение осуществляется в&nbsp;ZOOM)
+			p &mdash;&nbsp;Начать чат, написав вопрос представителю вендора, получив ответ в&nbsp;личном кабинете.	
+
+			p: strong Ответы на&nbsp;популярные вопросы.
+			p 1. Если я&nbsp;не&nbsp;знаю, какой статус выбрать при регистрации (Дилер, Экспонент, Партнер, Производитель, СМИ)? &mdash;&nbsp;Выберете &laquo;Другое&raquo;.
+			p 2. Не&nbsp;могу зайти в&nbsp;регистрацию. Попробуйте: 
+			p а) закрыть сайт, затем открыть его заново 
+			p б) очистить кеш браузера, и&nbsp;заново ввести логин и&nbsp;пароль
+			p в) в&nbsp;браузере Internet Explorer платформа может работать со&nbsp;сбоями, используйте другой
+			p 3. Трансляция пропала&nbsp;&mdash; Сигнал в&nbsp;ближайшее время восстановится. Попробуйте зайти в&nbsp;трансляцию не&nbsp;через вкладку Программа, а&nbsp;через вкладку LIVE.
+			p 4. Не&nbsp;отображаются сообщения в&nbsp;чате. 
+			p Попробуйте: 
+			p а) закрыть сайт, затем открыть его заново 
+			p б) отключить блокировщик рекламы и&nbsp;файерволл для данной страницы
+			p в) в&nbsp;браузере Internet Explorer платформа может работать со&nbsp;сбоями, используйте другой браузер.
+			p 5. Что делать, если у&nbsp;меня нет ZOOM и&nbsp;нет возможности его установить? &mdash;&nbsp;На&nbsp;стенде вы&nbsp;можете написать в&nbsp;чат вендору. Ответ будет в&nbsp;вашем личном кабинете на&nbsp;платформе.
+			p 6. Как установить ZOOM? &mdash;&nbsp;Пройдите по&nbsp;ссылке #[a(href="https://zoom.us/download]" target="_blank") https://zoom.us/download], скачайте и&nbsp;выполните быструю регистрацию.
+			p 7. Не&nbsp;смог связаться с&nbsp;вендором ни&nbsp;в&nbsp;чате, ни&nbsp;в&nbsp;ZOOM. &mdash;&nbsp;Возможно, коммуникационный сервис перезагружается. Попробуйте обновить страницу или зайти через несколько минут. Если проблема будет продолжена, напишите нам, мы&nbsp;обязательно передадим, чтобы представитель вендора написал вам в&nbsp;чат. Просмотреть сообщения можно в&nbsp;вашем личном кабинете.
+			p 8. Не&nbsp;успел на&nbsp;трансляцию, будет&nbsp;ли запись? &mdash;&nbsp;Запись основного эфира будет доступна после мероприятия.
+			p 9. Я&nbsp;забыл свой пароль, что делать? На&nbsp;странице #[a(href="https://convention.asroad.org/registration]" target="_blank") регистрации]  выберете кнопку &laquo;Восстановить пароль&raquo;, следуйте дальнейшим инструкциям.
+		+footer()
+
+
+	
