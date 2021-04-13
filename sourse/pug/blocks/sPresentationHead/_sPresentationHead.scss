@@ -192,6 +192,7 @@
 			padding: em(10);
 
 		}
+		
 	}
 	&__icon-wrap{
 		@include mt;
@@ -285,11 +286,31 @@
 	&__name{
 		font-size: em(18);
 		// color: #000000;
+		margin-bottom: rem(40);
+		position: relative;
 	}
 	&__prof{
 		font-size: em(12);
 		color: #939598;
 		margin-bottom: em(10);
+		position: absolute;
+		background-color: #fff;
+		padding: rem(15);
+		border-radius: 10px;
+		// margin-top: 50px;
+		top: 100%;
+		width: 200px;
+		transform: translateX(-50%);
+		left: 50%;
+		visibility: hidden;
+		@include mt;
+		opacity: 0;
+			&::before{
+			content: '';
+			@include triangle(em(20) em(6), #fff, up);
+			bottom: 100%;
+			@include a-cent1(x);
+		}
 	}
 	&__btn-manager{
 		@extend .btn;
@@ -374,3 +395,9 @@
 		transform:  translateY(  10px);
 	}
 }
+
+
+.canvas-block__name:hover  .canvas-block__prof{
+			visibility: visible;
+			opacity: 1;
+		}

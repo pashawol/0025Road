@@ -1,5 +1,10 @@
 
 	// start .sSpeakers
+	.main-page	.sSpeakers {
+		.container-fluid{
+			max-width: none;
+		}
+	}
 	.sSpeakers {
 		position: relative;
 		z-index: 20;
