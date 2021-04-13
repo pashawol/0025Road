@@ -92,6 +92,10 @@
 		height: em(195px);
 		left: em(66);
 		top: em(-45);
+		img{
+			position: absolute;
+			bottom: 0;left: 0;
+		}
 	}
 	&__block--aside{
 	}
@@ -100,7 +104,7 @@
 		margin-right: auto;
 		width: em(220px);
 		height: em(120px);
-		// background-color: #ffffff;
+		background-color: #ffffff;
 		left: em(35);
 	top: em(-4);
 		// display: flex;
@@ -314,7 +318,7 @@
 			object-fit: cover;
 			width: 100%;
 			height: 100%;
-			filter: saturate(0);
+			// filter: saturate(0);
 		}
 	}
 	.swiper-button-hand{
